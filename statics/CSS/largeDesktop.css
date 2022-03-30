@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
+
+#logo {
+  width: 15%;
+}
+#movie-content {
+  font-size: 130%;
+  display: flex;
+  flex-direction: column;
+}
+#movie-image {
+  width: 100%;
+  height: 33.5rem;
+}
+#card-content {
+  font-family: "Lora", serif;
+}
+#movie-info {
+  font-size: smaller;
+}
+.imdb-content {
+  font-family: "Quicksand", sans-serif;
+  margin: 2% 0%;
+}
+.card-text {
+  font-family: "Baloo Bhai 2", cursive;
+}
+#movie-content span a {
+  text-decoration: none;
+}
+#movie-content span {
+  padding: 2%;
+  margin: auto;
+}
