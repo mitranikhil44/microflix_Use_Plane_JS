@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
-
+*{
+  box-sizing: border-box;
+}
 #logo {
   width: 15%;
 }
