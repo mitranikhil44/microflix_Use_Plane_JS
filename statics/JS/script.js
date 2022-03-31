@@ -32,7 +32,9 @@ const getPost = async()=> {
     <div class="mb-3 text-light show-movie" id="movie-items">
     <div class="row g-0">
     <div class="col-md-4">
+    <a href="${data.imdbPage}">
     <img src="${data.image}" class="img-fluid rounded-start" alt="${data.movieTitle}" id="movie-image" />
+    </a>
     </div>
     <div class="col-md-8" id="card-content">
     <div class="card-body">
