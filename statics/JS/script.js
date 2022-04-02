@@ -26,7 +26,7 @@ const getPost = async()=> {
   const data = await response.json();
   console.log(data);
   data.items.map((data,
-    index) => {
+  ) => {
     let html = "";
     html += `
     <div class="mb-3 text-light show-movie" id="movie-items">
@@ -39,49 +39,53 @@ const getPost = async()=> {
     <div class="col-md-8" id="card-content">
     <div class="card-body">
     <p class="title-txt visually-hidden">
-    N0.${index+1} ${data.serchMovieTitle}
+    ${data.serchMovieTitle}
     </p>
     <h1 class="card-title">${data.movieTitle}</h1>
     <p id="movie-info">
-    (${data.info})
+    <b>Duration:</b> ${data.duration}
     </p>
-    <div>
-    <p class="imdb-content">
-    Rating: ${data.imdbRating} / 10 from ${data.imdbRatingCount} users
+    <p id="movie-info">
+    <b>Genres:</b> ${data.genres}
     </p>
-    <p class="imdb-content">
-    Metascore: ${data.metaScore}
+    <p id="movie-info">
+    <b>Release Date:</b> ${data.releaseDate}
     </p>
-    </div>
+    <p id="movie-info">
+    <b>Movie Quality:</b> ${data.movieQuality}
+    </p>
     <hr />
     <p class="card-text">
     ${data.storyLineShort}
     </p>
-    <div class="mb-5 d-flex flex-column align-item-center justify-content-between" id="download-link">
-        <div class="btn-group my-2 w-50" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p  
-          </button>
-          <div class="dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-            <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download Link</a>
-            <div class="my-2 text-light">${data.lan480p}</div>
-          </div>
-        </div>
-        <div class="btn-group my-2 w-50" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p  
-          </button>
-          <div class="dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-            <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download Link</a>
-            <div class="my-2 text-light">${data.lan720p}</div>
-          </div>
-        </div>
-        <div class="btn-group my-2 w-50" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-          </button>
-          <div class="dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-            <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download Link</a>
-            <div class="my-2 text-light">${data.lan1080p}</div>
-          </div>
-        </div>
+    <div>
+
+    </div>
+    <div class="mb-5 d-flex align-item-center" id="download-link">
+    <div class="btn-group mx-2" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+    </button>
+    <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+    <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download Link</a>
+    <div class="my-2 text-light">${data.lan480p}</div>
+    </div>
+    </div>
+    <div class="btn-group mx-2" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+    </button>
+    <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+    <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download Link</a>
+    <div class="my-2 text-light">${data.lan720p}</div>
+    </div>
+    </div>
+    <div class="btn-group mx-2" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+    </button>
+    <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+    <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download Link</a>
+    <div class="my-2 text-light">${data.lan1080p}</div>
+    </div>
+    </div>
     </div>
     <p class="card-text d-flex justify-content-end">
     <small class="text-muted">${data.lastUpdateDate}</small>
