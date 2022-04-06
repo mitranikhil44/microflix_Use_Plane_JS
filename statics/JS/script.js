@@ -24,9 +24,8 @@ searchMovies.addEventListener("input", () => {
 const getPost = async()=> {
   const response = await fetch(`./statics/jsons/movie-api.json`)
   const data = await response.json();
-  console.log(data);
-  data.items.map((data,
-  ) => {
+  let myData = data.items;
+  myData.map((data) => {
     let html = "";
     html += `
     <div class="mb-3 text-light show-movie" id="movie-items">
@@ -58,9 +57,6 @@ const getPost = async()=> {
     <p class="card-text">
     ${data.storyLineShort}
     </p>
-    <div>
-
-    </div>
     <div class="mb-5 d-flex align-item-center" id="download-link">
     <div class="btn-group mx-2" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
@@ -99,6 +95,28 @@ const getPost = async()=> {
     let movieContent = document.getElementById("movie-content");
     movieContent.insertAdjacentHTML("beforeend",
       html);
+    loading.classList.remove("show");
   })
 }
 getPost();
+const loading = document.querySelector(".loading");
+window.addEventListener("scroll", () => {
+  const {
+    scrollTop, scrollHeight, clientHeight
+  } = document.documentElement;
+  console.log({
+    scrollTop,
+    scrollHeight,
+    clientHeight
+  });
+  if (clientHeight + scrollTop > scrollHeight - 14) {
+    showLoad();
+  }
+});
+function showLoad() {
+  loading.classList.add("show");
+  setTimeout(()=> {
+    getPost();
+  },
+    1000);
+}
