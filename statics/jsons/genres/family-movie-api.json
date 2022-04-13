@@ -1,0 +1,21 @@
+{
+  "items"          :
+  [{
+    "imdbPage"       : "https://www.imdb.com/title/tt4123432/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Fantastic Beasts: The Secrets Of Dumbledore",
+    "serchMovieTitle": "fantastic beasts the secrets of dumbledore 2022",
+    "duration"       : "142 min",
+    "genres"         : "Adventure, Family, fantastic",
+    "releaseDate"    : "15 Apr 2022",
+    "shortByDate"    : "2022-04-15",
+    "movieQuality"   : "CamRip",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSAsI9S4pfkFnhCCPACYqqLxgWb3xniNElRw&usqp=CAU",
+    "storyLineShort" : "he third installment of 'Fantastic Beasts and Where to Find Them,' which follows the continuing adventures of Newt Scamander.",
+    "down480p"       : "https://send.cm/d/9z5S",
+    "down720p"       : "https://send.cm/d/9z5T",
+    "down1080p"      : "https://send.cm/d/9z5U",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 09, Apr 2022"
+  }]}

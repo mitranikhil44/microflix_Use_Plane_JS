@@ -1,0 +1,21 @@
+{
+  "items"          :
+  [{
+    "imdbPage"       : "https://www.imdb.com/title/tt1567437/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"The Voices",
+    "serchMovieTitle": "the voices 2015",
+    "duration"       : "103 min",
+    "genres"         : "Comedy, Crime, Fantasy",
+    "releaseDate"    : "06 Feb 2015",
+    "shortByDate"    : "2015-02-06",
+    "movieQuality"   : "Blu-Ray",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-QA7Cs5p6lkaUb7AvYq4pmIHHIcsVZK2OA&usqp=CAU",
+    "storyLineShort" : "A likable guy pursues his office crush with help from his evil talking pets, but things turn sinister when she stands him up for a date.",
+    "down480p"       : "https://send.cm/d/A0Ry",
+    "down720p"       : "https://send.cm/d/A0Rz",
+    "down1080p"      : "",
+    "lan480p"        : "English-Hindi",
+    "lan720p"        : "English-Hindi",
+    "lan1080p"       : "1080p is not available",
+    "lastUpdateDate" : "Last updated 10, Apr 2022"
+  }]}

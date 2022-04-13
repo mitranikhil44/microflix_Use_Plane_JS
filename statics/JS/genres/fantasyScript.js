@@ -73,7 +73,7 @@ function byDate(a, b) {
 
 // Function  to load contents
 const getPost = async()=> {
-  const response = await fetch(`./statics/jsons/movie-api.json`)
+  const response = await fetch(`../statics/jsons/genres/fantasy-movie-api.json`)
   const data = await response.json();
   let myData = data.items;
   myData.sort(byDate);
