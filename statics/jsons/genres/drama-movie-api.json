@@ -1,6 +1,42 @@
 {
   "items"          :
   [{
+    "imdbPage"       : "https://www.imdb.com/title/tt10811166/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"The Kashmir Files",
+    "serchMovieTitle": "the kashmir files 2022",
+    "duration"       : "170 min",
+    "genres"         : "Drama",
+    "releaseDate"    : "11 Mar 2022",
+    "shortByDate"    : "2022-04-07",
+    "movieQuality"   : "CamRip",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ccBs7mCzPNpr6Clavo1ilbdut96DfUfT4w&usqp=CAU",
+    "storyLineShort" : "The Kashmir Files' is a story, based on video interviews of the first generation victims of the Genocide of Kashmiri Pandit Community In 1990.",
+    "down480p"       : "https://send.cm/d/A6dW",
+    "down720p"       : "https://send.cm/d/A6dX",
+    "down1080p"      : "https://send.cm/d/A6dj",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan080p"        : "Hindi",
+    "lastUpdateDate" : "Last updated 15, Apr 2022"
+  },{
+    "imdbPage"       : "https://www.imdb.com/title/tt10698680/?ref_=tt_sims_tt_t_5",
+    "movieTitle"     :"Kolar Gold Fields: Chapter-2",
+    "serchMovieTitle": "k g f chapter-2 kgf chapter 2 kolar gold fields chapter 2",
+    "duration"       : "168 min",
+    "genres"         : "Action, Crime, Drama",
+    "releaseDate"    : "14 Apr 2022",
+    "shortByDate"    : "2022-04-07",
+    "movieQuality"   : "CamRip",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LoMDe16D0d1_fr--9Ef5le17FJ4SH53ZYA&usqp=CAU",
+    "storyLineShort" : "The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their savior, the government sees him as a threat to law and order; enemies are clamoring for revenge and conspiring f...",
+    "down480p"       : "https://send.cm/d/A6cx",
+    "down720p"       : "https://send.cm/d/A6cy",
+    "down1080p"      : "https://send.cm/d/A6d0",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan080p"        : "Hindi",
+    "lastUpdateDate" : "Last updated 15, Apr 2022"
+  },{
     "imdbPage"       : "https://www.imdb.com/title/tt9537292/?ref_=nv_sr_srsg_0",
     "movieTitle"     :"Ala Vaikunthapurramuloo",
     "serchMovieTitle": "ala vaikunthapurramuloo 2020",
