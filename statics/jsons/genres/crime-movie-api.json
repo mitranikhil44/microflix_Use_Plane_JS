@@ -1,6 +1,24 @@
 {
   "items"          :
   [{
+    "imdbPage"       : "https://www.imdb.com/title/tt11640022/?ref_=nv_sr_srsg_7",
+    "movieTitle"     : "Chakra",
+    "serchMovieTitle": "Chakra 2021",
+    "duration"       : "131 min",
+    "genres"         : "Action, Crime, Thriller",
+    "releaseDate"    : "19 Feb 2021",
+    "shortByDate"    : "2021-02-19",
+    "movieQuality"   : "HDRip",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_1dnbcSpn2kO5ZA60WiYIdeGUJyM8Xr3-H9hUA4cOZi3Cs4WaoK9BDtY&s=10",
+    "storyLineShort" : "A soldier and a police officer join forces to bring down a cyber hacker.",
+    "down480p"       : "https://send.cm/d/AE1Y",
+    "down720p"       : "https://send.cm/d/AE1Z",
+    "down1080p"      : "https://send.cm/d/AE1v",
+    "lan480p"        : "Hindi-Tamil",
+    "lan720p"        : "Hindi-Tamil",
+    "lan1080p"       : "Hindi-Tamil",
+    "lastUpdateDate" : "Last updated 19, Apr 2022"
+  },{
     "imdbPage"       : "https://www.imdb.com/title/tt10698680/?ref_=tt_sims_tt_t_5",
     "movieTitle"     :"Kolar Gold Fields: Chapter-2",
     "serchMovieTitle": "k g f chapter-2 kgf chapter 2 kolar gold fields chapter 2",
