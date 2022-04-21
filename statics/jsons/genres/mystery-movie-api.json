@@ -1,6 +1,24 @@
 {
   "items"          :
   [ {
+    "imdbPage"       : "https://m.imdb.com/title/tt0425112/?ref_=nv_sr_srsg_0",
+    "movieTitle"     : "Hot Fuzz",
+    "serchMovieTitle": "hot fuzz 2007",
+    "duration"       : "121 min",
+    "genres"         : "Action, Comedy, Mystery",
+    "releaseDate"    : "15 Apr 2007",
+    "shortByDate"    : "2007-04-15",
+    "movieQuality"   : "BRRip",
+    "image"          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIr4hf6HlSm8-FoMtVUUPBLyiNCGprUdBqQ&usqp=CAU",
+    "storyLineShort" : "A skilled London police officer, after irritating superiors with his embarrassing effectiveness, is transferred to a village where the easygoing officers object to his fervor for regulations...",
+    "down480p"       : "https://send.cm/d/AHrY",
+    "down720p"       : "https://send.cm/d/AHsI",
+    "down1080p"      : "",
+    "lan480p"        : "English-Hindi",
+    "lan720p"        : "English-Hindi",
+    "lan1080p"       : "1080p is not available",
+    "lastUpdateDate" : "Last updated 21, Apr 2022"
+  },{
     "imdbPage"       : "https://www.imdb.com/title/tt7657566/?ref_=nv_sr_srsg_0",
     "movieTitle"     :"Death On The Nile",
     "serchMovieTitle": "death on the nile 2022",
