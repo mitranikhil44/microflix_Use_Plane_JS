@@ -66,6 +66,11 @@ searchMovies.addEventListener("input", ()=> {
   });
 });
 
+let searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", (e)=>{
+  e.preventDefault();
+})
+
 // Function to sort movie by date
 function byDate(a, b) {
   return new Date(b.shortByDate).valueOf() - new Date(a.shortByDate).valueOf()

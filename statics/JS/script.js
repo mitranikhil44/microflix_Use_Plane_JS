@@ -50,7 +50,10 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         e);
     });
 });
-
+let searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", (e)=>{
+  e.preventDefault();
+})
 // Function to search movie
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("input", ()=> {
