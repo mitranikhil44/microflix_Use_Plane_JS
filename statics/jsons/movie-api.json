@@ -1,6 +1,24 @@
 {
   "items"          :
   [{
+    "imdbPage"       : "https://m.imdb.com/title/tt5301942/?ref_=nv_sr_srsg_0",
+    "movieTitle"     : "Jersey",
+    "serchMovieTitle": "jersey 2022",
+    "duration"       : "160 min",
+    "genres"         : "Drama, Romance, Sports",
+    "releaseDate"    : "22 Apr 2022",
+    "shortByDate"    : "2022-04-22",
+    "movieQuality"   : "CamRip",
+    "image"          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqslhcZVNerCSMIqIrB6MTLQIdDAC9FpAOyf66-dvuVuuNQJB8CVP7o4A&s=10",
+    "storyLineShort" : "A teen artist living in 1970s San Francisco enters into an affair with her mother's boyfriend.",
+    "down480p"       : "https://send.cm/d/ALIj",
+    "down720p"       : "https://send.cm/d/ALIk",
+    "down1080p"      : "https://send.cm/d/ALIn",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan1080p"       : "Hindi",
+    "lastUpdateDate" : "Last updated 23, Apr 2022"
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt3172532/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "The Diary Of A Teenage Girl",
     "serchMovieTitle": "the diary of a teenage girl 2015",
@@ -18,7 +36,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "1080p is not available",
     "lastUpdateDate" : "Last updated 21, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt14915608/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Captain Nova",
     "serchMovieTitle": "captain nova 2021",
@@ -36,7 +54,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "1080p is not available",
     "lastUpdateDate" : "Last updated 21, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt2334871/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Snatched",
     "serchMovieTitle": "snatched 2017",
@@ -54,7 +72,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "1080p is not available",
     "lastUpdateDate" : "Last updated 21, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt0425112/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Hot Fuzz",
     "serchMovieTitle": "hot fuzz 2007",
@@ -72,7 +90,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "1080p is not available",
     "lastUpdateDate" : "Last updated 21, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0758758/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Into The Wild",
     "serchMovieTitle": "into the wild 2007",
@@ -90,7 +108,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "1080p is not available",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt11640022/?ref_=nv_sr_srsg_7",
     "movieTitle"     : "Chakra",
     "serchMovieTitle": "Chakra 2021",
@@ -108,7 +126,7 @@
     "lan720p"        : "Hindi-Tamil",
     "lan1080p"       : "Hindi-Tamil",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt4084744/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Battle For Sevastopol",
     "serchMovieTitle": "battle for sevastopol 2015",
@@ -126,7 +144,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt6708668/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Black Crab",
     "serchMovieTitle": "black crab 2022",
@@ -144,7 +162,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt1201607/?ref_=nv_sr_srsg_6",
     "movieTitle"     : "Harry Potter And The Deathly Hallows Part-2",
     "serchMovieTitle": "harry potte and the deathly hallows part-2 part 2 2011",
@@ -162,7 +180,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0926084/?ref_=nv_sr_srsg_9",
     "movieTitle"     : "Harry Potter And The Deathly Hallows Part-1",
     "serchMovieTitle": "harry potte and the deathly hallows part-1 part 1 2010",
@@ -180,7 +198,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0417741/?ref_=nv_sr_srsg_11",
     "movieTitle"     : "Harry Potter And The Half Blood Prince",
     "serchMovieTitle": "harry potter and the half blood prince 2009",
@@ -198,7 +216,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0373889/?ref_=nv_sr_srsg_10",
     "movieTitle"     : "Harry Potter And The Order Of the Phoenix",
     "serchMovieTitle": "harry potte and the order of the phoenix 2007",
@@ -216,7 +234,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0330373/?ref_=nv_sr_srsg_3",
     "movieTitle"     : "Harry Potter And The Goblet Of Fire",
     "serchMovieTitle": "harry potter and the goblet of fire 2005",
@@ -234,7 +252,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0295297/?ref_=nv_sr_srsg_8",
     "movieTitle"     : "Harry Potter And The Chamber Of Secrets",
     "serchMovieTitle": "harry potter and the chamber of secrets 2002",
@@ -252,7 +270,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0304141/?ref_=nv_sr_srsg_7",
     "movieTitle"     : "Harry Potter And The Prisoner Of Azkaban",
     "serchMovieTitle": "harry potter and the prisoner of azkaban 2004",
@@ -270,7 +288,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt0241527/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Harry Potter And The Sorcerers Stone",
     "serchMovieTitle": "harry potter and the sorcerers stone 2001",
@@ -288,7 +306,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt11301946/?ref_=nv_sr_srsg_6",
     "movieTitle"     : "Beast",
     "serchMovieTitle": "beast 2022",

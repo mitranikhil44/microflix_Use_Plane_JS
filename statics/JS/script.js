@@ -50,10 +50,12 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         e);
     });
 });
+
 let searchBtn = document.getElementById("searchBtn");
 searchBtn.addEventListener("click", (e)=>{
   e.preventDefault();
 })
+
 // Function to search movie
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("input", ()=> {
@@ -76,7 +78,7 @@ function byDate(a, b) {
 
 // Function  to load contents
 const getPost = async()=> {
-  const response = await fetch(`./statics/jsons/movie-api.json`)
+  const response = await fetch(`../statics/jsons/movie-api.json`)
   const data = await response.json();
   let myData = data.items;
   myData.sort(byDate);
