@@ -5,6 +5,9 @@
 #logo {
   width: 15%;
 }
+#sortByDate{
+  display: none;
+}
 #genres-content {
   display: none;
   top: 8rem;
