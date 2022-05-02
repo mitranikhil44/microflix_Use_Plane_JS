@@ -72,9 +72,6 @@ function show(data) {
   </div>
   <div class="col-md-8" id="card-content">
   <div class="card-body">
-  <p class="title-txt visually-hidden">
-  ${data.serchMovieTitle}
-  </p>
   <h1 class="card-title">${data.movieTitle}</h1>
   <p id="movie-info">
   <b>Duration:</b> ${data.duration}
