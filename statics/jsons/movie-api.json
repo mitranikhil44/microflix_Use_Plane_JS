@@ -11,12 +11,12 @@
     "movieQuality"   : "HDCamRip",
     "image"          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDyqczRDDnOK6vBceTzucZEtI6KQg6O6ZgB9xUNXhwZr5zIPX5Nuh9JKoS&s=10",
     "storyLineShort" : "Dr. Stephen Strange casts a forbidden spell that opens the doorway to the multiverse, including alternate versions of himself, whose threat to humanity is too great for the combined forces o...",
-    "down480p"       : "https://send.cm/d/AjvN",
-    "down720p"       : "https://send.cm/d/AjsN",
-    "down1080p"      : "",
-    "lan480p"        : "English",
-    "lan720p"        : "English",
-    "lan1080p"       : "1080p is not available",
+    "down480p"       : "https://send.cm/d/AlNR",
+    "down720p"       : "https://send.cm/d/AlNS",
+    "down1080p"      : "https://send.cm/d/AlNa",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
     "lastUpdateDate" : "Last updated 05, May 2022"
   },{
     "imdbPage"       : "https://m.imdb.com/title/tt11873440/?ref_=nv_sr_srsg_0",
