@@ -1,6 +1,257 @@
 {
   "items"          :
-  [{
+  [ {
+    "imdbPage"       : "https://m.imdb.com/title/tt12078076/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Bajrangi 2",
+    "serchMovieTitle": "bajrangi 2 2021",
+    "duration"       : "155 min",
+    "genres"         : "Action, Fantasy",
+    "releaseDate"    : "29 Oct 2021",
+    "shortByDate"    : "2021-10-29",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3sjU0r_lp6Izpye4py799Qo3al41YM-U-s_O42ZxfnYo3mxLCSb6-o2p2&s=10",
+    "storyLineShort" : "The hero with a violent past goes to another village and connects with a good soul. He intends to protect Dhanvantari's sacred book, fights the villain, and aims to avenge his sister's death... ",
+    "down480p"       : "https://send.cm/d/Axd9",
+    "down720p"       : "https://send.cm/d/B7Vk",
+    "down1080p"      : "https://send.cm/d/B7VZ",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  }, {
+    "imdbPage"       : "https://m.imdb.com/title/tt0368222/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Romance And Cigarettes",
+    "serchMovieTitle": "romance and cigarettes 2006",
+    "duration"       : "105 min",
+    "genres"         : "Comedy, Musical, Romance",
+    "releaseDate"    : "03 Mar 2006",
+    "shortByDate"    : "2003-03-03",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDCvlK4BtSx_EqVJxstAYciCmtF4e_kn6jCpXxXlwHacKVs-Sn-_lBoYU&s=10",
+    "storyLineShort" : "This down-and-dirty musical set in the world of working-class New York tells the story of a husband's journey into infidelity and redemption when he must choose between his seductive mistres... ",
+    "down480p"       : "https://send.cm/d/B2Na",
+    "down720p"       : "https://send.cm/d/B2Nb",
+    "down1080p"      : "",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "1080p is not available",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt18080376/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Astakarmma",
+    "serchMovieTitle": "astakarmma 2022",
+    "duration"       : "99 min",
+    "genres"         : "Horror",
+    "releaseDate"    : "11 Feb 2022",
+    "shortByDate"    : "2022-02-11",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJZeAYgoCkaSqy66l012Z4hmsMg1_-YCyIR0NxBr1StEgTAdxCf2ggDB9l&s=10",
+    "storyLineShort" : "A famous psychiatrist who has no belief in suddenly goes through supernatural things paranormal experiences while treating a female patient and is up with the challenge of saving his patient",
+    "down480p"       : "https://send.cm/d/B2MR",
+    "down720p"       : "https://send.cm/d/B2MT",
+    "down1080p"      : "https://send.cm/d/AxdC",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan1080p"       : "Hindi",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt10393870/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Jayashbhai Jordaar",
+    "serchMovieTitle": "jayashbhai jordaar 2022",
+    "duration"       : "121 min",
+    "genres"         : "Comedy, Drama",
+    "releaseDate"    : "13 May 2022",
+    "shortByDate"    : "2022-05-13",
+    "movieQuality"   : "HDCam",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSAsI9S4pfkFnhCCPACYqqLxgWb3xniNElRw&usqp=CAU",
+    "storyLineShort" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRic_YvbydIsAhPjFOOuDWMcyAf3Xqv7lwo52Da1DwQpHOhZ_sDy_zBjQ&s=10",
+    "down480p"       : "https://send.cm/d/B2LI",
+    "down720p"       : "https://send.cm/d/B2LK",
+    "down1080p"      : "https://send.cm/d/B2LM",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan1080p"       : "Hindi",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt14114802/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"The Outfit",
+    "serchMovieTitle": "the outfit 2022",
+    "duration"       : "105 min",
+    "genres"         : "Crime, Drama, Mystery",
+    "releaseDate"    : "18 Mar 2022",
+    "shortByDate"    : "2022-03-18",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ55sI25_vK9UmpNeJ7SD6LGjGYLXXcxv7clu6qq8WEdChxzX0BvrDlEeM&s=10",
+    "storyLineShort" : "An expert cutter must outwit a dangerous group of mobsters in order to survive a fateful night.",
+    "down480p"       : "https://send.cm/d/Azvh",
+    "down720p"       : "https://send.cm/d/Azvj",
+    "down1080p"      : "https://send.cm/d/Azvk",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt11138512/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"The North Man",
+    "serchMovieTitle": "the north man 2022",
+    "duration"       : "137 min",
+    "genres"         : "Action, Adventure, Drama",
+    "releaseDate"    : "15 Apr 2022",
+    "shortByDate"    : "2022-04-15",
+    "movieQuality"   : "CamRip",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeFjIDcxh1q_4hL4K2zP7vhHYUTnER4_Cq5En2J49yyTZmHUz2g7BKBExG&s=10",
+    "storyLineShort" : "From visionary director Robert Eggers comes The Northman, an action-filled epic that follows a young Viking prince on his quest to avenge his father's murder.",
+    "down480p"       : "https://send.cm/d/AzuE",
+    "down720p"       : "https://send.cm/d/AxdA",
+    "down1080p"      : "https://send.cm/d/AxdC",
+    "lan480p"        : "English",
+    "lan720p"        : "English",
+    "lan1080p"       : "English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt2267968/?ref_=tt_sims_tt_t_2",
+    "movieTitle"     :"Kung Fu Panda 3",
+    "serchMovieTitle": "kung fu panda 3 2016",
+    "duration"       : "142 min",
+    "genres"         : "Animation, Adventure, Action",
+    "releaseDate"    : "29 Jan 2016",
+    "shortByDate"    : "2016-01-29",
+    "movieQuality"   : "Blu-Ray",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1qW0ki7JBhLKfMbm6OH2jPtRoAwz2Dim4mwz0bXuwsFbiQIrc6k_PcSI&s=10",
+    "storyLineShort" : "Continuing his 'legendary adventures of awesomeness', Po must face two hugely epic, but different threats: one supernatural and the other a little closer to home.",
+    "down480p"       : "https://send.cm/d/Azcs",
+    "down720p"       : "https://send.cm/d/Azcu",
+    "down1080p"      : "https://send.cm/d/Azcw",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt1302011/?ref_=tt_sims_tt_t_1",
+    "movieTitle"     :"Kung Fu Panda 2",
+    "serchMovieTitle": "kung fu panda 2 2011",
+    "duration"       : "90 min",
+    "genres"         : "Animation, Action, Adventure",
+    "releaseDate"    : "26 May 2011",
+    "shortByDate"    : "2011-05-26",
+    "movieQuality"   : "Blu-Ray",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPp92xySzwPzbBZEee9I1vsmAvFqUbL1-FDVEr6D_PlGLFSAc3IO1tj7l5&s=10",
+    "storyLineShort" : "Po and his friends fight to stop a peacock villain from conquering China with a deadly new weapon, but first the Dragon Warrior must come to terms with his past.",
+    "down480p"       : "https://send.cm/d/AzcF",
+    "down720p"       : "https://send.cm/d/AzcG ",
+    "down1080p"      : "https://send.cm/d/AzcI",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://m.imdb.com/title/tt0441773/?ref_=nv_sr_srsg_3",
+    "movieTitle"     :"Kung Fu Panda",
+    "serchMovieTitle": "kung fu panda 2008",
+    "genres"         : "Animation, Action, Adventure",
+    "releaseDate"    : "06 Jun 2008",
+    "shortByDate"    : "2008-06-06",
+    "movieQuality"   : "Blu-Ray",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpIB1wsIgUVyUNX9DUiXhOx7k-l0BR3sfBFmhM7-XQV5P7ADN5vFci3x0&s=10",
+    "storyLineShort" : "To everyone's surprise, including his own, Po, an overweight, clumsy panda, is chosen as protector of the Valley of Peace. His suitability will soon be tested as the valley's arch-enemy is o...",
+    "down480p"       : "https://send.cm/d/Azbp",
+    "down720p"       : "https://send.cm/d/Azbs",
+    "down1080p"      : "https://send.cm/d/Azbu",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://www.imdb.com/title/tt4123432/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Fantastic Beasts: The Secrets Of Dumbledore",
+    "serchMovieTitle": "fantastic beasts the secrets of dumbledore 2022",
+    "duration"       : "142 min",
+    "genres"         : "Adventure, Family, Fantastic",
+    "releaseDate"    : "15 Apr 2022",
+    "shortByDate"    : "2022-04-15",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSAsI9S4pfkFnhCCPACYqqLxgWb3xniNElRw&usqp=CAU",
+    "storyLineShort" : "The third installment of 'Fantastic Beasts and Where to Find Them,' which follows the continuing adventures of Newt Scamander.",
+    "down480p"       : "https://send.cm/d/Axd9",
+    "down720p"       : "https://send.cm/d/AxdA",
+    "down1080p"      : "https://send.cm/d/AxdC",
+    "lan480p"        : "Hindi-English",
+    "lan720p"        : "Hindi-English",
+    "lan1080p"       : "Hindi-English",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  },{
+    "imdbPage"       : "https://www.imdb.com/title/tt10698680/?ref_=tt_sims_tt_t_5",
+    "movieTitle"     : "Kolar Gold Fields: Chapter-2",
+    "serchMovieTitle": "k g f chapter-2 kgf chapter 2 kolar gold fields chapter 2 2022",
+    "duration"       : "168 min",
+    "genres"         : "Action, Crime, Drama",
+    "releaseDate"    : "14 Apr 2022",
+    "shortByDate"    : "2022-04-14",
+    "movieQuality"   : "WEB-Rip",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LoMDe16D0d1_fr--9Ef5le17FJ4SH53ZYA&usqp=CAU",
+    "storyLineShort" : "The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their savior, the government sees him as a threat to law and order; enemies are clamoring for revenge and conspiring f...",
+    "down480p"       : "https://send.cm/d/B2KJ",
+    "down720p"       : "https://send.cm/d/B2KJ",
+    "down1080p"      : "https://send.cm/d/B2Kp",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan1080p"       : "Hindi",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  }, {
+    "imdbPage"       : "https://www.imdb.com/title/tt10811166/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"The Kashmir Files",
+    "serchMovieTitle": "the kashmir files 2022",
+    "duration"       : "170 min",
+    "genres"         : "Drama",
+    "releaseDate"    : "11 Mar 2022",
+    "shortByDate"    : "2022-03-11",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ccBs7mCzPNpr6Clavo1ilbdut96DfUfT4w&usqp=CAU",
+    "storyLineShort" : "The Kashmir Files' is a story, based on video interviews of the first generation victims of the Genocide of Kashmiri Pandit Community In 1990.",
+    "down480p"       : "https://send.cm/d/B2Ll",
+    "down720p"       : "https://send.cm/d/B2Ln",
+    "down1080p"      : "https://send.cm/d/B2Lp",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan080p"        : "Hindi",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  }, {
+    "imdbPage"       : "https://www.imdb.com/title/tt11301946/?ref_=nv_sr_srsg_6",
+    "movieTitle"     : "Beast",
+    "serchMovieTitle": "beast 2022",
+    "duration"       : "155 min",
+    "genres"         : "Action, Comedy, Drama",
+    "releaseDate"    : "13 Apr 2022",
+    "shortByDate"    : "2022-04-13",
+    "movieQuality"   : "Web-DL",
+    "image"          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc25FBez77onqvFrSBCOBLoTM_TW98-bOY1g&usqp=CAU",
+    "storyLineShort" : "After a shopping mall in Chennai is hijacked by terrorists who hold the visitors as hostages, Veera Raghavan, a spy also trapped in the mall, decides to save the hostages by eliminating the terrorists.",
+    "down480p"       : "https://send.cm/d/B2Mk",
+    "down720p"       : "https://send.cm/d/B2Mm",
+    "down1080p"      : "https://send.cm/d/B2Mr",
+    "lan480p"        : "Hindi",
+    "lan720p"        : "Hindi",
+    "lan1080p"       : "Hindi",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  }, {
+    "imdbPage"       : "https://www.imdb.com/title/tt5108870/?ref_=nv_sr_srsg_0",
+    "movieTitle"     :"Morbius",
+    "serchMovieTitle": "morbius 2022",
+    "duration"       : "104 min",
+    "genres"         : "Action, Adventure, Horror",
+    "releaseDate"    : "01 Apr 2022",
+    "shortByDate"    : "2022-04-01",
+    "movieQuality"   : "Web-DL",
+    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM2xgNgq4MQzSX9kes-REI-M4nY0YJXfdOug&usqp=CAU",
+    "storyLineShort" : "Biochemist Michael Morbius tries to cure himself of a rare blood disease, but he inadvertently infects himself with a form of vampirism instead.",
+    "down480p"       : "https://send.cm/d/B4gZ",
+    "down720p"       : "https://send.cm/d/B4gb",
+    "down1080p"      : "https://send.cm/d/B4ge",
+    "lan480p"        : "English-Hindi",
+    "lan720p"        : "English-Hindi",
+    "lan1080p"       : "English-Hindi",
+    "lastUpdateDate" : "Last updated 16, May 2022"
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt9419884/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Docter Strange In The Multiverse Of Madness",
     "serchMovieTitle": "docter strange in the multiverse of madness 2022",
@@ -36,7 +287,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 07, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt11375428/?ref_=nv_sr_srsg_1",
     "movieTitle"     : "Hridayam",
     "serchMovieTitle": "hridayam 2022",
@@ -54,7 +305,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 07, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt14479746/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Thar",
     "serchMovieTitle": "thar 2022",
@@ -72,7 +323,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 07, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt10698680/?ref_=tt_sims_tt_t_5",
     "movieTitle"     : "Prem Rathan Dhan Payo",
     "serchMovieTitle": "prem rathan dhan payo 2022",
@@ -90,25 +341,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 07, May 2022"
-  },{
-    "imdbPage"       : "https://www.imdb.com/title/tt10698680/?ref_=tt_sims_tt_t_5",
-    "movieTitle"     : "Kolar Gold Fields: Chapter-2",
-    "serchMovieTitle": "k g f chapter-2 kgf chapter 2 kolar gold fields chapter 2 2022",
-    "duration"       : "168 min",
-    "genres"         : "Action, Crime, Drama",
-    "releaseDate"    : "14 Apr 2022",
-    "shortByDate"    : "2022-04-14",
-    "movieQuality"   : "HDRipHC",
-    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LoMDe16D0d1_fr--9Ef5le17FJ4SH53ZYA&usqp=CAU",
-    "storyLineShort" : "The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their savior, the government sees him as a threat to law and order; enemies are clamoring for revenge and conspiring f...",
-    "down480p"       : "https://send.cm/d/AnaU",
-    "down720p"       : "https://send.cm/d/AnaW",
-    "down1080p"      : "https://send.cm/d/AnaZ",
-    "lan480p"        : "Hindi",
-    "lan720p"        : "Hindi",
-    "lan1080p"       : "Hindi",
-    "lastUpdateDate" : "Last updated 07, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt8178634/?ref_=nv_sr_srsg_0",
     "movieTitle"     :"RRR: Rise Rore Revolt",
     "serchMovieTitle": "rrr rise rore revolt 2022",
@@ -126,7 +359,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 07, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt11873440/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Sonic The Hedagehog 2",
     "serchMovieTitle": "sonic the hedagehog 2 2022",
@@ -144,7 +377,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 05, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt11873440/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "HeroPanti 2",
     "serchMovieTitle": "heropanti 2022",
@@ -162,7 +395,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 02, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt11460992/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Runway 34",
     "serchMovieTitle": "runway 2022",
@@ -180,7 +413,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 02, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt10886166/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "365 Days",
     "serchMovieTitle": "365 days 2020",
@@ -216,7 +449,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 02, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt12996154/?ref_=tt_sims_tt_t_1",
     "movieTitle"     : "365 Days: This Days",
     "serchMovieTitle": "365 days this days 2022",
@@ -234,7 +467,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 02, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt13349280/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "Adavallu Meeku Joharlu",
     "serchMovieTitle": "adavallu meeku jaharlu 2022",
@@ -252,7 +485,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 02, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt0993846/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "The Wolf Of The Wall Street",
     "serchMovieTitle": "the wolf of the wall street 2013",
@@ -270,7 +503,7 @@
     "lan720p"        : "English-Hindi",
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 02, May 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt16969178/?ref_=fn_al_tt_0",
     "movieTitle"     : "Siklo",
     "serchMovieTitle": "siklo 2022",
@@ -324,7 +557,7 @@
     "lan720p"        : "Hindi",
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 26, Apr 2022"
-  },{
+  }, {
     "imdbPage"       : "https://m.imdb.com/title/tt5910280/?ref_=nv_sr_srsg_2",
     "movieTitle"     : "Tunnel",
     "serchMovieTitle": "tunnel 2016",
@@ -721,24 +954,6 @@
     "lan1080p"       : "English-Hindi",
     "lastUpdateDate" : "Last updated 19, Apr 2022"
   }, {
-    "imdbPage"       : "https://www.imdb.com/title/tt11301946/?ref_=nv_sr_srsg_6",
-    "movieTitle"     : "Beast",
-    "serchMovieTitle": "beast 2022",
-    "duration"       : "155 min",
-    "genres"         : "Action, Comedy, Drama",
-    "releaseDate"    : "13 Apr 2022",
-    "shortByDate"    : "2022-04-13",
-    "movieQuality"   : "CamRip",
-    "image"          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc25FBez77onqvFrSBCOBLoTM_TW98-bOY1g&usqp=CAU",
-    "storyLineShort" : "After a shopping mall in Chennai is hijacked by terrorists who hold the visitors as hostages, Veera Raghavan, a spy also trapped in the mall, decides to save the hostages by eliminating the terrorists.",
-    "down480p"       : "https://send.cm/d/ABPV",
-    "down720p"       : "https://send.cm/d/ABPX",
-    "down1080p"      : "https://send.cm/d/ABPY",
-    "lan480p"        : "Hindi",
-    "lan720p"        : "Hindi",
-    "lan1080p"       : "Hindi",
-    "lastUpdateDate" : "Last updated 17, Apr 2022"
-  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt11379988/?ref_=nv_sr_srsg_0",
     "movieTitle"     : "James",
     "serchMovieTitle": "james 2022",
@@ -757,24 +972,6 @@
     "lan1080p"       : "Hindi",
     "lastUpdateDate" : "Last updated 17, Apr 2022"
   }, {
-    "imdbPage"       : "https://www.imdb.com/title/tt10811166/?ref_=nv_sr_srsg_0",
-    "movieTitle"     :"The Kashmir Files",
-    "serchMovieTitle": "the kashmir files 2022",
-    "duration"       : "170 min",
-    "genres"         : "Drama",
-    "releaseDate"    : "11 Mar 2022",
-    "shortByDate"    : "2022-03-11",
-    "movieQuality"   : "CamRip",
-    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ccBs7mCzPNpr6Clavo1ilbdut96DfUfT4w&usqp=CAU",
-    "storyLineShort" : "The Kashmir Files' is a story, based on video interviews of the first generation victims of the Genocide of Kashmiri Pandit Community In 1990.",
-    "down480p"       : "https://send.cm/d/A6dW",
-    "down720p"       : "https://send.cm/d/A6dX",
-    "down1080p"      : "https://send.cm/d/A6dj",
-    "lan480p"        : "Hindi",
-    "lan720p"        : "Hindi",
-    "lan080p"        : "Hindi",
-    "lastUpdateDate" : "Last updated 15, Apr 2022"
-  }, {
     "imdbPage"       : "https://www.imdb.com/title/tt18555320/?ref_=nv_sr_srsg_0",
     "movieTitle"     :"Return To Space",
     "serchMovieTitle": "return to space 2022",
@@ -792,25 +989,7 @@
     "lan720p"        : "Hindi-English",
     "lan080p"        : "Hindi-English",
     "lastUpdateDate" : "Last updated 09, Apr 2022"
-  }, {
-    "imdbPage"       : "https://www.imdb.com/title/tt4123432/?ref_=nv_sr_srsg_0",
-    "movieTitle"     :"Fantastic Beasts: The Secrets Of Dumbledore",
-    "serchMovieTitle": "fantastic beasts the secrets of dumbledore 2022",
-    "duration"       : "142 min",
-    "genres"         : "Adventure, Family, Fantastic",
-    "releaseDate"    : "15 Apr 2022",
-    "shortByDate"    : "2022-04-15",
-    "movieQuality"   : "CamRip",
-    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSAsI9S4pfkFnhCCPACYqqLxgWb3xniNElRw&usqp=CAU",
-    "storyLineShort" : "he third installment of 'Fantastic Beasts and Where to Find Them,' which follows the continuing adventures of Newt Scamander.",
-    "down480p"       : "https://send.cm/d/9z5S",
-    "down720p"       : "https://send.cm/d/9z5T",
-    "down1080p"      : "https://send.cm/d/9z5U",
-    "lan480p"        : "Hindi-English",
-    "lan720p"        : "Hindi-English",
-    "lan1080p"       : "Hindi-English",
-    "lastUpdateDate" : "Last updated 09, Apr 2022"
-  }, {
+  },  {
     "imdbPage"       : "https://www.imdb.com/title/tt10806040/?ref_=nv_sr_srsg_0",
     "movieTitle"     :"Valimai",
     "serchMovieTitle": "valimai 2022",
@@ -846,24 +1025,6 @@
     "lan720p"        : "Hindi-Tamil",
     "lan1080p"       : "Hindi-Tamil",
     "lastUpdateDate" : "Last updated 04, Apr 2022"
-  }, {
-    "imdbPage"       : "https://www.imdb.com/title/tt5108870/?ref_=nv_sr_srsg_0",
-    "movieTitle"     :"Morbius",
-    "serchMovieTitle": "morbius 2022",
-    "duration"       : "104 min",
-    "genres"         : "Action, Adventure, Horror",
-    "releaseDate"    : "01 Apr 2022",
-    "shortByDate"    : "2022-04-01",
-    "movieQuality"   : "CamRip",
-    "image"          :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM2xgNgq4MQzSX9kes-REI-M4nY0YJXfdOug&usqp=CAU",
-    "storyLineShort" : "Biochemist Michael Morbius tries to cure himself of a rare blood disease, but he inadvertently infects himself with a form of vampirism instead.",
-    "down480p"       : "https://send.cm/d/9otW",
-    "down720p"       : "https://send.cm/d/9otX",
-    "down1080p"      : "",
-    "lan480p"        : "Hindi-English",
-    "lan720p"        : "Hindi-English",
-    "lan1080p"       : "1080p is not available",
-    "lastUpdateDate" : "Last updated 01, Apr 2022"
   }, {
     "imdbPage"       : "https://www.imdb.com/title/tt9537292/?ref_=nv_sr_srsg_0",
     "movieTitle"     :"Ala Vaikunthapurramuloo",
