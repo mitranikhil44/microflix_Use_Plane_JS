@@ -173,6 +173,25 @@ document.getElementById("action").addEventListener("click", ()=> {
     showData();
   });
 });
+document.getElementById("animation").addEventListener("click", ()=> {
+  content.innerHTML = "";
+  fetch(movieURL).then(response => response.json()).then(data => {
+    let myData = data.items;
+    let addFilter = myData.filter(x=> x.genres.includes("Animation"))
+    sortByDate.addEventListener("click", ()=> {
+      content.innerHTML = "";
+      addFilter.sort(byDate);
+      showData();
+    });
+    content.style.display = "block"
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data);
+      });
+    }
+    showData();
+  });
+});
 document.getElementById("adventure").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
