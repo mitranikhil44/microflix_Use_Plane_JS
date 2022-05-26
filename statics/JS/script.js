@@ -58,6 +58,8 @@ function byDate(a, b) {
 }
 
 // Function  to load contents
+let pageSize = 20;
+let currentPage = 0;
 let movieURL = `../statics/jsons/movie-api.json`
 const content = document.getElementById("content");
 const sortByDate = document.getElementById("sortByDate");
@@ -90,29 +92,38 @@ function show(data) {
   <p class="card-text">
   ${data.storyLineShort}
   </p>
-  <div class="mb-5 d-flex align-item-center" id="download-link">
-  <div class="btn-group mx-2" role="group">
-  <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-  </button>
+  <div class="d-flex align-item-center mx-2 my-2" id="download-link">
+  <div>
+  <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+  <a type="button" target="_self" class="mx-1 btn btn-outline-danger"href="${data.watch480p}">Watch</a>
+  </a>
   <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download Link</a>
+  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download</a>
   <div class="my-2 text-light">${data.lan480p}</div>
   </div>
   </div>
-  <div class="btn-group mx-2" role="group">
-  <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-  </button>
+  </div>
+  <div class="d-flex align-item-center mx-2 my-2" id="download-link">
+  <div>
+  <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+  <a type="button" target="_self" class="mx-1 btn btn-outline-danger"href="${data.watch720p}">Watch</a>
+  </a>
   <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download Link</a>
+  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download</a>
   <div class="my-2 text-light">${data.lan720p}</div>
   </div>
   </div>
-  <div class="btn-group mx-2" role="group">
-  <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-  </button>
+  </div>
+  </div>
+  <div class="d-flex align-item-center mx-2 my-2" id="download-link">
+  <div>
+  <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+  <a type="button" target="_self" class="mx-1 btn btn-outline-danger"href="${data.watch1080p}">Watch</a>
+  </a>
   <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download Link</a>
+  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download</a>
   <div class="my-2 text-light">${data.lan1080p}</div>
+  </div>
   </div>
   </div>
   </div>
@@ -128,29 +139,23 @@ function show(data) {
   content.insertAdjacentHTML("beforeend",
     html);
   // loading.classList.remove("show");
-}
-document.getElementById("showMovies").addEventListener("click", () => {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    if (sortByDate.style.display != "block") {
-      sortByDate.style.display = "block";
-    } else {
-      sortByDate.style.display = "none";
-    }
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      myData.sort(byDate);
-      showData();
-    });
-    content.style.display = "block"
-    function showData() {
-      myData.forEach((data)=> {
-        show(data);
-      });
-    }
+};
+
+// let trimData = myData.slice(0,5);
+// console.log(trimData)
+fetch(movieURL).then(response => response.json()).then(data => {
+  let myData = data.items;
+  sortByDate.addEventListener("click", ()=> {
+    content.innerHTML = "";
+    myData.sort(byDate);
     showData();
   });
+  function showData() {
+    myData.forEach((data)=> {
+      show(data);
+    });
+  }
+  showData();
 });
 
 // Function to filter data by genres of collection
@@ -158,13 +163,16 @@ document.getElementById("action").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    let pag = myData.slice(currentPage,
+      pageSize)
+    console.log(pag)
     let addFilter = myData.filter(x=> x.genres.includes("Action"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
-    content.style.display = "block"
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     function showData() {
       addFilter.forEach((data)=> {
         show(data);
@@ -174,15 +182,15 @@ document.getElementById("action").addEventListener("click", ()=> {
   });
 });
 document.getElementById("animation").addEventListener("click", ()=> {
-  content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Animation"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -197,11 +205,12 @@ document.getElementById("adventure").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Adventure"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -216,11 +225,12 @@ document.getElementById("comedy").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Comedy"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -235,11 +245,12 @@ document.getElementById("crime").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Crime"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -254,11 +265,12 @@ document.getElementById("documentary").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Documentary"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -273,11 +285,12 @@ document.getElementById("drama").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Drama"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -292,11 +305,12 @@ document.getElementById("fantastic").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Fantastic"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -311,11 +325,12 @@ document.getElementById("fantasy").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Fantasy"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -330,11 +345,12 @@ document.getElementById("family").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Family"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -349,11 +365,12 @@ document.getElementById("history").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("History"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -368,11 +385,12 @@ document.getElementById("horror").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Horror"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -387,11 +405,12 @@ document.getElementById("music").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Music"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -406,11 +425,12 @@ document.getElementById("mystery").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Mystery"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -425,11 +445,12 @@ document.getElementById("romance").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Romance"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -444,11 +465,12 @@ document.getElementById("thriller").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Thriller"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -463,11 +485,12 @@ document.getElementById("sciFi").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -482,11 +505,12 @@ document.getElementById("sports").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Sports"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -501,11 +525,12 @@ document.getElementById("biography").addEventListener("click", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.genres.includes("Biography"))
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
     content.style.display = "block"
     function showData() {
       addFilter.forEach((data)=> {
@@ -530,9 +555,9 @@ searchMovies.addEventListener("input", ()=> {
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
-    if(inputVal == ""){
+    if (inputVal == "") {
       content.style.display = "none";
-    }else{
+    } else {
       content.style.display = "block"
     }
     function showData() {
