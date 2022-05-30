@@ -13,6 +13,10 @@
 #genres-content a {
   text-decoration: none;
 }
+.navContent{
+  text-decoration: none;
+  color: white;
+}
 #content {
   font-size: 130%;
   display: flex;
@@ -41,6 +45,9 @@
 #content span {
   padding: 2%;
   margin: auto;
+}
+#download-link{
+  display: flex;
 }
 .loading {
   opacity: 0;

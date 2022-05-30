@@ -66,75 +66,72 @@ const sortByDate = document.getElementById("sortByDate");
 function show(data) {
   let html = "";
   html += `
-  <div class="mb-3 text-light show-movie" id="movie-items">
-  <div class="row g-0">
-  <div class="col-md-4">
-  <a href="${data.imdbPage}">
-  <img src="${data.image}" class="img-fluid rounded-start" alt="${data.movieTitle}" id="movie-image" />
-  </a>
-  </div>
-  <div class="col-md-8" id="card-content">
-  <div class="card-body">
-  <h1 class="card-title">${data.movieTitle}</h1>
-  <p id="movie-info">
-  <b>Duration:</b> ${data.duration}
-  </p>
-  <p id="movie-info">
-  <b>Genres:</b> ${data.genres}
-  </p>
-  <p id="movie-info">
-  <b>Release Date:</b> ${data.releaseDate}
-  </p>
-  <p id="movie-info">
-  <b>Movie Quality:</b> ${data.movieQuality}
-  </p>
-  <hr />
-  <p class="card-text">
-  ${data.storyLineShort}
-  </p>
-  <div class="d-flex align-item-center mx-2 my-2" id="download-link">
-  <div>
-  <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-  <a type="button" target="_self" class="mx-1 btn btn-outline-danger"href="${data.watch480p}">Watch</a>
-  </a>
-  <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download</a>
-  <div class="my-2 text-light">${data.lan480p}</div>
-  </div>
-  </div>
-  </div>
-  <div class="d-flex align-item-center mx-2 my-2" id="download-link">
-  <div>
-  <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-  <a type="button" target="_self" class="mx-1 btn btn-outline-danger"href="${data.watch720p}">Watch</a>
-  </a>
-  <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download</a>
-  <div class="my-2 text-light">${data.lan720p}</div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="d-flex align-item-center mx-2 my-2" id="download-link">
-  <div>
-  <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-  <a type="button" target="_self" class="mx-1 btn btn-outline-danger"href="${data.watch1080p}">Watch</a>
-  </a>
-  <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-  <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download</a>
-  <div class="my-2 text-light">${data.lan1080p}</div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <p class="card-text d-flex justify-content-end">
-  <small class="text-muted">${data.lastUpdateDate}</small>
-  </p>
-  </div>
-  </div>
-  </div>
-  <hr class="bg-light" />
-  </div>
+            <div class="mb-3 text-light show-movie" id="movie-items">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <a href="${data.imdbPage}">
+                    <img src="${data.image}" class="img-fluid rounded-start" alt="${data.movieTitle}" id="movie-image" />
+                  </a>
+                </div>
+                <div class="col-md-8" id="card-content">
+                  <div class="card-body">
+                    <h1 class="card-title">${data.movieTitle}</h1>
+                    <p id="movie-info">
+                      <b>Duration:</b> ${data.duration}
+                    </p>
+                    <p id="movie-info">
+                      <b>Genres:</b> ${data.genres}
+                    </p>
+                    <p id="movie-info">
+                      <b>Release Date:</b> ${data.releaseDate}
+                    </p>
+                    <p id="movie-info">
+                      <b>Movie Quality:</b> ${data.movieQuality}
+                    </p>
+                    <hr />
+                    <p class="card-text">
+                      ${data.storyLineShort}
+                    </p>
+                  </div>
+                  <div id="download-link">
+                    <div>
+                      <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+                      </button>
+                      <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+                        <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download</a>
+                        <div class="my-2 text-light">
+                          ${data.lan480p}
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+                      </button>
+                      <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+                        <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download</a>
+                        <div class="my-2 text-light">
+                          ${data.lan720p}
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+                      </button>
+                      <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+                        <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download</a>
+                        <div class="my-2 text-light">
+                          ${data.lan1080p}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-text d-flex justify-content-end">
+                  <small class="text-muted">${data.lastUpdateDate}</small>
+                </p>
+              </div>
+              <hr />
+            </div>
   `;
   content.insertAdjacentHTML("beforeend",
     html);
@@ -182,9 +179,10 @@ document.getElementById("action").addEventListener("click", ()=> {
   });
 });
 document.getElementById("animation").addEventListener("click", ()=> {
+  content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
-    let addFilter = myData.filter(x=> x.genres.includes("Animation"))
+    let addFilter = myData.filter(x=> x.genres.includes("Animation"));
     sortByDate.addEventListener("click",
       ()=> {
         content.innerHTML = "";
