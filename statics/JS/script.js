@@ -66,7 +66,7 @@ const sortByDate = document.getElementById("sortByDate");
 function show(data) {
   let html = "";
   html += `
-            <div class="mb-3 text-light show-movie" id="movie-items">
+            <section class="mb-3 text-light show-movie" id="movie-items">
               <div class="row g-0">
                 <div class="col-md-4">
                   <a href="${data.imdbPage}">
@@ -131,7 +131,7 @@ function show(data) {
                 </p>
               </div>
               <hr />
-            </div>
+            </section>
   `;
   content.insertAdjacentHTML("beforeend",
     html);
@@ -142,6 +142,8 @@ function show(data) {
 // console.log(trimData)
 fetch(movieURL).then(response => response.json()).then(data => {
   let myData = data.items;
+  document.getElementById("contentLength").innerText = myData.length;
+  document.getElementById("section2").classList = "visible mx-2";
   sortByDate.addEventListener("click", ()=> {
     content.innerHTML = "";
     myData.sort(byDate);
@@ -160,6 +162,7 @@ document.getElementById("action").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let pag = myData.slice(currentPage,
       pageSize)
     console.log(pag)
@@ -182,6 +185,7 @@ document.getElementById("animation").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Animation"));
     sortByDate.addEventListener("click",
       ()=> {
@@ -202,6 +206,7 @@ document.getElementById("adventure").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Adventure"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -222,6 +227,7 @@ document.getElementById("comedy").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Comedy"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -242,6 +248,7 @@ document.getElementById("crime").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Crime"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -262,6 +269,7 @@ document.getElementById("documentary").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Documentary"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -282,6 +290,7 @@ document.getElementById("drama").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Drama"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -302,6 +311,7 @@ document.getElementById("fantastic").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Fantastic"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -322,6 +332,7 @@ document.getElementById("fantasy").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Fantasy"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -342,6 +353,7 @@ document.getElementById("family").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Family"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -362,6 +374,7 @@ document.getElementById("history").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("History"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -382,6 +395,7 @@ document.getElementById("horror").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Horror"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -402,6 +416,7 @@ document.getElementById("music").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Music"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -422,6 +437,7 @@ document.getElementById("mystery").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Mystery"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -442,6 +458,7 @@ document.getElementById("romance").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Romance"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -462,6 +479,7 @@ document.getElementById("thriller").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Thriller"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -482,6 +500,7 @@ document.getElementById("sciFi").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -502,6 +521,7 @@ document.getElementById("sports").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Sports"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -522,6 +542,7 @@ document.getElementById("biography").addEventListener("click", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.genres.includes("Biography"))
     sortByDate.addEventListener("click",
       ()=> {
@@ -552,6 +573,7 @@ searchMovies.addEventListener("input", ()=> {
   content.innerHTML = "";
   fetch(movieURL).then(response => response.json()).then(data => {
     let myData = data.items;
+    document.getElementById("section2").classList = "invisible position-absolute";
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
     if (inputVal == "") {
       content.style.display = "none";
