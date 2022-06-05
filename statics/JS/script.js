@@ -5,13 +5,13 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl);
 });
 
-// Function to add contents
+// Function to ads contents
 (function(a, b, c) {
   Object.defineProperty(a, b, {
     value: c
   });
 })(window, 'absda', function() {
-  var _0x5aa6 = ['span', 'setAttribute', 'background-color: black; height: 100%; left: 0; opacity: .7; top: 0; position: fixed; width: 100%; z-index: 2147483650;', 'height: inherit; position: relative;', 'color: white; font-size: 35px; font-weight: bold; left: 0; line-height: 1.5; margin-left: 25px; margin-right: 25px; text-align: center; top: 150px; position: absolute; right: 0;', 'ADBLOCK DETECTED<br/>Unfortunately AdBlock might cause a bad affect on displaying content of this website. Please, deactivate it.', 'addEventListener', 'click', 'parentNode', 'removeChild', 'removeEventListener', 'DOMContentLoaded', 'createElement', 'getComputedStyle', 'innerHTML', 'className', 'adsBox', 'style', '-99999px', 'left', 'body', 'appendChild', 'offsetHeight', 'div']; (function(_0x2dff48, _0x4b3955) {
+  var _0x5aa6 = ['span', 'setAttribute', 'background-color: black; height: 100%; left: 0; opacity: .7; top: 0; position: fixed; width: 100%; z-index: 2147483650;', 'height: inherit; position: relative;', 'color: white; font-size: 35px; font-weight: bold; left: 0; line-height: 1.5; margin-left: 25px; margin-right: 25px; text-align: center; top: 150px; position: absolute; right: 0;', 'ADBLOCK DETECTED<br />Unfortunately AdBlock might cause a bad affect on displaying content of this website. Please, deactivate it.', 'addEventListener', 'click', 'parentNode', 'removeChild', 'removeEventListener', 'DOMContentLoaded', 'createElement', 'getComputedStyle', 'innerHTML', 'className', 'adsBox', 'style', '-99999px', 'left', 'body', 'appendChild', 'offsetHeight', 'div']; (function(_0x2dff48, _0x4b3955) {
     var _0x4fc911 = function(_0x455acd) {
       while (--_0x455acd) {
         _0x2dff48['push'](_0x2dff48['shift']());
@@ -58,115 +58,237 @@ function byDate(a, b) {
 }
 
 // Function  to load contents
-let pageSize = 20;
-let currentPage = 0;
-let movieURL = `../statics/jsons/movie-api.json`
-const content = document.getElementById("content");
+let movieUrl = {
+  "url": `../statics/jsons/movie-api.json`,
+  "currentPage": 1,
+  "pageSize": 10,
+  "window": 5,
+}
+let content = document.getElementById("content");
 const sortByDate = document.getElementById("sortByDate");
+
+// Function to show Data
 function show(data) {
-  let html = "";
-  html += `
-            <section class="mb-3 text-light show-movie" id="movie-items">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <a href="${data.imdbPage}">
-                    <img src="${data.image}" class="img-fluid rounded-start" alt="${data.movieTitle}" id="movie-image" />
-                  </a>
-                </div>
-                <div class="col-md-8" id="card-content">
-                  <div class="card-body">
-                    <h1 class="card-title">${data.movieTitle}</h1>
-                    <p id="movie-info">
-                      <b>Duration:</b> ${data.duration}
-                    </p>
-                    <p id="movie-info">
-                      <b>Genres:</b> ${data.genres}
-                    </p>
-                    <p id="movie-info">
-                      <b>Release Date:</b> ${data.releaseDate}
-                    </p>
-                    <p id="movie-info">
-                      <b>Movie Quality:</b> ${data.movieQuality}
-                    </p>
-                    <hr />
-                    <p class="card-text">
-                      ${data.storyLineShort}
-                    </p>
-                  </div>
-                  <div id="download-link">
-                    <div>
-                      <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-                      </button>
-                      <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-                        <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download</a>
-                        <div class="my-2 text-light">
-                          ${data.lan480p}
-                        </div>
+  content.insertAdjacentHTML("beforeend", `
+  <section class="mb-3 rounded-1 text-light show-movie" id="movie-items">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <a href="${data.imdbPage}">
+          <img src="${data.image}" class="img-fluid rounded-start" alt="Movie Image" id="movie-image" />
+        </a>
+      </div>
+      <div class="col-md-8" id="card-content">
+        <div class="card-body">
+          <h1 class="card-title">${data.movieTitle}</h1>
+          <p id="movie-info">
+            <b>Duration:</b> ${data.duration}
+          </p>
+          <p id="movie-info">
+            <b>Genres:</b> ${data.genres}
+          </p>
+          <p id="movie-info">
+            <b>Release Date:</b> ${data.releaseDate}
+          </p>
+          <p id="movie-info">
+            <b>Movie Quality:</b> ${data.movieQuality}
+          </p>
+          <hr />
+          <p class="card-text">
+            ${data.storyLineShort}
+          </p>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-dark">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel">${data.hindiTrailer} Trailer</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="ratio ratio-16x9">
+                        <iframe src="https://www,youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video" allowfullscreen></iframe>
                       </div>
                     </div>
-                    <div>
-                      <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-                      </button>
-                      <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-                        <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download</a>
-                        <div class="my-2 text-light">
-                          ${data.lan720p}
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-                      </button>
-                      <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-                        <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download</a>
-                        <div class="my-2 text-light">
-                          ${data.lan1080p}
-                        </div>
-                      </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">${data.englishTrailer}</button>
                     </div>
                   </div>
                 </div>
-                <p class="card-text d-flex justify-content-end">
-                  <small class="text-muted">${data.lastUpdateDate}</small>
-                </p>
               </div>
-              <hr />
-            </section>
-  `;
-  content.insertAdjacentHTML("beforeend",
-    html);
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-dark">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel2">${data.englishTrailer} Trailer</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">${data.hindiTrailer}</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-outline-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Watch Trailer</a>
+            </div>
+            <div class="mx-2">
+              <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                ScreenShots
+              </button>
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable text-dark">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Screen Shots</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="${data.screenShot1}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
+                      <hr />
+                      <img src="${data.screenShot2}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
+                      <hr />
+                      <img src="${data.screenShot3}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
+                      <hr />
+                      <img src="${data.screenShot4}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
+                      <hr />
+                      <img src= class="img-fluid" alt="Movie Screen Shots" ScreenShot">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="download-link">
+          <div>
+            <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+            </button>
+            <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+              <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download</a>
+              <div class="my-2 text-light">
+                ${data.lan480p}
+              </div>
+            </div>
+          </div>
+          <div>
+            <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+            </button>
+            <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+              <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download</a>
+              <div class="my-2 text-light">
+                ${data.lan720p}
+              </div>
+            </div>
+          </div>
+          <div>
+            <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+            </button>
+            <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+              <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download</a>
+              <div class="my-2 text-light">
+                ${data.lan1080p}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="card-text d-flex justify-content-end">
+        <small class="text-muted">${data.lastUpdateDate}</small>
+      </p>
+    </div>
+    <hr />
+  </section>
+    `);
   // loading.classList.remove("show");
 };
 
-// let trimData = myData.slice(0,5);
-// console.log(trimData)
-fetch(movieURL).then(response => response.json()).then(data => {
-  let myData = data.items;
-  document.getElementById("contentLength").innerText = myData.length;
-  document.getElementById("section2").classList = "visible mx-2";
-  sortByDate.addEventListener("click", ()=> {
-    content.innerHTML = "";
-    myData.sort(byDate);
+
+// Function to pagination data
+function pagination(url, currentPage, pageSize) {
+  let trimStart = (currentPage - 1) * pageSize;
+  let trimEnd = trimStart + pageSize;
+  let trimData = url.slice(trimStart, trimEnd);
+  let pages = Math.ceil(url.length /pageSize);
+  return {
+    "url": trimData,
+    "currentPage": pages
+  };
+};
+
+// Function Pagination Button
+let paginationSection = document.getElementById("paginationSection");
+function paginationBtn(pages) {
+  paginationSection.innerHTML = "";
+  let maxRight = movieUrl.currentPage + Math.floor(movieUrl.window /2);
+  let maxLeft = movieUrl.currentPage - Math.floor(movieUrl.window /2);
+  if (maxLeft < 1) {
+    maxLeft = 1;
+    maxRight = movieUrl.window;
+  }
+  if (maxRight > pages) {
+    maxLeft = pages - (movieUrl.window - 1);
+    maxRight = pages
+    if (maxLeft < 1) {
+      maxLeft = 1;
+    }
+  }
+  for (let page = maxLeft; page <= maxRight; page++) {
+    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id)" class="mx-1 my-2 btn btn-outline-light">${page}</button>`;
+  }
+  if (movieUrl.currentPage != 1) {
+    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id)" class="mx-1 my-2 btn btn-outline-light">&#171; First</button>` + paginationSection.innerHTML;
+  }
+  if (movieUrl.currentPage != pages) {
+    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id)" class="mx-1 my-2 btn btn-outline-light">&#187; Last</button>`;
+  }
+}
+
+// Function to show pagination Button
+function paginationButton(index) {
+  content.innerHTML = "";
+  movieUrl.currentPage = parseInt(index);
+  allMovies();
+}
+
+function allMovies() {
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("contentLength").innerText = myData.length;
+    document.getElementById("section2").classList = "visible mx-2";
+    sortByDate.addEventListener("click", ()=> {
+      content.innerHTML = "";
+      myData.sort(byDate);
+      showData();
+    });
+    let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+    function showData() {
+      movies.forEach((data)=> {
+        show(data);
+        paginationBtn(arrays.currentPage);
+      });
+    }
     showData();
   });
-  function showData() {
-    myData.forEach((data)=> {
-      show(data);
-    });
-  }
-  showData();
-});
+}
+allMovies();
 
 // Function to filter data by genres of collection
-document.getElementById("action").addEventListener("click", ()=> {
+function action() {
   content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let pag = myData.slice(currentPage,
-      pageSize)
-    console.log(pag)
-    let addFilter = myData.filter(x=> x.genres.includes("Action"))
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Action"));
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
     sortByDate.addEventListener("click",
       ()=> {
         content.innerHTML = "";
@@ -175,391 +297,459 @@ document.getElementById("action").addEventListener("click", ()=> {
       });
     function showData() {
       addFilter.forEach((data)=> {
-        show(data);
+        show(data); paginationSection.innerHTML = "";
       });
     }
     showData();
   });
-});
-document.getElementById("animation").addEventListener("click", ()=> {
+};
+function animation() {
   content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Animation"));
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Animation"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
     sortByDate.addEventListener("click",
       ()=> {
         content.innerHTML = "";
         addFilter.sort(byDate);
         showData();
       });
-    content.style.display = "block"
+    content.style.display = "block";
     function showData() {
       addFilter.forEach((data)=> {
-        show(data);
+        show(data); paginationSection.innerHTML = "";
       });
     }
     showData();
   });
-});
-document.getElementById("adventure").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Adventure"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("comedy").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Comedy"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("crime").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Crime"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("documentary").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Documentary"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("drama").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Drama"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("fantastic").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Fantastic"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("fantasy").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Fantasy"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("family").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Family"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("history").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("History"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("horror").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Horror"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("music").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Music"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("mystery").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Mystery"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("romance").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Romance"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("thriller").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Thriller"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("sciFi").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("sports").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Sports"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
-document.getElementById("biography").addEventListener("click", ()=> {
-  content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
-    let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
-    let addFilter = myData.filter(x=> x.genres.includes("Biography"))
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block"
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
-  });
-});
+};
 
+function adventure() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Adventure"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click", ()=> {
+      content.innerHTML = "";
+      addFilter.sort(byDate);
+      showData();
+    });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+function comedy() {
+
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Comedy"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click", ()=> {
+      content.innerHTML = "";
+      addFilter.sort(byDate);
+      showData();
+    });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+function crime() {
+
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Crime"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function documentary() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Documentary"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function drama() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Drama"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function fantastic() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Fantastic"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function fantasy() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Fantasy"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function family() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Family"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function history() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("History"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function horror() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Horror"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function music() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Music"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function mystery() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Mystery"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function romance() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Romance"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function thriller() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Thriller"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function sciFi() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function sports() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Sports"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
+
+function biography() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    document.getElementById("section2").classList = "invisible ";
+    let addFilter = myData.filter(x=> x.genres.includes("Biography"))
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
+    sortByDate.addEventListener("click",
+      ()=> {
+        content.innerHTML = "";
+        addFilter.sort(byDate);
+        showData();
+      });
+    content.style.display = "block";
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
+      });
+    }
+    showData();
+  });
+};
 
 // Function to search movie
 let searchBtn = document.getElementById("searchBtn");
@@ -571,31 +761,23 @@ let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("input", ()=> {
   let inputVal = searchMovies.value.toLowerCase();
   content.innerHTML = "";
-  fetch(movieURL).then(response => response.json()).then(data => {
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible position-absolute";
+    document.getElementById("section2").classList = "invisible ";
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
-    if (inputVal == "") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block"
-    }
+    document.getElementById("contentLength").innerText = "";
+    document.getElementById("section2").classList = "visible mx-2";
+    document.getElementById("contentLength").innerText = addFilter.length;
     function showData() {
       addFilter.forEach((data)=> {
-        show(data);
+        show(data); paginationSection.innerHTML = "";
       });
+    }
+    if (inputVal == "") {
+      showData();
     }
     showData();
   });
-  // let showMoive = document.getElementsByClassName("show-movie");
-  // Array.from(showMoive).forEach(function (element) {
-  //   let titleTxt = element.getElementsByClassName("title-txt")[0].innerText;
-  //   if (titleTxt.includes(inputVal)) {
-  //     element.style.display = "block";
-  //   } else {
-  //     element.style.display = "none";
-  //   }
-  // });
 });
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {

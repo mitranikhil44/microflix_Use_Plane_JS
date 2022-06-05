@@ -14,8 +14,14 @@
   text-decoration: none;
 }
 .navContent{
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+}
+#phoneDisplay{
+  display: none;
+}
+#tabletDisplay{
+  display: none;
 }
 #content {
   font-size: 130%;
@@ -48,6 +54,8 @@
 }
 #download-link{
   display: flex;
+  align-items: center;
+  margin: 0% 2%;
 }
 .loading {
   opacity: 0;

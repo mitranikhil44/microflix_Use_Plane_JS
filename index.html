@@ -15,13 +15,16 @@
   <meta property="og:url" content="https://moviesverse.tk/" />
   <meta property="og:site_name" content="MICROFLIX | Micro Flix - 480p Movies, 720p Movies, 1080p Movies" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./statics/images/favicons/favicon32.jpg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./statics/images/favicons/apple-touch-icon.jpg" />
   <meta content="41730" name="sendcm">
   <title>MICROFLIX | Micro Flix - 480p, 720p & 1080p Movies</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./statics/CSS/largeDesktop.css" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./statics/images/favicons/favicon32.jpg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./statics/images/favicons/apple-touch-icon.jpg" />
+  <link rel="stylesheet", href="./static/CSS/desktopSize.css", media="screen and (max-width: 1199.98px)">
+  <link rel="stylesheet", href="./static/CSS/tabletSize.css", media="screen and (max-width: 991.98px)">
+  <link rel="stylesheet", href="./static/CSS/landScapeMobileSize.css", media="screen and (max-width: 767.98px)">
+  <link rel="stylesheet", href="./static/CSS/portraitMobileSize.css", media="screen and (max-width: 575.98px)">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4724045884570258"
     crossorigin="anonymous"></script>
 </head>
@@ -48,32 +51,32 @@
   </div>
 </nav>
 <section class="d-flex justify-content-center align-items-center">
-  <a type="button" id="sortByDate" class="mx-2 my-2 navContent">Sort By Date</a>
+  <a type="button" id="sortByDate" class="btn btn-outline-light mx-2 my-1 px-2 py-1 navContent">Sort By Date</a>
   <ul class="navbar-nav me-auto mb-lg-0">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle mx-2 my-2 navContent" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="btn btn-outline-light nav-link dropdown-toggle mx-2 my-1 px-2 py-1 navContent" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         Genres
       </a>
       <ul class="dropdown-menu bg-dark text-center" aria-labelledby="navbarDropdown">
-        <li class=" border-bottom border-light"><a type="button" id="action" class="navContent mx-2 my-2">Action</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="adventure" class="navContent mx-2 my-2">Adventure</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="animation" class="navContent mx-2 my-2">Animation</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="biography" class="navContent mx-2 my-2">Biography</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="comedy" class="navContent mx-2 my-2">Comedy</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="crime" class="navContent mx-2 my-2">Crime</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="documentary" class="navContent mx-2 my-2">Documentary</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="drama" class="navContent mx-2 my-2">Drama</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="family" class="navContent mx-2 my-2">Family</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="fantastic" class="navContent mx-2 my-2">Fantastic</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="fantasy" class="navContent mx-2 my-2">Fantasy</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="history" class="navContent mx-2 my-2">History</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="horror" class="navContent mx-2 my-2">Horror</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="music" class="navContent mx-2 my-2">Music</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="mystery" class="navContent mx-2 my-2">Mystery</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="romance" class="navContent mx-2 my-2">Romance</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="sciFi" class="navContent mx-2 my-2">Sci-Fi</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="sports" class="navContent mx-2 my-2">Sport</a></li>
-        <li class=" border-bottom border-light"><a type="button" id="thriller" class="navContent mx-2 my-2">Thriller</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="action" onclick="action()" class="navContent mx-2 my-2">Action</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="adventure" onclick="adventure()" class="navContent mx-2 my-2">Adventure</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="animation" onclick="animation()" class="navContent mx-2 my-2">Animation</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="biography" onclick="biography()" class="navContent mx-2 my-2">Biography</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="comedy" onclick="comedy()" class="navContent mx-2 my-2">Comedy</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="crime" onclick="crime()" class="navContent mx-2 my-2">Crime</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="documentary" onclick="documentary()" class="navContent mx-2 my-2">Documentary</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="drama" onclick="drama()" class="navContent mx-2 my-2">Drama</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="family" onclick="family()" class="navContent mx-2 my-2">Family</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="fantastic" onclick="fantastic()" class="navContent mx-2 my-2">Fantastic</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="fantasy" onclick="fantasy()" class="navContent mx-2 my-2">Fantasy</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="history" onclick="history()" class="navContent mx-2 my-2">History</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="horror" onclick="horror()" class="navContent mx-2 my-2">Horror</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="music" onclick="music()" class="navContent mx-2 my-2">Music</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="mystery" onclick="mystery()" class="navContent mx-2 my-2">Mystery</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="romance" onclick="romance()" class="navContent mx-2 my-2">Romance</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="sciFi" onclick="sciFi()" class="navContent mx-2 my-2">Sci-Fi</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="sports" onclick="sports()" class="navContent mx-2 my-2">Sport</a></li>
+        <li class=" border-bottom border-light"><a type="button" id="thriller" onclick="thriller()" class="navContent mx-2 my-2">Thriller</a></li>
       </ul>
     </li>
   </ul>
@@ -86,8 +89,10 @@
     </button>
   </a>
 </section>
-<div class="d-flex justify-content-center align-items-center">
-  <iframe data-aa='2014387' src='//ad.a-ads.com/2014387?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<div class="d-flex align-items-center justify-content-center">
+  <iframe data-aa='2020102' src='//ad.a-ads.com/2020102?size=320x50' id="phoneDisplay" style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+  <iframe data-aa='2020107' src='//ad.a-ads.com/2020107?size=468x60' id="tabletDisplay" style='width:468px; height:60px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+  <iframe data-aa='2020111' src='//ad.a-ads.com/2020111?size=728x90' id="desktopDisplay"style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
 </div>
 <hr class="bg-light" />
 <section id="section2" class="invisible">
@@ -104,12 +109,14 @@
   </svg>
   <div class="alert alert-success d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
-    <div">
+    <div>
       (<span id="contentLength"></span>) movies has been successfully loaded.
     </div>
   </div>
 </section>
 <section class="my-4 mx-2" id="content">
+</section>
+<section class="d-flex align-items-center mx-2 flex-wrap" id="paginationSection">
   <div class="loading">
     <div class="ball"></div>
     <div class="ball"></div>
@@ -117,7 +124,9 @@
   </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script type='text/javascript' onerror='absda()' src='//mufflercypress.com/ab/af/89/abaf891831bb7891c187936b81e84ebb.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="<%=ResolveUrl("~/Scripts/jquery-1.3.2.js")%>" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="./statics/JS/script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
