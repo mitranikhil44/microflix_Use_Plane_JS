@@ -21,10 +21,6 @@
   <title>MICROFLIX | Micro Flix - 480p, 720p & 1080p Movies</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="./statics/CSS/largeDesktop.css" />
-  <link rel="stylesheet", href="./static/CSS/desktopSize.css", media="screen and (max-width: 1199.98px)">
-  <link rel="stylesheet", href="./static/CSS/tabletSize.css", media="screen and (max-width: 991.98px)">
-  <link rel="stylesheet", href="./static/CSS/landScapeMobileSize.css", media="screen and (max-width: 767.98px)">
-  <link rel="stylesheet", href="./static/CSS/portraitMobileSize.css", media="screen and (max-width: 575.98px)">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4724045884570258"
     crossorigin="anonymous"></script>
 </head>
@@ -91,8 +87,6 @@
 </section>
 <div class="d-flex align-items-center justify-content-center">
   <iframe data-aa='2020102' src='//ad.a-ads.com/2020102?size=320x50' id="phoneDisplay" style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  <iframe data-aa='2020107' src='//ad.a-ads.com/2020107?size=468x60' id="tabletDisplay" style='width:468px; height:60px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  <iframe data-aa='2020111' src='//ad.a-ads.com/2020111?size=728x90' id="desktopDisplay"style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
 </div>
 <hr class="bg-light" />
 <section id="section2" class="invisible">
@@ -110,11 +104,11 @@
   <div class="alert alert-success d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
     <div>
-      (<span id="contentLength"></span>) movies has been successfully loaded.
+      (<span id="contentLength"></span>) movies has been successfully loaded
     </div>
   </div>
 </section>
-<section class="my-4 mx-2" id="content">
+<section class="my-4 mx-2 overflow-hidden" id="content">
 </section>
 <section class="d-flex align-items-center mx-2 flex-wrap" id="paginationSection">
   <div class="loading">

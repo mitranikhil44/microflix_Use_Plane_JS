@@ -1,4 +1,4 @@
-  @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -13,15 +13,9 @@
 #genres-content a {
   text-decoration: none;
 }
-.navContent{
+.navContent {
   color: white;
   text-decoration: none;
-}
-#phoneDisplay{
-  display: none;
-}
-#tabletDisplay{
-  display: none;
 }
 #content {
   font-size: 130%;
@@ -42,6 +36,71 @@
   font-family: "Quicksand", sans-serif;
   margin: 2% 0%;
 }
+.screenShots {
+  margin: 2% 0%;
+  align-items: center;
+}
+.screenShots img{
+  width: 33rem;
+  height: 20rem;
+}
+.screenShots img:hover{
+  opacity: .8;
+}
+#showScreenShotDisplay, #showEnglishTrailerDisplay, #showHindiTrailerDisplay{
+  margin: 2% 0;
+  display: none;
+}
+#imageSlider div{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+#imageSlider div img{
+  width: 20%;
+  float: left;
+}
+@keyframes slider{
+  0%{
+    left: 0;
+  }
+  10%{
+    left: 0;
+  }
+  15%{
+    left: -100%;
+  }
+  35%{
+    left: -100%;
+  }
+  40%{
+    left: -200%;
+  }
+  60%{
+    left: -200%;
+  }
+  65%{
+    left: -300%;
+  }
+  85%{
+    left: -300%;
+  }
+  95%{
+    left: -400%;
+  }
+  100%{
+    left: -400%;
+  }
+}
+#watchTrailer{
+  color: #df4759;
+  text-decoration: none;
+}
+#watchTrailer:hover{
+  color:white;
+}
 .card-text {
   font-family: "Baloo Bhai 2", cursive;
 }
@@ -52,7 +111,7 @@
   padding: 2%;
   margin: auto;
 }
-#download-link{
+#download-link {
   display: flex;
   align-items: center;
   margin: 0% 2%;

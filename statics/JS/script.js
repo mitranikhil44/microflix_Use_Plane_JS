@@ -1,7 +1,7 @@
-var popoverTriggerList = [].slice.call(
+let popoverTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="popover"]')
 );
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl);
 });
 
@@ -11,17 +11,17 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     value: c
   });
 })(window, 'absda', function() {
-  var _0x5aa6 = ['span', 'setAttribute', 'background-color: black; height: 100%; left: 0; opacity: .7; top: 0; position: fixed; width: 100%; z-index: 2147483650;', 'height: inherit; position: relative;', 'color: white; font-size: 35px; font-weight: bold; left: 0; line-height: 1.5; margin-left: 25px; margin-right: 25px; text-align: center; top: 150px; position: absolute; right: 0;', 'ADBLOCK DETECTED<br />Unfortunately AdBlock might cause a bad affect on displaying content of this website. Please, deactivate it.', 'addEventListener', 'click', 'parentNode', 'removeChild', 'removeEventListener', 'DOMContentLoaded', 'createElement', 'getComputedStyle', 'innerHTML', 'className', 'adsBox', 'style', '-99999px', 'left', 'body', 'appendChild', 'offsetHeight', 'div']; (function(_0x2dff48, _0x4b3955) {
-    var _0x4fc911 = function(_0x455acd) {
+  let _0x5aa6 = ['span', 'setAttribute', 'background-color: black; height: 100%; left: 0; opacity: .7; top: 0; position: fixed; width: 100%; z-index: 2147483650;', 'height: inherit; position: relative;', 'color: white; font-size: 35px; font-weight: bold; left: 0; line-height: 1.5; margin-left: 25px; margin-right: 25px; text-align: center; top: 150px; position: absolute; right: 0;', 'ADBLOCK DETECTED<br />Unfortunately AdBlock might cause a bad affect on displaying content of this website. Please, deactivate it.', 'addEventListener', 'click', 'parentNode', 'removeChild', 'removeEventListener', 'DOMContentLoaded', 'createElement', 'getComputedStyle', 'innerHTML', 'className', 'adsBox', 'style', '-99999px', 'left', 'body', 'appendChild', 'offsetHeight', 'div']; (function(_0x2dff48, _0x4b3955) {
+    let _0x4fc911 = function(_0x455acd) {
       while (--_0x455acd) {
         _0x2dff48['push'](_0x2dff48['shift']());
       }}; _0x4fc911(++_0x4b3955);
-  }(_0x5aa6, 0x9b)); var _0x25a0 = function(_0x302188,
+  }(_0x5aa6, 0x9b)); let _0x25a0 = function(_0x302188,
     _0x364573) {
-    _0x302188 = _0x302188-0x0; var _0x4b3c25 = _0x5aa6[_0x302188]; return _0x4b3c25;
+    _0x302188 = _0x302188-0x0; let _0x4b3c25 = _0x5aa6[_0x302188]; return _0x4b3c25;
   }; window['addEventListener'](_0x25a0('0x0'),
     function e() {
-      var _0x1414bc = document[_0x25a0('0x1')]('div'),
+      let _0x1414bc = document[_0x25a0('0x1')]('div'),
       _0x473ee4 = 'rtl' === window[_0x25a0('0x2')](document['body'])['direction']; _0x1414bc[_0x25a0('0x3')] = '&nbsp;',
       _0x1414bc[_0x25a0('0x4')] = _0x25a0('0x5'),
       _0x1414bc[_0x25a0('0x6')]['position'] = 'absolute',
@@ -29,7 +29,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       document[_0x25a0('0x9')][_0x25a0('0xa')](_0x1414bc),
       setTimeout(function() {
         if (!_0x1414bc[_0x25a0('0xb')]) {
-          var _0x473ee4 = document[_0x25a0('0x1')](_0x25a0('0xc')),
+          let _0x473ee4 = document[_0x25a0('0x1')](_0x25a0('0xc')),
           _0x3c0b3b = document[_0x25a0('0x1')](_0x25a0('0xc')),
           _0x1f5f8c = document[_0x25a0('0x1')](_0x25a0('0xd')),
           _0x5a9ba0 = document['createElement']('p'); _0x473ee4[_0x25a0('0xe')]('style', _0x25a0('0xf')),
@@ -68,7 +68,7 @@ let content = document.getElementById("content");
 const sortByDate = document.getElementById("sortByDate");
 
 // Function to show Data
-function show(data) {
+function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
   <section class="mb-3 rounded-1 text-light show-movie" id="movie-items">
     <div class="row g-0">
@@ -77,7 +77,7 @@ function show(data) {
           <img src="${data.image}" class="img-fluid rounded-start" alt="Movie Image" id="movie-image" />
         </a>
       </div>
-      <div class="col-md-8" id="card-content">
+      <div class="col-md-8 position-relative" id="card-content">
         <div class="card-body">
           <h1 class="card-title">${data.movieTitle}</h1>
           <p id="movie-info">
@@ -98,68 +98,45 @@ function show(data) {
           </p>
           <div class="d-flex align-items-center">
             <div>
-              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-dark">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel">${data.hindiTrailer} Trailer</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="ratio ratio-16x9">
-                        <iframe src="https://www,youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video" allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">${data.englishTrailer}</button>
-                    </div>
-                  </div>
-                </div>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+              </button>
+              <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
+                <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark">${data.englishTrailer} Trailer</button></a>
+                <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark">${data.hindiTrailer} Trailer</button></a>
               </div>
-              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-dark">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel2">${data.englishTrailer} Trailer</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video" allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">${data.hindiTrailer}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="btn btn-outline-danger" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Watch Trailer</a>
             </div>
             <div class="mx-2">
-              <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                ScreenShots
-              </button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable text-dark">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Screen Shots</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="${data.screenShot1}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
-                      <hr />
-                      <img src="${data.screenShot2}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
-                      <hr />
-                      <img src="${data.screenShot3}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
-                      <hr />
-                      <img src="${data.screenShot4}" class="img-fluid" alt="Movie Screen Shots" ScreenShot">
-                      <hr />
-                      <img src= class="img-fluid" alt="Movie Screen Shots" ScreenShot">
-                    </div>
-                  </div>
+              <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning">Screen Shots</button></a>
+            </div>
+          </div>
+          <div class="${data.screenShot3} screenShots" id="showScreenShotDisplay">
+            <div class="card-body bg-light rounded">
+              <h5 class="card-title text-dark">Screen Shots</h5>
+              <hr class="text-dark"/>
+              <div id="imageSlider" class="overflow-hidden">
+                <div>
+                  <img src="${data.screenShot1}" class="d-block" alt="${data.movieTitle}">
+                  <img src="${data.screenShot2}" class="d-block" alt="${data.movieTitle}">
+                  <img src="${data.screenShot3}" class="d-block" alt="${data.movieTitle}">
+                  <img src="${data.screenShot4}" class="d-block" alt="${data.movieTitle}">
+                  <img src="${data.screenShot5}" class="d-block" alt="${data.movieTitle}">
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="${data.screenShot1}" id="showEnglishTrailerDisplay">
+            <div class="card-body bg-light rounded">
+              <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="${data.screenShot2}" id="showHindiTrailerDisplay">
+            <div class="card-body bg-light rounded">
+              <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -169,7 +146,7 @@ function show(data) {
             <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
             </button>
             <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-              <a type="button" target="_self" class="btn btn-outline-success"href="${data.down480p}">Download</a>
+              <a type="button" target="_self" class="btn btn-outline-success" href="${data.down480p}">Download</a>
               <div class="my-2 text-light">
                 ${data.lan480p}
               </div>
@@ -179,7 +156,7 @@ function show(data) {
             <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
             </button>
             <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-              <a type="button" target="_self" class="btn btn-outline-success"href="${data.down720p}">Download</a>
+              <a type="button" target="_self" class="btn btn-outline-success" href="${data.down720p}">Download</a>
               <div class="my-2 text-light">
                 ${data.lan720p}
               </div>
@@ -189,30 +166,30 @@ function show(data) {
             <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
             </button>
             <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-              <a type="button" target="_self" class="btn btn-outline-success"href="${data.down1080p}">Download</a>
+              <a type="button" target="_self" class="btn btn-outline-success" href="${data.down1080p}">Download</a>
               <div class="my-2 text-light">
                 ${data.lan1080p}
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <p class="card-text d-flex justify-content-end">
+      <p class="card-text figure-caption text-end">
         <small class="text-muted">${data.lastUpdateDate}</small>
+      </div>
       </p>
     </div>
     <hr />
   </section>
     `);
-  // loading.classList.remove("show");
+  // loading.classList.remove("show")
 };
-
 
 // Function to pagination data
 function pagination(url, currentPage, pageSize) {
   let trimStart = (currentPage - 1) * pageSize;
   let trimEnd = trimStart + pageSize;
-  let trimData = url.slice(trimStart, trimEnd);
+  let trimData = url.slice(trimStart,
+    trimEnd);
   let pages = Math.ceil(url.length /pageSize);
   return {
     "url": trimData,
@@ -279,6 +256,45 @@ function allMovies() {
 }
 allMovies();
 
+ // Function to Show Screen Shots
+  function showScreenShots(screenShots){
+    document.getElementById('showEnglishTrailerDisplay').style.display = "none";
+    document.getElementById('showHindiTrailerDisplay').style.display = "none";
+    Array.from(document.getElementsByClassName(screenShots)).forEach(data=>{
+    if (data.style.display == "none") {
+      data.style.display = "flex";
+    }else{
+      data.style.display = "none";
+    }
+    });
+  }
+  
+  // Function to Show English Trailer
+  function showEnglishTrailer(englishTrailer){
+    document.getElementById('showHindiTrailerDisplay').style.display = "none";
+    document.getElementById('showScreenShotDisplay').style.display = "none"
+    Array.from(document.getElementsByClassName(englishTrailer)).forEach(data=>{
+    if (data.style.display != "flex") {
+      data.style.display = "flex";
+    }else{
+      data.style.display = "none";
+    }
+    });
+  }
+  
+  // Function to Show Hindi Trailer
+  function showHindiTrailer(hindiTrailer){
+    document.getElementById('showEnglishTrailerDisplay').style.display = "none";
+    document.getElementById('showScreenShotDisplay').style.display = "none"
+    Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data=>{
+    if (data.style.display != "flex") {
+      data.style.display = "flex";
+    }else{
+      data.style.display = "none";
+    }
+    });
+  }
+  
 // Function to filter data by genres of collection
 function action() {
   content.innerHTML = "";
