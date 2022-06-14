@@ -70,116 +70,116 @@ const sortByDate = document.getElementById("sortByDate");
 // Function to show Data
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
-  <section class="mb-3 rounded-1 text-light show-movie" id="movie-items">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <a href="${data.imdbPage}">
-          <img src="${data.image}" class="img-fluid rounded-start" alt="Movie Image" id="movie-image" />
-        </a>
-      </div>
-      <div class="col-md-8 position-relative" id="card-content">
-        <div class="card-body">
-          <h1 class="card-title">${data.movieTitle}</h1>
-          <p id="movie-info">
-            <b>Duration:</b> ${data.duration}
-          </p>
-          <p id="movie-info">
-            <b>Genres:</b> ${data.genres}
-          </p>
-          <p id="movie-info">
-            <b>Release Date:</b> ${data.releaseDate}
-          </p>
-          <p id="movie-info">
-            <b>Movie Quality:</b> ${data.movieQuality}
-          </p>
-          <hr />
-          <p class="card-text">
-            ${data.storyLineShort}
-          </p>
-          <div class="d-flex align-items-center">
-            <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
-              </button>
-              <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
-                <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark">${data.englishTrailer} Trailer</button></a>
-                <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark">${data.hindiTrailer} Trailer</button></a>
+    <section class="mb-3 rounded-1 text-light show-movie" id="movie-items">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="${data.imdbPage}">
+            <img src="${data.image}" class="img-fluid rounded-start" alt="Movie Image" id="movie-image" />
+          </a>
+        </div>
+        <div class="col-md-8 position-relative" id="card-content">
+          <div class="card-body">
+            <h1 class="card-title">${data.movieTitle}</h1>
+            <p id="movie-info">
+              <b>Duration:</b> ${data.duration}
+            </p>
+            <p id="movie-info">
+              <b>Genres:</b> ${data.genres}
+            </p>
+            <p id="movie-info">
+              <b>Release Date:</b> ${data.releaseDate}
+            </p>
+            <p id="movie-info">
+              <b>Movie Quality:</b> ${data.movieQuality}
+            </p>
+            <hr />
+            <p class="card-text">
+              ${data.storyLineShort}
+            </p>
+            <div class="d-flex align-items-center">
+              <div>
+                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+                </button>
+                <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
+                  <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark">${data.englishTrailer} Trailer</button></a>
+                  <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark">${data.hindiTrailer} Trailer</button></a>
+                </div>
+              </div>
+              <div class="mx-2">
+                <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning">Screen Shots</button></a>
               </div>
             </div>
-            <div class="mx-2">
-              <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning">Screen Shots</button></a>
+            <div class="${data.screenShot3} screenShots" id="showScreenShotDisplay">
+              <div class="card-body bg-light rounded">
+                <h5 class="card-title text-dark">Screen Shots</h5>
+                <hr class="text-dark" />
+                <div id="imageSlider" class="overflow-hidden">
+                  <div>
+                    <img src="${data.screenShot1}" class="d-block" alt="${data.movieTitle}">
+                    <img src="${data.screenShot2}" class="d-block" alt="${data.movieTitle}">
+                    <img src="${data.screenShot3}" class="d-block" alt="${data.movieTitle}">
+                    <img src="${data.screenShot4}" class="d-block" alt="${data.movieTitle}">
+                    <img src="${data.screenShot5}" class="d-block" alt="${data.movieTitle}">
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="${data.screenShot3} screenShots" id="showScreenShotDisplay">
-            <div class="card-body bg-light rounded">
-              <h5 class="card-title text-dark">Screen Shots</h5>
-              <hr class="text-dark"/>
-              <div id="imageSlider" class="overflow-hidden">
+            <div class="${data.screenShot1}" id="showEnglishTrailerDisplay">
+              <div class="card-body bg-light rounded">
+                <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
                 <div>
-                  <img src="${data.screenShot1}" class="d-block" alt="${data.movieTitle}">
-                  <img src="${data.screenShot2}" class="d-block" alt="${data.movieTitle}">
-                  <img src="${data.screenShot3}" class="d-block" alt="${data.movieTitle}">
-                  <img src="${data.screenShot4}" class="d-block" alt="${data.movieTitle}">
-                  <img src="${data.screenShot5}" class="d-block" alt="${data.movieTitle}">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="${data.screenShot2}" id="showHindiTrailerDisplay">
+              <div class="card-body bg-light rounded">
+                <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
+                <div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
           </div>
-          <div class="${data.screenShot1}" id="showEnglishTrailerDisplay">
-            <div class="card-body bg-light rounded">
-              <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
-              <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="download-link">
+            <div>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+              </button>
+              <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+                <a type="button" target="_self" class="btn btn-outline-success" href="${data.down480p}">Download</a>
+                <div class="my-2 text-light">
+                  ${data.lan480p}
+                </div>
+              </div>
+            </div>
+            <div>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+              </button>
+              <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+                <a type="button" target="_self" class="btn btn-outline-success" href="${data.down720p}">Download</a>
+                <div class="my-2 text-light">
+                  ${data.lan720p}
+                </div>
+              </div>
+            </div>
+            <div>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+              </button>
+              <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
+                <a type="button" target="_self" class="btn btn-outline-success" href="${data.down1080p}">Download</a>
+                <div class="my-2 text-light">
+                  ${data.lan1080p}
+                </div>
               </div>
             </div>
           </div>
-          <div class="${data.screenShot2}" id="showHindiTrailerDisplay">
-            <div class="card-body bg-light rounded">
-              <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
-              <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
+          <p class="card-text figure-caption text-end">
+            <small class="text-muted">${data.lastUpdateDate}</small>
           </div>
-        </div>
-        <div id="download-link">
-          <div>
-            <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-            </button>
-            <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-              <a type="button" target="_self" class="btn btn-outline-success" href="${data.down480p}">Download</a>
-              <div class="my-2 text-light">
-                ${data.lan480p}
-              </div>
-            </div>
-          </div>
-          <div>
-            <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-            </button>
-            <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-              <a type="button" target="_self" class="btn btn-outline-success" href="${data.down720p}">Download</a>
-              <div class="my-2 text-light">
-                ${data.lan720p}
-              </div>
-            </div>
-          </div>
-          <div>
-            <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-            </button>
-            <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-              <a type="button" target="_self" class="btn btn-outline-success" href="${data.down1080p}">Download</a>
-              <div class="my-2 text-light">
-                ${data.lan1080p}
-              </div>
-            </div>
-          </div>
-        </div>
-      <p class="card-text figure-caption text-end">
-        <small class="text-muted">${data.lastUpdateDate}</small>
+        </p>
       </div>
-      </p>
-    </div>
-    <hr />
-  </section>
+      <hr />
+    </section>
     `);
   // loading.classList.remove("show")
 };
@@ -199,7 +199,7 @@ function pagination(url, currentPage, pageSize) {
 
 // Function Pagination Button
 let paginationSection = document.getElementById("paginationSection");
-function paginationBtn(pages) {
+function paginationBtn(pages, showContent) {
   paginationSection.innerHTML = "";
   let maxRight = movieUrl.currentPage + Math.floor(movieUrl.window /2);
   let maxLeft = movieUrl.currentPage - Math.floor(movieUrl.window /2);
@@ -215,131 +215,143 @@ function paginationBtn(pages) {
     }
   }
   for (let page = maxLeft; page <= maxRight; page++) {
-    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id)" class="mx-1 my-2 btn btn-outline-light">${page}</button>`;
+    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light">${page}</button>`;
   }
   if (movieUrl.currentPage != 1) {
-    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id)" class="mx-1 my-2 btn btn-outline-light">&#171; First</button>` + paginationSection.innerHTML;
+    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light">&#171; First</button>` + paginationSection.innerHTML;
   }
   if (movieUrl.currentPage != pages) {
-    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id)" class="mx-1 my-2 btn btn-outline-light">&#187; Last</button>`;
+    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light">&#187; Last</button>`;
   }
 }
 
 // Function to show pagination Button
-function paginationButton(index) {
+function paginationButton(index, showNow) {
   content.innerHTML = "";
   movieUrl.currentPage = parseInt(index);
-  allMovies();
+  showNow();
 }
 
 function allMovies() {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+    // Movies load in variables
     let myData = data.items;
+    let movieData = "allMovies";
     document.getElementById("contentLength").innerText = "";
     document.getElementById("contentLength").innerText = myData.length;
     document.getElementById("section2").classList = "visible mx-2";
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      myData.sort(byDate);
-      showData();
-    });
     let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
-    function showData() {
-      movies.forEach((data)=> {
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
         show(data);
-        paginationBtn(arrays.currentPage);
       });
     }
     showData();
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
   });
 }
 allMovies();
 
- // Function to Show Screen Shots
-  function showScreenShots(screenShots){
-    document.getElementById('showEnglishTrailerDisplay').style.display = "none";
-    document.getElementById('showHindiTrailerDisplay').style.display = "none";
-    Array.from(document.getElementsByClassName(screenShots)).forEach(data=>{
+// Function to Show Screen Shots
+function showScreenShots(screenShots) {
+  document.getElementById('showEnglishTrailerDisplay').style.display = "none";
+  document.getElementById('showHindiTrailerDisplay').style.display = "none";
+  Array.from(document.getElementsByClassName(screenShots)).forEach(data=> {
     if (data.style.display == "none") {
       data.style.display = "flex";
-    }else{
+    } else {
       data.style.display = "none";
     }
-    });
-  }
-  
-  // Function to Show English Trailer
-  function showEnglishTrailer(englishTrailer){
-    document.getElementById('showHindiTrailerDisplay').style.display = "none";
-    document.getElementById('showScreenShotDisplay').style.display = "none"
-    Array.from(document.getElementsByClassName(englishTrailer)).forEach(data=>{
+  });
+}
+
+// Function to Show English Trailer
+function showEnglishTrailer(englishTrailer) {
+  document.getElementById('showHindiTrailerDisplay').style.display = "none";
+  document.getElementById('showScreenShotDisplay').style.display = "none"
+  Array.from(document.getElementsByClassName(englishTrailer)).forEach(data=> {
     if (data.style.display != "flex") {
       data.style.display = "flex";
-    }else{
+    } else {
       data.style.display = "none";
     }
-    });
-  }
-  
-  // Function to Show Hindi Trailer
-  function showHindiTrailer(hindiTrailer){
-    document.getElementById('showEnglishTrailerDisplay').style.display = "none";
-    document.getElementById('showScreenShotDisplay').style.display = "none"
-    Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data=>{
+  });
+}
+
+// Function to Show Hindi Trailer
+function showHindiTrailer(hindiTrailer) {
+  document.getElementById('showEnglishTrailerDisplay').style.display = "none";
+  document.getElementById('showScreenShotDisplay').style.display = "none"
+  Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data=> {
     if (data.style.display != "flex") {
       data.style.display = "flex";
-    }else{
+    } else {
       data.style.display = "none";
     }
-    });
-  }
-  
+  });
+}
+
 // Function to filter data by genres of collection
 function action() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
+    let movieData = "action";
     document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Action"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
+
 function animation() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Animation"))
+    let movieData = "animation";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Animation"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -347,72 +359,86 @@ function animation() {
 function adventure() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Adventure"))
+    let movieData = "adventure";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Adventure"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
+
 function comedy() {
-
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Comedy"))
+    let movieData = "comedy";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Comedy"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click", ()=> {
-      content.innerHTML = "";
-      addFilter.sort(byDate);
-      showData();
-    });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
-function crime() {
 
+function crime() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Crime"))
+    let movieData = "crime";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Crime"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -420,24 +446,28 @@ function crime() {
 function documentary() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Documentary"))
+    let movieData = "documentary";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Documentary"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -445,24 +475,28 @@ function documentary() {
 function drama() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Drama"))
+    let movieData = "drama";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Drama"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -470,24 +504,28 @@ function drama() {
 function fantastic() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Fantastic"))
+    let movieData = "fantastic";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Fantastic"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -495,24 +533,28 @@ function fantastic() {
 function fantasy() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Fantasy"))
+    let movieData = "fantasy";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Fantasy"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -520,24 +562,28 @@ function fantasy() {
 function family() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Family"))
+    let movieData = "family";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Family"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -545,24 +591,28 @@ function family() {
 function history() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("History"))
+    let movieData = "history";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("History"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -570,24 +620,28 @@ function history() {
 function horror() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Horror"))
+    let movieData = "horror";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Horror"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -595,24 +649,28 @@ function horror() {
 function music() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Music"))
+    let movieData = "music";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Music"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -620,24 +678,28 @@ function music() {
 function mystery() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Mystery"))
+    let movieData = "mystery";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Mystery"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -645,24 +707,28 @@ function mystery() {
 function romance() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Romance"))
+    let movieData = "romance";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Romance"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -670,24 +736,28 @@ function romance() {
 function thriller() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Thriller"))
+    let movieData = "thriller";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Thriller"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -695,24 +765,28 @@ function thriller() {
 function sciFi() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"))
+    let movieData = "sciFi";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -720,24 +794,28 @@ function sciFi() {
 function sports() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Sports"))
+    let movieData = "sports";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Sports"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
@@ -745,24 +823,28 @@ function sports() {
 function biography() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+
+    // Movies load in variables
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
-    let addFilter = myData.filter(x=> x.genres.includes("Biography"))
+    let movieData = "biography";
+    document.getElementById("section2").classList = "invisible";
+    let addFilter = myData.filter(x=> x.genres.includes("Biography"));
     document.getElementById("contentLength").innerText = "";
     document.getElementById("section2").classList = "visible mx-2";
     document.getElementById("contentLength").innerText = addFilter.length;
-    sortByDate.addEventListener("click",
-      ()=> {
-        content.innerHTML = "";
-        addFilter.sort(byDate);
-        showData();
-      });
-    content.style.display = "block";
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
       });
     }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
     showData();
   });
 };
