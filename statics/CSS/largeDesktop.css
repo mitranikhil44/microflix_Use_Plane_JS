@@ -2,6 +2,23 @@
 * {
   box-sizing: border-box;
 }
+body{
+  background: black;
+}
+#navbar {
+  position: sticky;
+  top: 0px;
+  width: 98%;
+  margin: auto;
+  z-index: 1;
+  background: black;
+  border: 2px solid black;
+  border-radius: 0px 0px 2px 2px;
+}
+#navbar a {
+  text-decoration: none;
+  color: white;
+}
 #logo {
   width: 15%;
 }
@@ -11,10 +28,6 @@
   border-radius: 6px;
 }
 #genres-content a {
-  text-decoration: none;
-}
-.navContent {
-  color: white;
   text-decoration: none;
 }
 #content {
@@ -37,69 +50,33 @@
   margin: 2% 0%;
 }
 .screenShots {
-  margin: 2% 0%;
-  align-items: center;
+  position: absolute;
+  border-radius: 4px;
+  background: white;
+  overflow: scroll;
+  height: 95%;
+  width: 90%;
+  top: 0px;
 }
-.screenShots img{
+.screenShots img {
   width: 33rem;
   height: 20rem;
+  border-radius: 4px;
+  margin: 2% 0%;
 }
-.screenShots img:hover{
-  opacity: .8;
+.screenShots img:hover {
+  opacity: .9;
 }
-#showScreenShotDisplay, #showEnglishTrailerDisplay, #showHindiTrailerDisplay{
+#showScreenShotDisplay, #showEnglishTrailerDisplay, #showHindiTrailerDisplay {
   margin: 2% 0;
   display: none;
 }
-#imageSlider div{
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: 20s slider infinite;
-}
-#imageSlider div img{
-  width: 20%;
-  float: left;
-}
-@keyframes slider{
-  0%{
-    left: 0;
-  }
-  10%{
-    left: 0;
-  }
-  15%{
-    left: -100%;
-  }
-  35%{
-    left: -100%;
-  }
-  40%{
-    left: -200%;
-  }
-  60%{
-    left: -200%;
-  }
-  65%{
-    left: -300%;
-  }
-  85%{
-    left: -300%;
-  }
-  95%{
-    left: -400%;
-  }
-  100%{
-    left: -400%;
-  }
-}
-#watchTrailer{
+#watchTrailer {
   color: #df4759;
   text-decoration: none;
 }
-#watchTrailer:hover{
-  color:white;
+#watchTrailer:hover {
+  color: white;
 }
 .card-text {
   font-family: "Baloo Bhai 2", cursive;
@@ -127,6 +104,13 @@
 }
 .loading.show {
   opacity: 1;
+}
+#foot{
+  
+}
+#foot a{
+  margin: 1% 2%;
+  text-decoration: none;
 }
 .ball {
   background-color: white;
