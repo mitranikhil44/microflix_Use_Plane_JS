@@ -71,14 +71,14 @@ const sortByDate = document.getElementById("sortByDate");
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
     <section>
-      <div class="mb-3 rounded-1 text-light show-movie bg-dark" id="movie-items">
+      <div class="mb-3 rounded-1 text-light bg-dark" id="movie-items">
         <div class="row g-0">
           <div class="col-md-4 px-2 py-2">
             <a href="${data.imdbPage}">
               <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
             </a>
           </div>
-          <div class="col-md-8 position-relative" id="card-content">
+          <div class="col-md-8" id="card-content">
             <div class="card-body">
               <h1 class="card-title">${data.movieTitle}</h1>
               <p id="movie-info">
@@ -110,10 +110,9 @@ function show(data, index) {
                   <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning">Screen Shots</button></a>
                 </div>
               </div>
-              <div class="${data.screenShot3} screenShots" id="showScreenShotDisplay">
+              <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
                 <div class="card-body rounded alert-dismissible">
                   <h5 class="card-title text-dark">Screen Shots</h5>
-                  <button type="button" class="btn-close d-inline float-end" aria-label="Close"></button>
                   <hr class="bg-dark" />
                   <div>
                       <img src="${data.screenShot1}" alt="${data.movieTitle}">
@@ -124,19 +123,21 @@ function show(data, index) {
                   </div>
                 </div>
               </div>
-              <div class="${data.screenShot1}" id="showEnglishTrailerDisplay">
+              <div class="${data.screenShot1} bg-light" id="showEnglishTrailerDisplay">
                 <div class="card-body bg-light rounded">
                   <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
+                  <hr / class="bg-dark">
                   <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
-              <div class="${data.screenShot2}" id="showHindiTrailerDisplay">
+              <div class="${data.screenShot2} bg-light" id="showHindiTrailerDisplay">
                 <div class="card-body bg-light rounded">
                   <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
+                  <hr / class="bg-dark">
                   <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
@@ -281,7 +282,7 @@ function showEnglishTrailer(englishTrailer) {
       data.style.display = "flex";
     } else {
       data.style.display = "none";
-    };
+    }
   });
 }
 
@@ -294,7 +295,7 @@ function showHindiTrailer(hindiTrailer) {
       data.style.display = "flex";
     } else {
       data.style.display = "none";
-    };
+    }
   });
 }
 

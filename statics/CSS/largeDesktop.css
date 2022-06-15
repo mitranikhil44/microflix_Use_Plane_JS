@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
 * {
+   margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
-body{
+body {
   background: black;
 }
 #navbar {
@@ -11,13 +13,14 @@ body{
   width: 98%;
   margin: auto;
   z-index: 1;
-  background: black;
-  border: 2px solid black;
+  background: white;
+  border: 2px solid white;
   border-radius: 0px 0px 2px 2px;
+  padding: 0% 2%;
 }
 #navbar a {
   text-decoration: none;
-  color: white;
+  color: gray;
 }
 #logo {
   width: 15%;
@@ -50,19 +53,16 @@ body{
   margin: 2% 0%;
 }
 .screenShots {
-  position: absolute;
   border-radius: 4px;
-  background: white;
   overflow: scroll;
-  height: 95%;
-  width: 90%;
-  top: 0px;
+  height: 20rem;
+  width: 100%;
 }
 .screenShots img {
-  width: 33rem;
+  width: 100%;
   height: 20rem;
   border-radius: 4px;
-  margin: 2% 0%;
+  margin: 2% auto;
 }
 .screenShots img:hover {
   opacity: .9;
@@ -105,10 +105,8 @@ body{
 .loading.show {
   opacity: 1;
 }
-#foot{
-  
-}
-#foot a{
+#foot {}
+#foot a {
   margin: 1% 2%;
   text-decoration: none;
 }
