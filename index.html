@@ -30,9 +30,9 @@
         <div class="d-flex justify-content-center align-items-center mb-2">
           <ul class="navbar-nav me-auto mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="btn btn-outline-dark nav-link dropdown-toggle px-2 py-1 mt-2" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-outline-dark nav-link dropdown-toggle px-2 py-1 mt-2" id="navbarDropdown" onclick="genresBtnColor()"data-bs-toggle="dropdown" aria-expanded="false">
                 Genres
-              </a>
+              </button>
               <ul class="dropdown-menu bg-dark text-center" aria-labelledby="navbarDropdown" id="genresContent">
                 <li class="navContent mx-2 my-2 border-bottom border-light"><a type="button" id="action" onclick="action()">Action</a></li>
                 <li class="navContent mx-2 my-2 border-bottom border-light"><a type="button" id="adventure" onclick="adventure()">Adventure</a></li>
@@ -69,18 +69,6 @@
       </form>
     </div>
   </nav>
-  <div class="d-flex align-items-center justify-content-center">
-    <script type="text/javascript">
-      atOptions = {
-        'key': '177c6915c1691e131933eb27873080e9',
-        'format': 'iframe',
-        'height': 300,
-        'width': 160,
-        'params': {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's': '') + '://mufflercypress.com/177c6915c1691e131933eb27873080e9/invoke.js"></scr' + 'ipt>');
-    </script>
-  </div>
   <hr class="bg-light" />
   <section id="section2" class="invisible">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -111,6 +99,26 @@
         </div> -->
   </section>
   <hr / class="bg-light">
+  <div class="d-flex align-items-center justify-content-center">
+    <script type="text/javascript">
+      atOptions = {
+        'key': '177c6915c1691e131933eb27873080e9',
+        'format': 'iframe',
+        'height': 300,
+        'width': 160,
+        'params': {}
+      };
+      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's': '') + '://mufflercypress.com/177c6915c1691e131933eb27873080e9/invoke.js"></scr' + 'ipt>');
+      function genresBtnColor(){
+        let genresBtnColor = document.getElementById("navbarDropdown");
+        if(genresBtnColor.style.color != "white"){
+          genresBtnColor.style.color = "white";
+        }else{
+          genresBtnColor.style.color = "#343a40"
+        }
+      }
+    </script>
+  </div>
   <footer id="foot">
     <div class="container text-center">
       <h1 class="mb-5">Follow us</h1>

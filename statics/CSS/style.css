@@ -28,7 +28,10 @@ body {
   font-size: 120%;
   overflow-x: scroll;
 }
-#navbar a {
+#navbar button {
+  color: #343a40;
+}
+#genresContent a {
   text-decoration: none;
   color: white;
 }
