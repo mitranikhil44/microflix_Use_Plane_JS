@@ -71,7 +71,7 @@ const sortByDate = document.getElementById("sortByDate");
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
     <section>
-      <div class="mb-3 rounded-1 text-light bg-dark" id="movie-items">
+      <div class="mb-3 rounded-1 text-light bg-dark position relative" id="movie-items">
         <div class="row g-0">
           <div class="col-md-4 px-2 py-2">
             <a href="${data.imdbPage}">
@@ -79,47 +79,52 @@ function show(data, index) {
             </a>
           </div>
           <div class="col-md-8" id="card-content">
-            <div class="card-body">
+            <div class="card-body" id="movie-info">
               <h1 class="card-title">${data.movieTitle}</h1>
-              <p id="movie-info">
+              <p>
                 <b>Duration:</b> ${data.duration}
               </p>
-              <p id="movie-info">
+              <p>
                 <b>Genres:</b> ${data.genres}
               </p>
-              <p id="movie-info">
+              <p>
                 <b>Release Date:</b> ${data.releaseDate}
               </p>
-              <p id="movie-info">
+              <p>
                 <b>Movie Quality:</b> ${data.movieQuality}
               </p>
               <hr />
-              <p class="card-text">
-                ${data.storyLineShort}
+              <p>
+                ${data.storyLineShort} <a href="${data.imdbPage}"> Read More... </a>
               </p>
               <div class="d-flex align-items-center">
                 <div>
-                  <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+                  <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
                   </button>
                   <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
-                    <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark">${data.englishTrailer} Trailer</button></a>
-                    <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark">${data.hindiTrailer} Trailer</button></a>
+                    <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.englishTrailer} Trailer</button></a>
+                    <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.hindiTrailer} Trailer</button></a>
                   </div>
                 </div>
                 <div class="mx-2">
-                  <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning">Screen Shots</button></a>
+                  <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning btnSize">Screen Shots</button></a>
                 </div>
               </div>
               <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
                 <div class="card-body rounded alert-dismissible">
-                  <h5 class="card-title text-dark">Screen Shots</h5>
+                  <h5 class="card-title text-dark fs-3">Screen Shots</h5>
                   <hr class="bg-dark" />
                   <div>
                       <img src="${data.screenShot1}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
                       <img src="${data.screenShot2}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
                       <img src="${data.screenShot3}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
                       <img src="${data.screenShot4}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
                       <img src="${data.screenShot5}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
                   </div>
                 </div>
               </div>
@@ -128,7 +133,7 @@ function show(data, index) {
                   <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
                   <hr / class="bg-dark">
                   <div>
-                    <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
@@ -137,49 +142,49 @@ function show(data, index) {
                   <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
                   <hr / class="bg-dark">
                   <div>
-                    <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
             </div>
             <div id="download-link">
               <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
                 </button>
-                <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-                  <a type="button" target="_self" class="btn btn-outline-success" href="${data.down480p}">Download</a>
-                  <div class="my-2 text-light">
+                <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+                  <a type="button" target="_self" class="btn btn-success" href="${data.down480p}">Download</a>
+                  <div class="my-2">
                     ${data.lan480p}
                   </div>
                 </div>
               </div>
               <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
                 </button>
-                <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-                  <a type="button" target="_self" class="btn btn-outline-success" href="${data.down720p}">Download</a>
-                  <div class="my-2 text-light">
+                <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+                  <a type="button" target="_self" class="btn btn-success" href="${data.down720p}">Download</a>
+                  <div class="my-2">
                     ${data.lan720p}
                   </div>
                 </div>
               </div>
               <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
                 </button>
-                <div class="text-center dropdown-menu bg-dark border-dark my-2" aria-labelledby="btnGroupDrop1">
-                  <a type="button" target="_self" class="btn btn-outline-success" href="${data.down1080p}">Download</a>
-                  <div class="my-2 text-light">
+                <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+                  <a type="button" target="_self" class="btn btn-success" href="${data.down1080p}">Download</a>
+                  <div class="my-2">
                     ${data.lan1080p}
                   </div>
                 </div>
               </div>
             </div>
-            <p class="card-text figure-caption text-end">
-              <small class="text-muted">${data.lastUpdateDate}</small>
-            </div>
-          </p>
+          </div> 
         </div>
         <hr />
+        <p class="card-text figure-caption text-end">
+          <small class="text-muted">${data.lastUpdateDate}</small>
+        </p>
       </div>
     </section>
     `);
@@ -217,13 +222,13 @@ function paginationBtn(pages, showContent) {
     }
   }
   for (let page = maxLeft; page <= maxRight; page++) {
-    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light">${page}</button>`;
+    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">${page}</button>`;
   }
   if (movieUrl.currentPage != 1) {
-    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light">&#171; First</button>` + paginationSection.innerHTML;
+    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#171; First</button>` + paginationSection.innerHTML;
   }
   if (movieUrl.currentPage != pages) {
-    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light">&#187; Last</button>`;
+    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last</button>`;
   }
 }
 
