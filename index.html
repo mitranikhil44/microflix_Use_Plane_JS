@@ -21,8 +21,10 @@
   <link rel="stylesheet" type="text/css" href="./statics/CSS/style.css" />
 </head>
 <body>
-  <div class="container-fluid mb-2">
-    <img class="" id="logo" src="./statics/images/logo.jpg" alt="logo" />
+  <div id="logo">
+    <a href="http://microflix.tk">
+      <img class="" src="./statics/images/logo.jpg" alt="logo" />
+    </a>
   </div>
   <nav id="navbar" class="bg-light">
     <div class="d-flex align-items-center justify-content-between">
@@ -93,10 +95,10 @@
   </section>
   <section class="d-flex align-items-center mx-2 flex-wrap mb-2" id="paginationSection">
     <!-- <div class="loading">
-          <div class="ball"></div>
-          <div class="ball"></div>
-          <div class="ball"></div>
-        </div> -->
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+            </div> -->
   </section>
   <hr / class="bg-light">
   <div class="d-flex align-items-center justify-content-center">
@@ -109,11 +111,11 @@
         'params': {}
       };
       document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's': '') + '://mufflercypress.com/177c6915c1691e131933eb27873080e9/invoke.js"></scr' + 'ipt>');
-      function genresBtnColor(){
+      function genresBtnColor() {
         let genresBtnColor = document.getElementById("navbarDropdown");
-        if(genresBtnColor.style.color != "white"){
+        if (genresBtnColor.style.color != "white") {
           genresBtnColor.style.color = "white";
-        }else{
+        } else {
           genresBtnColor.style.color = "#343a40"
         }
       }

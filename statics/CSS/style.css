@@ -9,7 +9,7 @@
 body {
   background-color: black;
 }
-#logo {
+#logo img{
   width: 15%;
   margin: 2%;
 }
@@ -278,6 +278,16 @@ body {
 
 /* Desktop Size Css */
 @media only screen and (max-width: 575.98px) {
+ 
+ #logo{
+   width: 40%;
+   margin: auto;
+ }
+  #logo img{
+  width: 100%;
+  margin: 5% 0%;
+}
+
   /* Navbar Stuff */
   #navbar {
     border-radius: 0px 0px 2px 2px;
