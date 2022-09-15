@@ -222,13 +222,13 @@ function paginationBtn(pages, showContent) {
     }
   }
   for (let page = maxLeft; page <= maxRight; page++) {
-    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">${page}</button>`;
+    paginationSection.innerHTML += `<button id="${page}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-dark paginationSize">${page}</button>`;
   }
   if (movieUrl.currentPage != 1) {
-    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#171; First</button>` + paginationSection.innerHTML;
+    paginationSection.innerHTML = `<button id="${1}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-dark paginationSize">&#171; First</button>` + paginationSection.innerHTML;
   }
   if (movieUrl.currentPage != pages) {
-    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last</button>`;
+    paginationSection.innerHTML += `<button id="${pages}" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-dark paginationSize">&#187; Last</button>`;
   }
 }
 
@@ -245,12 +245,9 @@ function allMovies() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "allMovies";
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("contentLength").innerText = myData.length;
-    document.getElementById("section2").classList = "visible mx-2";
     let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
-
+    
     // Function to show Data
     async function showData() {
       await movies.forEach((data)=> {
@@ -304,20 +301,64 @@ function showHindiTrailer(hindiTrailer) {
   });
 }
 
+// Function to show cateogries
+function showHindiMovies() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+    // Movies load in variables
+    let myData = data.items;
+    let movieData = "showHindiMovies";
+    let addFilter = myData.filter(x=> x.lan720p.includes("Hindi"));
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
+      });
+}
+
+// Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
+    showData();
+  });
+};
+
+function showEnglishMovies() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+    // Movies load in variables
+    let myData = data.items;
+    let movieData = "showEnglishMovies";
+    let addFilter = myData.filter(x=> x.lan720p.includes("English"));
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
+      });
+}
+
+// Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
+    showData();
+  });
+};
+
 // Function to filter data by genres of collection
 function action() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "action";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Action"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -337,16 +378,11 @@ function action() {
 function animation() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
-
-
+    
     // Movies load in variables
     let myData = data.items;
     let movieData = "animation";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Animation"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -367,15 +403,10 @@ function adventure() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "adventure";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Adventure"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -396,15 +427,10 @@ function comedy() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "comedy";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Comedy"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -425,15 +451,10 @@ function crime() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "crime";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Crime"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -454,15 +475,10 @@ function documentary() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "documentary";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Documentary"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -483,15 +499,10 @@ function drama() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "drama";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Drama"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -512,15 +523,10 @@ function fantastic() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "fantastic";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Fantastic"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -541,15 +547,10 @@ function fantasy() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "fantasy";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Fantasy"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -570,15 +571,10 @@ function family() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "family";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Family"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -599,15 +595,10 @@ function history() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "history";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("History"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -628,15 +619,10 @@ function horror() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "horror";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Horror"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -657,15 +643,34 @@ function music() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
+    // Movies load in variables
+    let myData = data.items;
+    let movieData = "music";
+    let addFilter = myData.filter(x=> x.genres.includes("Music"));
+    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
+
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
+      });
+    }
+
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
+    showData();
+  });
+};
+
+function musical() {
+  content.innerHTML = "";
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
     let myData = data.items;
     let movieData = "music";
-    document.getElementById("section2").classList = "invisible";
-    let addFilter = myData.filter(x=> x.genres.includes("Music"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
+    let addFilter = myData.filter(x=> x.genres.includes("Musical"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -686,15 +691,10 @@ function mystery() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "mystery";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Mystery"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -715,15 +715,10 @@ function romance() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "romance";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Romance"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -744,15 +739,10 @@ function thriller() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "thriller";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Thriller"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -773,15 +763,10 @@ function sciFi() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "sciFi";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -802,15 +787,10 @@ function sports() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "sports";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Sports"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -831,15 +811,10 @@ function biography() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-
     // Movies load in variables
     let myData = data.items;
     let movieData = "biography";
-    document.getElementById("section2").classList = "invisible";
     let addFilter = myData.filter(x=> x.genres.includes("Biography"));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
@@ -869,11 +844,9 @@ searchMovies.addEventListener("input", (e)=> {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
-    document.getElementById("section2").classList = "invisible ";
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
-    document.getElementById("contentLength").innerText = "";
-    document.getElementById("section2").classList = "visible mx-2";
-    document.getElementById("contentLength").innerText = addFilter.length;
+    
+    // function to showData
     function showData() {
       addFilter.forEach((data)=> {
         show(data); paginationSection.innerHTML = "";
@@ -885,6 +858,7 @@ searchMovies.addEventListener("input", (e)=> {
     showData();
   });
 });
+
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
 //   const {

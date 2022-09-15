@@ -28,15 +28,12 @@ body {
   font-size: 120%;
   overflow-x: scroll;
 }
-#navbar button {
-  color: #343a40;
-}
 #genresContent a {
   text-decoration: none;
   color: white;
 }
 #search-movies {
-  padding-left: 16%;
+  padding-left: 18%;
 }
 #searchBtnIcon {
   position: absolute;
@@ -123,6 +120,9 @@ body {
 }
 
 /* Fotter Stuff */
+#foot {
+  color: white;
+}
 #foot a {
   margin: 2% 3%;
   text-decoration: none;
@@ -156,7 +156,7 @@ body {
     font-size: 100%;
   }
   #search-movies {
-    padding-left: 15%;
+    padding-left: 18%;
   }
 
   /* Content Stuff */
@@ -197,7 +197,7 @@ body {
     border-radius: 0px 0px 4px 4px;
   }
   #genresContent {
-    height: 30rem;
+    height: 28rem;
   }
   #navbar a {
     font-size: 85%;
@@ -244,7 +244,7 @@ body {
     border-radius: 0px 0px 3px 3px;
   }
   #genresContent {
-    height: 20rem;
+    height: 18rem;
   }
   #navbar a {
     font-size: 80%;
@@ -293,7 +293,7 @@ body {
     border-radius: 0px 0px 2px 2px;
   }
   #genresContent {
-    height: 26rem;
+    height: 20rem;
   }
   #navbar a {
     font-size: 70%;
