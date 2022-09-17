@@ -70,7 +70,6 @@ const sortByDate = document.getElementById("sortByDate");
 // Function to show Data
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
-    <section>
       <div class="mb-3 rounded-1 text-light bg-dark position relative" id="movie-items">
         <div class="row g-0">
           <div class="col-md-4 px-2 py-2">
@@ -186,7 +185,6 @@ function show(data, index) {
           <small class="text-muted">${data.lastUpdateDate}</small>
         </p>
       </div>
-    </section>
     `);
   // loading.classList.remove("show")
 };
