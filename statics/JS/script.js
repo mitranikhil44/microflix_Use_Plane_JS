@@ -54,7 +54,7 @@ let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
 // Function to sort movie by date
 function byDate(a, b) {
-  return new Date(b.shortByDate).valueOf() - new Date(a.shortByDate).valueOf()
+  return new Date(b.shortByDate).valueOf() - new Date(a.shortByDate).valueOf();
 }
 
 // Function  to load contents
@@ -63,131 +63,131 @@ let movieUrl = {
   "currentPage": 1,
   "pageSize": 10,
   "window": 5,
-}
+};
 let content = document.getElementById("content");
 const sortByDate = document.getElementById("sortByDate");
 
 // Function to show Data
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
-      <div class="mb-3 rounded-1 text-light bg-dark position relative" id="movie-items">
-        <div class="row g-0">
-          <div class="col-md-4 px-2 py-2">
-            <a href="${data.imdbPage}">
-              <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
-            </a>
-          </div>
-          <div class="col-md-8" id="card-content">
-            <div class="card-body" id="movie-info">
-              <h1 class="card-title">${data.movieTitle}</h1>
-              <p>
-                <b>Duration:</b> ${data.duration}
-              </p>
-              <p>
-                <b>Genres:</b> ${data.genres}
-              </p>
-              <p>
-                <b>Release Date:</b> ${data.releaseDate}
-              </p>
-              <p>
-                <b>Movie Quality:</b> ${data.movieQuality}
-              </p>
-              <hr />
-              <p>
-                ${data.storyLineShort} <a href="${data.imdbPage}"> Read More... </a>
-              </p>
-              <div class="d-flex align-items-center">
-                <div>
-                  <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
-                  </button>
-                  <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
-                    <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.englishTrailer} Trailer</button></a>
-                    <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.hindiTrailer} Trailer</button></a>
-                  </div>
-                </div>
-                <div class="mx-2">
-                  <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning btnSize">Screen Shots</button></a>
-                </div>
-              </div>
-              <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
-                <div class="card-body rounded alert-dismissible">
-                  <h5 class="card-title text-dark fs-3">Screen Shots</h5>
-                  <hr class="bg-dark" />
-                  <div>
-                      <img src="${data.screenShot1}" alt="${data.movieTitle}">
-                      <hr class="bg-dark" />
-                      <img src="${data.screenShot2}" alt="${data.movieTitle}">
-                      <hr class="bg-dark" />
-                      <img src="${data.screenShot3}" alt="${data.movieTitle}">
-                      <hr class="bg-dark" />
-                      <img src="${data.screenShot4}" alt="${data.movieTitle}">
-                      <hr class="bg-dark" />
-                      <img src="${data.screenShot5}" alt="${data.movieTitle}">
-                      <hr class="bg-dark" />
-                  </div>
-                </div>
-              </div>
-              <div class="${data.screenShot1} bg-light" id="showEnglishTrailerDisplay">
-                <div class="card-body bg-light rounded">
-                  <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
-                  <hr / class="bg-dark">
-                  <div>
-                    <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="${data.screenShot2} bg-light" id="showHindiTrailerDisplay">
-                <div class="card-body bg-light rounded">
-                  <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
-                  <hr / class="bg-dark">
-                  <div>
-                    <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="download-link">
-              <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-                </button>
-                <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
-                  <a type="button" target="_self" class="btn btn-success" href="${data.down480p}">Download</a>
-                  <div class="my-2">
-                    ${data.lan480p}
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-                </button>
-                <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
-                  <a type="button" target="_self" class="btn btn-success" href="${data.down720p}">Download</a>
-                  <div class="my-2">
-                    ${data.lan720p}
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-                </button>
-                <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
-                  <a type="button" target="_self" class="btn btn-success" href="${data.down1080p}">Download</a>
-                  <div class="my-2">
-                    ${data.lan1080p}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div>
-        <hr />
-        <p class="card-text figure-caption text-end">
-          <small class="text-muted">${data.lastUpdateDate}</small>
-        </p>
-      </div>
+    <div class="mb-3 rounded-1 text-light bg-dark position relative" id="movie-items">
+    <div class="row g-0">
+    <div class="col-md-4 px-2 py-2">
+    <a target="_blank" href="${data.imdbPage}">
+    <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
+    </a>
+    </div>
+    <div class="col-md-8" id="card-content">
+    <div class="card-body" id="movie-info">
+    <h1 class="card-title">${data.movieTitle}</h1>
+    <p>
+    <b>Duration:</b> ${data.duration}
+    </p>
+    <p>
+    <b>Genres:</b> ${data.genres}
+    </p>
+    <p>
+    <b>Release Date:</b> ${data.releaseDate}
+    </p>
+    <p>
+    <b>Movie Quality:</b> ${data.movieQuality}
+    </p>
+    <hr />
+    <p>
+    ${data.storyLineShort} <a target="_blank" href="${data.imdbPage}"> Read More... </a>
+    </p>
+    <div class="d-flex align-items-center">
+    <div>
+    <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+    </button>
+    <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
+    <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.englishTrailer} Trailer</button></a>
+    <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.hindiTrailer} Trailer</button></a>
+    </div>
+    </div>
+    <div class="mx-2">
+    <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning btnSize">Screen Shots</button></a>
+    </div>
+    </div>
+    <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
+    <div class="card-body rounded alert-dismissible">
+    <h5 class="card-title text-dark fs-3">Screen Shots</h5>
+    <hr class="bg-dark" />
+    <div>
+    <img src="${data.screenShot1}" alt="${data.movieTitle}">
+    <hr class="bg-dark" />
+    <img src="${data.screenShot2}" alt="${data.movieTitle}">
+    <hr class="bg-dark" />
+    <img src="${data.screenShot3}" alt="${data.movieTitle}">
+    <hr class="bg-dark" />
+    <img src="${data.screenShot4}" alt="${data.movieTitle}">
+    <hr class="bg-dark" />
+    <img src="${data.screenShot5}" alt="${data.movieTitle}">
+    <hr class="bg-dark" />
+    </div>
+    </div>
+    </div>
+    <div class="${data.screenShot1} bg-light" id="showEnglishTrailerDisplay">
+    <div class="card-body bg-light rounded">
+    <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
+    <hr / class="bg-dark">
+    <div>
+    <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    </div>
+    </div>
+    <div class="${data.screenShot2} bg-light" id="showHindiTrailerDisplay">
+    <div class="card-body bg-light rounded">
+    <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
+    <hr / class="bg-dark">
+    <div>
+    <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div id="download-link">
+    <div>
+    <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+    </button>
+    <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+    <a type="button" target="_self" class="btn btn-success" href="${data.down480p}">Download</a>
+    <div class="my-2">
+    ${data.lan480p}
+    </div>
+    </div>
+    </div>
+    <div>
+    <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+    </button>
+    <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+    <a type="button" target="_self" class="btn btn-success" href="${data.down720p}">Download</a>
+    <div class="my-2">
+    ${data.lan720p}
+    </div>
+    </div>
+    </div>
+    <div>
+    <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+    </button>
+    <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+    <a type="button" target="_self" class="btn btn-success" href="${data.down1080p}">Download</a>
+    <div class="my-2">
+    ${data.lan1080p}
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <hr />
+    <p class="card-text figure-caption text-end">
+    <small class="text-muted">${data.lastUpdateDate}</small>
+    </p>
+    </div>
     `);
   // loading.classList.remove("show")
-};
+}
 
 // Function to pagination data
 function pagination(url, currentPage, pageSize) {
@@ -200,7 +200,7 @@ function pagination(url, currentPage, pageSize) {
     "url": trimData,
     "currentPage": pages
   };
-};
+}
 
 // Function Pagination Button
 let paginationSection = document.getElementById("paginationSection");
@@ -214,7 +214,7 @@ function paginationBtn(pages, showContent) {
   }
   if (maxRight > pages) {
     maxLeft = pages - (movieUrl.window - 1);
-    maxRight = pages
+    maxRight = pages;
     if (maxLeft < 1) {
       maxLeft = 1;
     }
@@ -245,7 +245,7 @@ function allMovies() {
     let movieData = "allMovies";
     let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
-    
+
     // Function to show Data
     async function showData() {
       await movies.forEach((data)=> {
@@ -276,7 +276,7 @@ function showScreenShots(screenShots) {
 // Function to Show English Trailer
 function showEnglishTrailer(englishTrailer) {
   document.getElementById('showHindiTrailerDisplay').style.display = "none";
-  document.getElementById('showScreenShotDisplay').style.display = "none"
+  document.getElementById('showScreenShotDisplay').style.display = "none";
   Array.from(document.getElementsByClassName(englishTrailer)).forEach(data=> {
     if (data.style.display != "flex") {
       data.style.display = "flex";
@@ -289,7 +289,7 @@ function showEnglishTrailer(englishTrailer) {
 // Function to Show Hindi Trailer
 function showHindiTrailer(hindiTrailer) {
   document.getElementById('showEnglishTrailerDisplay').style.display = "none";
-  document.getElementById('showScreenShotDisplay').style.display = "none"
+  document.getElementById('showScreenShotDisplay').style.display = "none";
   Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data=> {
     if (data.style.display != "flex") {
       data.style.display = "flex";
@@ -316,9 +316,9 @@ function showHindiMovies() {
       await movies.forEach((data)=> {
         show(data);
       });
-}
+    }
 
-// Show pagination Button
+    // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
   });
@@ -340,9 +340,9 @@ function showEnglishMovies() {
       await movies.forEach((data)=> {
         show(data);
       });
-}
+    }
 
-// Show pagination Button
+    // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
   });
@@ -376,7 +376,7 @@ function action() {
 function animation() {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
-    
+
     // Movies load in variables
     let myData = data.items;
     let movieData = "animation";
@@ -843,7 +843,7 @@ searchMovies.addEventListener("input", (e)=> {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
-    
+
     // function to showData
     function showData() {
       addFilter.forEach((data)=> {
