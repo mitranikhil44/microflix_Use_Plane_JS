@@ -44,12 +44,6 @@ body {
 #info-movie {
   font-size: 120%;
 }
-#mobileSize {
-  display: none;
-}
-#tabletSize {
-  display: none;
-}
 
 /* Content Stuff */
 #movie-items {
@@ -215,12 +209,6 @@ body {
   #search-movies {
     padding-left: 14%;
   }
-  #mobileSize {
-    display: none;
-  }
-  #windowSize {
-    display: none;
-  }
 
   /* Content Stuff */
   #movie-image {
@@ -312,12 +300,6 @@ body {
   #navbar a {
     font-size: 70%;
   }
-  #tabletSize {
-    display: none;
-  }
-  #windowSize {
-    display: none;
-  }
 
 
   /* Content Stuff */
@@ -341,7 +323,7 @@ body {
   #showTrailer {
     height: 13rem;
   }
-}}
+}
 
 
 
