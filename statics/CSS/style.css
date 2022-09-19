@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -6,8 +7,8 @@
 }
 
 /* Large Desktop Size Css */
-body {
-  background-color: black;
+body{
+  background-color: #212233;
 }
 #logo img{
   width: 15%;
@@ -45,6 +46,9 @@ body {
 }
 
 /* Content Stuff */
+#movie-items{
+  background-color: blue;
+}
 #movie-image {
   width: 100%;
   height: 40rem;
