@@ -243,7 +243,7 @@ function allMovies() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "allMovies";
-    let arrays = pagination(myData.sort(byDate), movieUrl.currentPage, movieUrl.pageSize);
+    let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
     // Function to show Data
@@ -307,7 +307,7 @@ function showHindiMovies() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "showHindiMovies";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.lan720p.includes("Hindi"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -332,7 +332,7 @@ function showEnglishMovies() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "showEnglishMovies";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.lan720p.includes("English"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -358,7 +358,7 @@ function action() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "action";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Action"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -383,7 +383,7 @@ function animation() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "animation";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Animation"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -408,7 +408,7 @@ function adventure() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "adventure";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Adventure"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -433,7 +433,7 @@ function comedy() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "comedy";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Comedy"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -458,7 +458,7 @@ function crime() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "crime";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Crime"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -483,7 +483,7 @@ function documentary() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "documentary";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Documentary"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -508,7 +508,7 @@ function drama() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "drama";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Drama"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -533,7 +533,7 @@ function fantastic() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "fantastic";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Fantastic"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -558,7 +558,7 @@ function fantasy() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "fantasy";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Fantasy"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -583,7 +583,7 @@ function family() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "family";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Family"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -608,7 +608,7 @@ function history() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "history";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("History"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -633,7 +633,7 @@ function horror() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "horror";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Horror"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -658,7 +658,7 @@ function music() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "music";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Music"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -683,7 +683,7 @@ function musical() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "music";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Musical"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -708,7 +708,7 @@ function mystery() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "mystery";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Mystery"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -733,7 +733,7 @@ function romance() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "romance";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Romance"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -758,7 +758,7 @@ function thriller() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "thriller";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Thriller"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -783,7 +783,7 @@ function sciFi() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "sciFi";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -808,7 +808,7 @@ function sports() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "sports";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Sports"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -833,7 +833,7 @@ function biography() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "biography";
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.genres.includes("Biography"));
     let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
@@ -864,7 +864,7 @@ searchMovies.addEventListener("input", (e)=> {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
-    myData.sort(byDate);
+    myData;
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
 
     // function to showData
