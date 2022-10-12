@@ -1,39 +1,44 @@
 {
   "items":
-  [ 
-  {
-    "id": "207",
-    "imdbPage": "https://m.imdb.com/title/tt8350360/?ref_=fn_al_tt_0",
-    "movieTitle": "Annabelle Comes Home",
+  [ {
+    "id": "208",
+    "imdbPage": "https://m.imdb.com/title/tt14661252/?ref_=nv_sr_srsg_0",
+    "movieTitle": "Revealer",
     "categories": "united states",
-    "serchMovieTitle": "anna belle annabelle 2019 annabelle 3 anna 3 belle 3 annabelle comes home comes 3 home 3",
-    "duration": "106 min",
-    "genres": "Horror, Mystery, Thriller",
-    "releaseDate": "26 June 2019",
-    "shortByDate": "2019-06-26",
-    "movieQuality": "Blu-Ray",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0CnpjEWPM1rYerHcm9VcR8SINSo5yUQZ90A&usqp=CAU",
-    "storyLineShort": "While babysitting the daughter of Ed and Lorraine Warren, a teenager and her friend unknowingly awaken an evil spirit trapped in a doll.",
+    "serchMovieTitle": "revealer 2022 revea rev ler ",
+    "duration": "86 min",
+    "genres": "Horror",
+    "releaseDate": "23 June 2022",
+    "shortByDate": "2022-06-23",
+    "movieQuality": "Web-DL",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMW4YV2BFq5MjC1LjxRlEMxWi-kdn1ExcrjA&usqp=CAU",
+    "storyLineShort": "Tensions rise when a stripper and religious protester are trapped together in a peep show booth and must come together to survive the apocalypse in 1980's Chicago.",
     "hindiTrailer": "Not Available",
     "englishTrailer": "English",
     "watchHindiTrailer": "", 
-    "watchEnglishTrailer": "EMa-KFfatT0",
-    "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq8oEFs1t7DrUFzc_hi5Ey_TgO1ZZ2bRZqug&usqp=CAU"  ,
-    "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhza2SxkpRiYl7jRBKIxdwA0bWtg813UfdDg&usqp=CAU"  ,
-    "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0rxkufUtncbIvutu1LsQ6k9neB0aZ5DFIGQ&usqp=CAU"  ,
-    "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDU64GL0Vl-wY-qYcchWHAj_BR-mXD3CrqA&usqp=CAU"  ,
-    "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQURSZUsxXqGmyLcEIgpYZv13mno5_3GnM7BA&usqp=CAU"  ,
+    "watchEnglishTrailer": "sqE6ozuOZ7Q",
+    "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0A0LTNHuMyDpcmRJUC2D-0MC2iD19ve1Afg&usqp=CAU" 
+    ,
+    "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8VpXgED7hBlHKDYvPTZ3cySW_h_mHOvbZSw&usqp=CAU"  
+    ,
+    "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm-dyUNxZ_FhQ9-b0WfcYjJsOpMjWaTkx8ig&usqp=CAU" 
+    ,
+    "screenShot4": "https://static.wixstatic.com/media/cc392c_b924f8710f974147bd1e8302fa64c1ae~mv2.jpg/v1/fit/w_1024,h_512,al_c,q_80,enc_auto/file.jpg"  
+    ,
+    "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexzdRvlla_f3aQaljiGjL5cZ8d2UBQ21Emw&usqp=CAU" 
+    ,
     "myBox480p": "",
-    "uploadBaz480p": "https://uploadbaz.me/mb98x6eaulu9",
+    "uploadBaz480p": "https://uploadbaz.me/tmmnj6jwm5y3",
     "myBox720p": "",
-    "uploadBaz720p": "https://uploadbaz.me/4qkwz1k0rxgd",
+    "uploadBaz720p": "https://uploadbaz.me/sgjmp000arbg",
     "myBox1080p": "",
-    "uploadBaz1080p": "https://uploadbaz.me/j7zgpyoh1tf0",
-    "lan480p": "Hindi-English ",
-    "lan720p": "Hindi-English",
-    "lan1080p": "Hindi-English",
+    "uploadBaz1080p": "https://uploadbaz.me/hpgkmk6lhr9t",
+    "lan480p": "English ",
+    "lan720p": "English",
+    "lan1080p": "English",
     "lastUpdateDate": "Last updated 12, oct 2022"
   },
+
   {
     "id": "207",
     "imdbPage": "https://m.imdb.com/title/tt8350360/?ref_=fn_al_tt_0",
