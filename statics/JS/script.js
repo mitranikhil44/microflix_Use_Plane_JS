@@ -162,8 +162,10 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_self" class="btn btn-success" href="${data.uploadBaz720p}">Upload Baz</a>
-                <a type="button" target="_self" class="btn btn-success" href="${data.myBox720p}">My Box</a>
+                <div class="list-group">
+                  <button type="button" target="_self" class="btn btn-danger list-group-item list-group-item-action" href="${data.uploadBaz720p}">Upload Baz</button>
+                  <button type="button" target="_self" class="btn btn-info list-group-item list-group-item-action" href="${data.myBox720p}">My Box</button>
+                </div>
                 <div class="my-2">
                   ${data.lan720p}
                 </div>
