@@ -150,7 +150,7 @@ function show(data, index) {
             <div>
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
               </button>
-              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+              <div class="text-center dropdown-menu bg-light border-dark my-2 px-1 py-1 bgSize" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_self" class="btn btn-success" href="${data.uploadBaz480p}">Upload Baz</a>
                 <a type="button" target="_self" class="btn btn-success" href="${data.myBox480p}">My Box</a>
                 <div class="my-2">
@@ -161,7 +161,7 @@ function show(data, index) {
             <div>
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
               </button>
-              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+              <div class="text-center dropdown-menu bg-light border-dark my-2 px-1 py-1 bgSize" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_self" class="btn btn-success" href="${data.uploadBaz720p}">Upload Baz</a>
                 <a type="button" target="_self" class="btn btn-success" href="${data.myBox720p}">My Box</a>
                 <div class="my-2">
@@ -172,7 +172,7 @@ function show(data, index) {
             <div>
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
               </button>
-              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize" aria-labelledby="btnGroupDrop1">
+              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1 py-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_self" class="btn btn-success" href="${data.uploadBaz1080p}">Upload Baz</a>
                 <a type="button" target="_self" class="btn btn-success" href="${data.myBox1080p}">My Box</a>
                 <div class="my-2">
