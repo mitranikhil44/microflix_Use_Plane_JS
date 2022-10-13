@@ -868,7 +868,6 @@ searchMovies.addEventListener("input", (e)=> {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
-    myData;
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
 
     // function to showData
