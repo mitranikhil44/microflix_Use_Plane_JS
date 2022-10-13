@@ -260,7 +260,7 @@ function allMovies() {
     // Movies load in variables
     let myData = data.items;
     let movieData = "allMovies";
-    let arrays = pagination(myData.sort(byDate), movieUrl.currentPage, movieUrl.pageSize);
+    let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
     let movies = arrays.url;
 
     // Function to show Data
