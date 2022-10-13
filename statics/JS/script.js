@@ -868,6 +868,7 @@ searchMovies.addEventListener("input", (e)=> {
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
+    myData.sort(byDate);
     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
 
     // function to showData
@@ -881,7 +882,7 @@ searchMovies.addEventListener("input", (e)=> {
     }
     showData();
   });
-,2000 );
+, 2000)
 });
 
 // const loading = document.querySelector(".loading");
