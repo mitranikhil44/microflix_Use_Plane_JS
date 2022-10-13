@@ -881,7 +881,7 @@ searchMovies.addEventListener("input", (e)=> {
     }
     showData();
   });
- ,5000 );
+ ,2000 );
 });
 
 // const loading = document.querySelector(".loading");
