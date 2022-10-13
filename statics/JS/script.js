@@ -858,11 +858,11 @@ function biography() {
 let searchBtn = document.getElementById("searchBtn");
 searchBtn.addEventListener("click", (e)=> {
   e.preventDefault();
-})
+});
 
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("input", (e)=> {
-  e.preventDefault();
+  setTimeout(e.preventDefault();
   let inputVal = searchMovies.value.toLowerCase();
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
@@ -881,6 +881,7 @@ searchMovies.addEventListener("input", (e)=> {
     }
     showData();
   });
+  ,3000)
 });
 
 // const loading = document.querySelector(".loading");
