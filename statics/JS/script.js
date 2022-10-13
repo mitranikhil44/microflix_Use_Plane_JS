@@ -959,35 +959,30 @@ function biography() {
 };
 
 // Function to search movie
-let searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-});
-
 let searchMovies = document.getElementById("search-movies");
-searchMovies.addEventListener("keypress", () => {
+searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
-  wait();
+     wait();
   setTimeout(() => {
-    if (e.key === "Enter") {
-      let inputVal = searchMovies.value.toLowerCase();
-      fetch(movieUrl.url).then(response => response.json()).then(data => {
-        let myData = data.items;
-        myData.sort(byDate);
-        let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
+  if(e.key === "Enter"){;
+  let inputVal = searchMovies.value.toLowerCase();
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    let myData = data.items;
+    myData.sort(byDate);
+    let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
 
-        // function to showData
-        function showData() {
-          addFilter.forEach((data) => {
-            show(data); paginationSection.innerHTML = "";
-          });
-        }
-        if (inputVal == "") {
-          showData();
-        }
-        showData();
+    // function to showData
+    function showData() {
+      addFilter.forEach((data)=> {
+        show(data); paginationSection.innerHTML = "";
       });
     }
+    if (inputVal == "") {
+      showData();
+    }
+    showData();
+  });
+}
     wait();
   }, 1500);
 });
