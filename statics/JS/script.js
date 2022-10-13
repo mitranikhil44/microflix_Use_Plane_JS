@@ -254,28 +254,27 @@ function paginationButton(index, showNow) {
 
 function allMovies() {
   wait();
-  setTimeout(() => {
-    fetch(movieUrl.url).then(response => response.json()).then(data => {
+  setTimeout(()=>{
+  fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-      // Movies load in variables
-      let myData = data.items;
-      let movieData = "allMovies";
-      let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
-      let movies = arrays.url;
+    // Movies load in variables
+    let myData = data.items;
+    let movieData = "allMovies";
+    let arrays = pagination(myData.sort(byDate), movieUrl.currentPage, movieUrl.pageSize);
+    let movies = arrays.url;
 
-      // Function to show Data
-      async function showData() {
-        await movies.forEach((data) => {
-          show(data);
-        });
-      }
-      showData();
+    // Function to show Data
+    async function showData() {
+      await movies.forEach((data)=> {
+        show(data);
+      });
+    }
+    showData();
 
-      // Show pagination Button
-      paginationBtn(arrays.currentPage, movieData);
-    });
-    wait();
-  }, 1500);
+    // Show pagination Button
+    paginationBtn(arrays.currentPage, movieData);
+  });},1500);
+  
 }
 allMovies();
 
