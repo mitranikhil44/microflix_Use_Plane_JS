@@ -274,6 +274,7 @@ function allMovies() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
     });
+    wait();
   }, 1500);
 }
 allMovies();
