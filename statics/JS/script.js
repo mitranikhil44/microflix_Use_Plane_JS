@@ -818,6 +818,8 @@ function sciFi() {
 
 function sports() {
   content.innerHTML = "";
+  wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -838,11 +840,13 @@ function sports() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function biography() {
   content.innerHTML = "";
+  wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -863,7 +867,7 @@ function biography() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 // Function to search movie
@@ -895,7 +899,9 @@ searchMovies.addEventListener("keypress", ()=> {
     }
     showData();
   });
-  }}, 1500);
+  }
+    wait();
+  }, 1500);
 });
 
 // const loading = document.querySelector(".loading");
