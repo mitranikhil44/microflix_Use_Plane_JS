@@ -882,7 +882,7 @@ searchMovies.addEventListener("input", (e)=> {
     }
     showData();
   });
- ,2000 )
+ ,5000 )
 });
 
 // const loading = document.querySelector(".loading");
