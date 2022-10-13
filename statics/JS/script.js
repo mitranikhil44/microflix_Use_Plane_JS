@@ -861,8 +861,8 @@ searchBtn.addEventListener("click", (e)=> {
 });
 
 let searchMovies = document.getElementById("search-movies");
-searchMovies.addEventListener("input", (e)=> {
-  setTimeout(()=> {e.preventDefault();
+searchMovies.addEventListener("keypress", ()=> {
+  if(e.key === "Enter"){
   let inputVal = searchMovies.value.toLowerCase();
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
@@ -881,7 +881,7 @@ searchMovies.addEventListener("input", (e)=> {
     }
     showData();
   });
-  }, 3000);
+  }
 });
 
 // const loading = document.querySelector(".loading");
