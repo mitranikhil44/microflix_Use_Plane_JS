@@ -66,6 +66,16 @@ let movieUrl = {
 };
 let content = document.getElementById("content");
 const sortByDate = document.getElementById("sortByDate");
+let showWait = document.getElementById("wait");
+
+// Function to show wait
+function wait() {
+  if(showWait.style.display != "flex"){
+    showWait.style.display = "flex";
+  }else{
+    showWait.style.display = "none";
+  }
+}
 
 // Function to show Data
 function show(data, index) {
@@ -241,6 +251,8 @@ function paginationButton(index, showNow) {
 }
 
 function allMovies() {
+  wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -259,7 +271,7 @@ function allMovies() {
 
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
-  });
+  })}, 1500);
 }
 allMovies();
 
