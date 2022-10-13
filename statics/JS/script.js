@@ -70,9 +70,9 @@ let showWait = document.getElementById("wait");
 
 // Function to show wait
 function wait() {
-  if(showWait.style.display != "flex"){
+  if (showWait.style.display != "flex") {
     showWait.style.display = "flex";
-  }else{
+  } else {
     showWait.style.display = "none";
   }
 }
@@ -80,7 +80,7 @@ function wait() {
 // Function to show Data
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
-    <div class="mb-3 rounded-1 text-dark bg-light" id="movie-items">
+   <div class="mb-3 rounded-1 text-dark bg-light" id="movie-items">
       <div class="row g-0">
         <div class="col-md-4 px-2 py-2">
           <a target="_blank" href="${data.imdbPage}">
@@ -233,13 +233,15 @@ function paginationBtn(pages, showContent) {
     }
   }
   for (let page = maxLeft; page <= maxRight; page++) {
-    paginationSection.innerHTML += `<button id="${page}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">${page}</button>`;
+    paginationSection.innerHTML += ` < button id = "${page}" href = "#logo" onclick = "paginationButton(this.id, ${showContent})" class = "mx-1 my-2 btn btn-outline-light paginationSize" > $ {
+      page
+    } < /button > `;
   }
   if (movieUrl.currentPage != 1) {
-    paginationSection.innerHTML = `<button id="${1}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#171; First</button>` + paginationSection.innerHTML;
+    paginationSection.innerHTML = ` < button id = "${1}" href = "#logo" onclick = "paginationButton(this.id, ${showContent})" class = "mx-1 my-2 btn btn-outline-light paginationSize">&#171; First < /button > ` + paginationSection.innerHTML;
   }
   if (movieUrl.currentPage != pages) {
-    paginationSection.innerHTML += `<button id="${pages}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last</button>`;
+    paginationSection.innerHTML += ` < button id = "${pages}" href = "#logo" onclick = "paginationButton(this.id, ${showContent})" class = "mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last < /button > `;
   }
 }
 
@@ -253,25 +255,26 @@ function paginationButton(index, showNow) {
 function allMovies() {
   wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "allMovies";
-    let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "allMovies";
+      let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
+      showData();
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-  })}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+    });
+  }, 1500);
 }
 allMovies();
 
@@ -279,7 +282,7 @@ allMovies();
 function showScreenShots(screenShots) {
   document.getElementById('showEnglishTrailerDisplay').style.display = "none";
   document.getElementById('showHindiTrailerDisplay').style.display = "none";
-  Array.from(document.getElementsByClassName(screenShots)).forEach(data=> {
+  Array.from(document.getElementsByClassName(screenShots)).forEach(data => {
     if (data.style.display == "none") {
       data.style.display = "flex";
     } else {
@@ -292,7 +295,7 @@ function showScreenShots(screenShots) {
 function showEnglishTrailer(englishTrailer) {
   document.getElementById('showHindiTrailerDisplay').style.display = "none";
   document.getElementById('showScreenShotDisplay').style.display = "none";
-  Array.from(document.getElementsByClassName(englishTrailer)).forEach(data=> {
+  Array.from(document.getElementsByClassName(englishTrailer)).forEach(data => {
     if (data.style.display != "flex") {
       data.style.display = "flex";
     } else {
@@ -305,7 +308,7 @@ function showEnglishTrailer(englishTrailer) {
 function showHindiTrailer(hindiTrailer) {
   document.getElementById('showEnglishTrailerDisplay').style.display = "none";
   document.getElementById('showScreenShotDisplay').style.display = "none";
-  Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data=> {
+  Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data => {
     if (data.style.display != "flex") {
       data.style.display = "flex";
     } else {
@@ -317,462 +320,496 @@ function showHindiTrailer(hindiTrailer) {
 // Function to show cateogries
 function showHindiMovies() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "showHindiMovies";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.lan720p.includes("Hindi"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "showHindiMovies";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.lan720p.includes("Hindi"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function showEnglishMovies() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "showEnglishMovies";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.lan720p.includes("English"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "showEnglishMovies";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.lan720p.includes("English"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 // Function to filter data by genres of collection
 function action() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "action";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Action"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "action";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Action"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function animation() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "animation";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Animation"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "animation";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Animation"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function adventure() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "adventure";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Adventure"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "adventure";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Adventure"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function comedy() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "comedy";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Comedy"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "comedy";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Comedy"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function crime() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "crime";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Crime"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "crime";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Crime"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function documentary() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "documentary";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Documentary"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "documentary";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Documentary"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function drama() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "drama";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Drama"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "drama";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Drama"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function fantastic() {
-  content.innerHTML = "";  
+  content.innerHTML = "";
   wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "fantastic";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Fantastic"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "fantastic";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Fantastic"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function fantasy() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "fantasy";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Fantasy"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "fantasy";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Fantasy"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function family() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "family";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Family"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "family";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Family"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function history() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "history";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("History"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "history";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("History"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function horror() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "horror";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Horror"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "horror";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Horror"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function music() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "music";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Music"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "music";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Music"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function musical() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "music";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Musical"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "music";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Musical"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function mystery() {
   content.innerHTML = "";
-    wait();
+  wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "mystery";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Mystery"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "mystery";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Mystery"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function romance() {
@@ -781,166 +818,175 @@ function romance() {
   setTimeout(() => {
     fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "romance";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Romance"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "romance";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Romance"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });
-}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function thriller() {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "thriller";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Thriller"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "thriller";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Thriller"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function sciFi() {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "sciFi";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Sci-Fi"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "sciFi";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Sci-Fi"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function sports() {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "sports";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Sports"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "sports";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Sports"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 function biography() {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "biography";
-     myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.genres.includes("Biography"));
-    let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "biography";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.genres.includes("Biography"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-    showData();
-  });}, 1500);
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+  },
+    1500);
 };
 
 // Function to search movie
 let searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", (e)=> {
+searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
 let searchMovies = document.getElementById("search-movies");
-searchMovies.addEventListener("keypress", ()=> {
+searchMovies.addEventListener("keypress", () => {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-  if(e.key === "Enter"){
-  let inputVal = searchMovies.value.toLowerCase();
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
-    let myData = data.items;
-    myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
+    if (e.key === "Enter") {
+      let inputVal = searchMovies.value.toLowerCase();
+      fetch(movieUrl.url).then(response => response.json()).then(data => {
+        let myData = data.items;
+        myData.sort(byDate);
+        let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
 
-    // function to showData
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+        // function to showData
+        function showData() {
+          addFilter.forEach((data) => {
+            show(data); paginationSection.innerHTML = "";
+          });
+        }
+        if (inputVal == "") {
+          showData();
+        }
+        showData();
       });
     }
-    if (inputVal == "") {
-      showData();
-    }
-    showData();
-  });
-  }
     wait();
   }, 1500);
 });
