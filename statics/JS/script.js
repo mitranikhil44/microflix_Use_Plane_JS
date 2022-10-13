@@ -862,8 +862,7 @@ searchBtn.addEventListener("click", (e)=> {
 
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("input", (e)=> {
-  setTimeout(
-    e.preventDefault();
+  e.preventDefault();
   let inputVal = searchMovies.value.toLowerCase();
   content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
@@ -882,7 +881,6 @@ searchMovies.addEventListener("input", (e)=> {
     }
     showData();
   });
-, 2000)
 });
 
 // const loading = document.querySelector(".loading");
