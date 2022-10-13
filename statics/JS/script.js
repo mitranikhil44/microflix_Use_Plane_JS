@@ -874,9 +874,11 @@ searchBtn.addEventListener("click", (e)=> {
 
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("keypress", ()=> {
+  content.innerHTML = "";
+  wait();
+  setTimeout(() => {
   if(e.key === "Enter"){
   let inputVal = searchMovies.value.toLowerCase();
-  content.innerHTML = "";
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
     myData.sort(byDate);
@@ -893,7 +895,7 @@ searchMovies.addEventListener("keypress", ()=> {
     }
     showData();
   });
-  }
+  }}, 1500);
 });
 
 // const loading = document.querySelector(".loading");
