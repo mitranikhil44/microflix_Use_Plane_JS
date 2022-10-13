@@ -862,10 +862,10 @@ searchBtn.addEventListener("click", (e)=> {
 
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("input", (e)=> {
+  setTimeout(
     e.preventDefault();
   let inputVal = searchMovies.value.toLowerCase();
   content.innerHTML = "";
-  setTimeout(
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
     myData;
