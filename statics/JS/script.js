@@ -860,29 +860,29 @@ searchBtn.addEventListener("click", (e)=> {
   e.preventDefault();
 })
 
-let searchMovies = document.getElementById("search-movies");
-searchMovies.addEventListener("input", (e)=> {
-  setTimeout(
-    e.preventDefault();
-  let inputVal = searchMovies.value.toLowerCase();
-  content.innerHTML = "";
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
-    let myData = data.items;
-    let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
+// let searchMovies = document.getElementById("search-movies");
+// searchMovies.addEventListener("input", (e)=> {
+//   setTimeout(
+//     e.preventDefault();
+//   let inputVal = searchMovies.value.toLowerCase();
+//   content.innerHTML = "";
+//   fetch(movieUrl.url).then(response => response.json()).then(data => {
+//     let myData = data.items;
+//     let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
 
-    // function to showData
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
-      });
-    }
-    if (inputVal == "") {
-      showData();
-    }
-    showData();
-  });
- ,2000 );
-});
+//     // function to showData
+//     function showData() {
+//       addFilter.forEach((data)=> {
+//         show(data); paginationSection.innerHTML = "";
+//       });
+//     }
+//     if (inputVal == "") {
+//       showData();
+//     }
+//     showData();
+//   });
+// ,2000 );
+// });
 
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
