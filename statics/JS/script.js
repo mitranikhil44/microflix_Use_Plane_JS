@@ -317,6 +317,8 @@ function showHindiTrailer(hindiTrailer) {
 // Function to show cateogries
 function showHindiMovies() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -337,11 +339,13 @@ function showHindiMovies() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function showEnglishMovies() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -362,12 +366,14 @@ function showEnglishMovies() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 // Function to filter data by genres of collection
 function action() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -388,11 +394,13 @@ function action() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function animation() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -413,11 +421,13 @@ function animation() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function adventure() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -438,11 +448,13 @@ function adventure() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function comedy() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -463,11 +475,13 @@ function comedy() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function crime() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -488,11 +502,13 @@ function crime() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function documentary() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -513,11 +529,13 @@ function documentary() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function drama() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -538,11 +556,13 @@ function drama() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function fantastic() {
-  content.innerHTML = "";
+  content.innerHTML = "";  
+  wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -563,11 +583,13 @@ function fantastic() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function fantasy() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -588,11 +610,13 @@ function fantasy() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function family() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -613,11 +637,13 @@ function family() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function history() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -638,11 +664,13 @@ function history() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function horror() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -663,11 +691,13 @@ function horror() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function music() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -688,11 +718,13 @@ function music() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function musical() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -713,11 +745,13 @@ function musical() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function mystery() {
   content.innerHTML = "";
+    wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -738,12 +772,14 @@ function mystery() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function romance() {
   content.innerHTML = "";
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+  wait();
+  setTimeout(() => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
     let myData = data.items;
@@ -764,10 +800,13 @@ function romance() {
     paginationBtn(arrays.currentPage, movieData);
     showData();
   });
+}, 1500);
 };
 
 function thriller() {
   content.innerHTML = "";
+  wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -788,11 +827,13 @@ function thriller() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function sciFi() {
   content.innerHTML = "";
+  wait();
+  setTimeout(() => {
   fetch(movieUrl.url).then(response => response.json()).then(data => {
 
     // Movies load in variables
@@ -813,7 +854,7 @@ function sciFi() {
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
     showData();
-  });
+  });}, 1500);
 };
 
 function sports() {
