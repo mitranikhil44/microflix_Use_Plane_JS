@@ -250,6 +250,7 @@ function paginationButton(index, showNow) {
   showNow();
 }
 
+// Function to show all movies 
 function allMovies() {
   wait();
   setTimeout(()=>{
