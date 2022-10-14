@@ -959,6 +959,11 @@ function biography() {
 };
 
 // Function to search movie
+let searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", (event) =>{
+ event.preventDefault();
+});
+
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
