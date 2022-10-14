@@ -233,15 +233,13 @@ function paginationBtn(pages, showContent) {
     }
   }
   for (let page = maxLeft; page <= maxRight; page++) {
-    paginationSection.innerHTML += ` < button id = "${page}" href = "#logo" onclick = "paginationButton(this.id, ${showContent})" class = "mx-1 my-2 btn btn-outline-light paginationSize" > $ {
-      page
-    } < /button > `;
+    paginationSection.innerHTML += ` <button id="${page}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize"> ${page} </button> `;
   }
   if (movieUrl.currentPage != 1) {
-    paginationSection.innerHTML = ` < button id = "${1}" href = "#logo" onclick = "paginationButton(this.id, ${showContent})" class = "mx-1 my-2 btn btn-outline-light paginationSize">&#171; First < /button > ` + paginationSection.innerHTML;
+    paginationSection.innerHTML = ` <button id="${1}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#171; First </button> ` + paginationSection.innerHTML;
   }
   if (movieUrl.currentPage != pages) {
-    paginationSection.innerHTML += ` < button id = "${pages}" href = "#logo" onclick = "paginationButton(this.id, ${showContent})" class = "mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last < /button > `;
+    paginationSection.innerHTML += ` <button id="${pages}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last </button> `;
   }
 }
 
