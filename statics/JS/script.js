@@ -431,6 +431,7 @@ function animation() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
