@@ -1,6 +1,43 @@
 {
   "items":
   [ {
+    "id": "213",
+    "imdbPage": "https://m.imdb.com/title/tt0421073/?ref_=nv_sr_srsg_0",
+    "movieTitle": "Street Kings",
+    "categories": "united states",
+    "serchMovieTitle": "streer kking 2021 Street ",
+    "duration": "131 min",
+    "genres": "Crime , Action, Thriller",
+    "releaseDate": "11 April 2008",
+    "shortByDate": "2008-04-11",
+    "movieQuality": "Blu-Ray",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRebLMJcOfpIe4tyIphBoOCiOR3ZfxCXtMAeA&usqp=CAU",
+    "storyLineShort": "An undercover cop, disillusioned by the death of his wife, is implicated in the murder of an officer and must struggle to clear himself.",
+    "hindiTrailer": "Not Available",
+    "englishTrailer": "English",
+    "watchHindiTrailer": "", 
+    "watchEnglishTrailer": "jdHjrd4P9Rs",
+    "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT72bdO05tI9UTpIZ-XLgFCCyJp91bk5QJmg&usqp=CAU"
+    ,
+    "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOzTA4mSiR-reBewh1tP60CG5u97zYI0Dhw&usqp=CAU"
+    ,
+    "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3B1goHvz-O3EQ35CGDgldKl9AYB8kzAO4oA&usqp=CAU"
+    ,
+    "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMSXyZrzd-yWX6EuZLmp1c21PVOb5rWDWpTA&usqp=CAU"
+    ,
+    "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMaKGCKKep8_IE5ejO-ytb90OPV-AMTfYu2w&usqp=CAU",
+    "myBox480p": "",
+    "uploadBaz480p": "https://uploadbaz.me/qhsgs3a3o2oh",
+    "myBox720p": "",
+    "uploadBaz720p": "https://uploadbaz.me/sr0oqg1o0q37"
+    "myBox1080p": "",
+    "uploadBaz1080p": "",
+    "lan480p": "Hindi-English",
+    "lan720p": "Hindi-English",
+    "lan1080p": "Not Available",
+    "lastUpdateDate": "Last updated 14, October 2022"
+  },
+  {
     "id": "212",
     "imdbPage": "https://m.imdb.com/title/tt21272154/?ref_=nv_sr_srsg_0",
     "movieTitle": "Warrior Kings",
