@@ -273,7 +273,9 @@ function allMovies() {
 
     // Show pagination Button
     paginationBtn(arrays.currentPage, movieData);
-  });},1500);
+  });
+    wait();
+  },1500);
   
 }
 allMovies();
@@ -343,6 +345,7 @@ function showHindiMovies() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -372,6 +375,7 @@ function showEnglishMovies() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -402,6 +406,7 @@ function action() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -461,6 +466,7 @@ function adventure() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -490,6 +496,7 @@ function comedy() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -519,6 +526,7 @@ function crime() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -548,6 +556,7 @@ function documentary() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -577,6 +586,7 @@ function drama() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -606,6 +616,7 @@ function fantastic() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -635,6 +646,7 @@ function fantasy() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -664,6 +676,7 @@ function family() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -693,6 +706,7 @@ function history() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -722,6 +736,7 @@ function horror() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -751,6 +766,7 @@ function music() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -780,6 +796,7 @@ function musical() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -809,6 +826,7 @@ function mystery() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -838,6 +856,7 @@ function romance() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -867,6 +886,7 @@ function thriller() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -896,6 +916,7 @@ function sciFi() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -925,6 +946,7 @@ function sports() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
@@ -954,6 +976,7 @@ function biography() {
       paginationBtn(arrays.currentPage, movieData);
       showData();
     });
+    wait();
   },
     1500);
 };
