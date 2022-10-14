@@ -964,7 +964,7 @@ searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
      wait();
   setTimeout(() => {
-  if(e.key === "Enter"){;
+  if(e.key === "Enter"){
   let inputVal = searchMovies.value.toLowerCase();
   fetch(movieUrl.url).then(response => response.json()).then(data => {
     let myData = data.items;
