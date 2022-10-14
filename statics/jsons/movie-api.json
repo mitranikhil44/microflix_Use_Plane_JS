@@ -1,6 +1,42 @@
 {
   "items":
- [
+ [ {
+    "id": "213",
+    "imdbpage": "https://m.imdb.com/title/tt0421073/?ref_=nv_sr_srsg_0",
+    "movietitle": "street kings",
+    "categories": "united states",
+    "serchmovietitle": "street king 2021 stree",
+    "duration": "131 min",
+    "genres": "Crime, Action, Thriller",
+    "releasedate": "11 april 2008",
+    "shortbydate": "2008-04-11",
+    "moviequality": "blu-ray",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:and9gcreblmjcofpie4tyiphboocior3zfxcxtmaea&usqp=cau",
+    "storylineshort": "an undercover cop, disillusioned by the death of his wife, is implicated in the murder of an officer and must struggle to clear himself.",
+    "hinditrailer": "not available",
+    "englishtrailer": "english",
+    "watchhinditrailer": "", 
+    "watchenglishtrailer": "jdhjrd4p9rs",
+    "screenshot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:and9gcrt72bdo05ti9utpiz-xlgfccyjp91bk5qjmg&usqp=cau"
+    ,
+    "screenshot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:and9gcsmozta4msir-rebewh1tp60cg5u97zyi0dhw&usqp=cau"
+    ,
+    "screenshot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:and9gct3b1gohvz-o3eq35cgdgldkl9ayb8kzao4oa&usqp=cau"
+    ,
+    "screenshot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:and9gcsmsxyzrzd-ywx6euzlmp1c21pvob5rwdwpta&usqp=cau"
+    ,
+    "screenshot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:and9gcsmakgckkep8_ie5ejo-ytb90opv-amtfyu2w&usqp=cau",
+    "mybox480p": "https://mypowerdisk.com/mybox/share?id=236a0a31c1745e8c00cb8d616795c9523883",
+    "uploadbaz480p": "https://uploadbaz.me/qhsgs3a3o2oh",
+    "mybox720p": "",
+    "uploadbaz720p": "https://uploadbaz.me/sr0oqg1o0q37",
+    "mybox1080p": "https://mypowerdisk.com/mybox/share?id=236a0a3156a7adc0d7f69cf69b9e1c6ba54f",
+    "uploadbaz1080p": "",
+    "lan480p": "hindi-english",
+    "lan720p": "hindi-english",
+    "lan1080p": "not available",
+    "lastupdatedate": "last updated 14, october 2022"
+  },
   {
     "id": "212",
     "imdbpage": "https://m.imdb.com/title/tt21272154/?ref_=nv_sr_srsg_0",
