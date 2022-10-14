@@ -1,6 +1,43 @@
 {
   "items":
   [ {
+    "id": "211",
+    "imdbPage": "https://m.imdb.com/title/tt6856242/?ref_=fn_al_tt_0",
+    "movieTitle": "The King's Man",
+    "categories": "united states",
+    "serchMovieTitle": "kingsman 3 man 3 king 3 the king man 2021 the king man",
+    "duration": "131 min",
+    "genres": "Adventure, Action, Thriller",
+    "releaseDate": "22 December 2021",
+    "shortByDate": "2021-12-22",
+    "movieQuality": "Blu-Ray",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyXvcy3MTiFgbwhE75mIuwEmWsgOkZ4q355Q&usqp=CAU",
+    "storyLineShort": "In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.",
+    "hindiTrailer": "Hindi",
+    "englishTrailer": "English",
+    "watchHindiTrailer": "WrrbBt0ej0", 
+    "watchEnglishTrailer": "5zdBG-iGfes",
+    "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmfWWIKmcF0B8zBKoB0DfQxUtPznEpJNogow&usqp=CAU"
+    ,
+    "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRt15N3t7aiVmOg6ZWGffolBARSoOm3ZzKFA&usqp=CAU"
+    ,
+    "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcSFqNCW-iqZl4WYrMSxEtQj_lqzP6b9UDEw&usqp=CAU"
+    ,
+    "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAb4g1gEbv3JD6iSIDp2CnP4PlTB3aEE2AZA&usqp=CAU"
+    ,
+    "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaMfgMkcdLltr-KRINimdrjCqbdlerlUIZSQ&usqp=CAU",
+    "myBox480p": "",
+    "uploadBaz480p": "https://uploadbaz.me/f2px0gv733dj",
+    "myBox720p": "",
+    "uploadBaz720p": "https://uploadbaz.me/ydc6rk3orevy"
+    "myBox1080p": "",
+    "uploadBaz1080p": "https://uploadbaz.me/xb6m9xxpdtuh",
+    "lan480p": "Hindi-English",
+    "lan720p": "Hindi-English",
+    "lan1080p": "Hindi-English",
+    "lastUpdateDate": "Last updated 14, October 2022"
+  },
+  {
     "id": "210",
     "imdbPage": "https://m.imdb.com/title/tt4649466/?ref_=nv_sr_srsg_0",
     "movieTitle": "Kingsman: The Golden Circle",
@@ -8,7 +45,7 @@
     "serchMovieTitle": "kingsman 2 man 2 king 2 the king man 2017 golden circle",
     "duration": "141 min",
     "genres": "Adventure, Action, Comedy",
-    "releaseDate": "22 September 201î",
+    "releaseDate": "22 September 2017",
     "shortByDate": "2017-09-22",
     "movieQuality": "Blu-Ray",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe2sSWYW8McTgUrflgKvvTmsG8a_l1ajcVLw&usqp=CAU",
