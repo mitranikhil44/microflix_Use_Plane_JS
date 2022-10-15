@@ -1,6 +1,43 @@
 {
   "items":
  [ {
+    "id": "214",
+    "imdbPage": "https://m.imdb.com/title/tt2457138/?ref_=nv_sr_srsg_0",
+    "movieTitle": "Battledogs",
+    "categories": "united states",
+    "serchMovieTitle": "battledogs 2013 battle dogs ",
+    "duration": "88 min",
+    "genres": "Adventure, Action, Horror",
+    "releaseDate": "06 april 2013",
+    "shortByDate": "2013-04-06",
+    "movieQuality": "blu-ray",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LAYXo9M3LaqPDZrhITxnaJC_KhntzlzAEA&usqp=CAU",
+    "storyLineShort": "A werewolf virus is unleashed upon New York, and Major Hoffman looks for a cure while Lt. General Monning wants to establish a new canine army.",
+    "hindiTrailer": "Not Available",
+    "englishTrailer": "English",
+    "watchHindiTrailer": "", 
+    "watchEnglishTrailer": "jmsUa-N9xr8",
+    "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmIMFw8Hbaah8yzldzQzk5gUg90eWUl8jHA&usqp=CAU"
+    ,
+    "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTekWl0UvaE8uwoZCnHYg9JGS3u7OhQOF7UUw&usqp=CAU"
+    ,
+    "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScIGQ3niH0_9c2ZgStfiKebL5xyTfPolxFUQ&usqp=CAU"
+    ,
+    "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyBXLDQ0XVldL2okUabyYp-S6WRgaN5V0C5w&usqp=CAU"
+    ,
+    "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ic0_QZYoktCQcSXwxsXfqph549BYVLezow&usqp=CAU",
+    "myBox480p": "https://mdisk.me/convertor/16x9/el0t0V",
+    "uploadBaz480p": "https://uploadbaz.me/g6t3vv69vc13",
+    "myBox720p": "https://mdisk.me/convertor/427x240/boEOuv",
+    "uploadBaz720p": "https://uploadbaz.me/yhn1em0amuvt",
+    "myBox1080p": "https://mdisk.me/convertor/16x9/FSIHUT",
+    "uploadBaz1080p": "https://uploadbaz.me/vcjgqqec2xf5",
+    "lan480p": "Hindi-English",
+    "lan720p": "Hindi-English",
+    "lan1080p": "Hindi-English",
+    "lastUpdate": "Last updated 15, october 2022"
+  },
+  {
     "id": "213",
     "imdbPage": "https://m.imdb.com/title/tt0421073/?ref_=nv_sr_srsg_0",
     "movieTitle": "street kings",
