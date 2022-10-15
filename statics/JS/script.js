@@ -349,6 +349,36 @@ function showHindiMovies() {
     1500);
 };
 
+function showHindiMovies() {
+  content.innerHTML = "";
+  wait();
+  setTimeout(() => {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
+
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "showHindiMovies";
+      myData.sort(byDate);
+      let addFilter = myData.filter(x => x.categories.includes("18+"));
+      let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
+
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data) => {
+          show(data);
+        });
+      }
+
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+      showData();
+    });
+    wait();
+  },
+    1500);
+};
+
 function showEnglishMovies() {
   content.innerHTML = "";
   wait();
