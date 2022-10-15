@@ -195,7 +195,7 @@ function show(data, index) {
       </div>
       <hr />
       <p class="card-text figure-caption text-end">
-        <small class="text-muted">${data.lastUpdateDate}</small>
+        <small class="text-muted">${data.lastUpdate}</small>
       </p>
     </div>
     `);
