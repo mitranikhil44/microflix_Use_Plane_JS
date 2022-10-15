@@ -328,7 +328,6 @@ function showHindiMovies() {
       // Movies load in variables
       let myData = data.items;
       let movieData = "showHindiMovies";
-      myData.sort(byDate);
       let addFilter = myData.filter(x => x.lan720p.includes("Hindi"));
       let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
       let movies = arrays.url;
@@ -349,7 +348,7 @@ function showHindiMovies() {
     1500);
 };
 
-function showHindiMovies() {
+function adultMovies() {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
@@ -357,8 +356,7 @@ function showHindiMovies() {
 
       // Movies load in variables
       let myData = data.items;
-      let movieData = "showHindiMovies";
-      myData.sort(byDate);
+      let movieData = "adultMovies";
       let addFilter = myData.filter(x => x.categories.includes("18+"));
       let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
       let movies = arrays.url;
@@ -388,7 +386,6 @@ function showEnglishMovies() {
       // Movies load in variables
       let myData = data.items;
       let movieData = "showEnglishMovies";
-      myData.sort(byDate);
       let addFilter = myData.filter(x => x.lan720p.includes("English"));
       let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
       let movies = arrays.url;
