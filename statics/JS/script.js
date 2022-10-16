@@ -158,8 +158,8 @@ function show(data, index) {
           </div>
           <div id="download-link">
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-              </button>
+              <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" data-bs-toggle="dropdown" aria-expanded="false">480p
+              </a>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-danger" href="${data.uploadBaz480p}">Upload Baz</a>
                 <a type="button" target="_blank" class="btn btn-info" href="${data.myBox480p}">My Box</a>
