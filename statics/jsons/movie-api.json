@@ -1,6 +1,44 @@
 {
   "items":
  [ {
+      "id": "219",
+      "imdbPage": "https://m.imdb.com/title/tt10665342/?ref_=fn_al_tt_0",
+      "movieTitle": "Halloween Ends",
+      "categories": "united states,united kingdom",
+      "serchMovieTitle": "halloween ends 2022 hallo",
+      "duration": "111 min",
+      "genres": "Horror , Thriller",
+      "releaseDate": "14 October 2022",
+      "shortByDate": "2022-10-14",
+      "movieQuality": "Web-DL",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReEjfr_2RfXgdGYWAwepJwe_z4OaUk462GRQ&usqp=CAU",
+      "storyLineShort": "The saga of Michael Myers and Laurie Strode comes to a spine-chilling climax in this final installment of this trilogy.",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "s0vtbxLa-N8",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgKSRD7u_6nHPK55N8tjEEUbnOc4ugEKha8g&usqp=CAU"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zFvdOPyXUun4nUXShu-igbyb8lkpS5GEgQ&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT43-qtM0Vrlu1IHJv6T4fvpO9sglcL7vM7BQ&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60GvRiQ2TEEXIkCaC7M7LP0Ew3qREXG897Q&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPSRm18cgcSodYK4p5KZRh_FO9Z7YlfjXD3Q&usqp=CAU"
+      ,
+      "myBox480p": "https://mdisk.me/convertor/360x151/cgPsCN",
+      "uploadBaz480p": "https://uploadbaz.me/bevj3fcrfpgk",
+      "myBox720p": "https://mdisk.me/convertor/160x67/inqTHT",
+      "uploadBaz720p": "https://uploadbaz.me/vh7t33rlkh7n",
+      "myBox1080p": "https://mdisk.me/convertor/910x381/vK7Eal",
+      "uploadBaz1080p": "https://uploadbaz.me/4q8om1tto5xk",
+      "lan480p": "English",
+      "lan720p": "English",
+      "lan1080p": "English",
+      "lastUpdate": "Last updated 16, october 2022"
+    },
+    {
       "id": "218",
       "imdbPage": "https://m.imdb.com/title/tt8327630/?ref_=fn_al_tt_0",
       "movieTitle": "They Live Inside Us",
