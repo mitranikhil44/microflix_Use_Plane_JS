@@ -169,8 +169,8 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-              </button>
+              <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" href="https://mufflercypress.com/i5vamc9w?key=d2fb7c5a16df1db7d604ab04e20a4787" target="_blank" data-bs-toggle="dropdown" aria-expanded="false">720p
+              </a>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-danger" href="${data.uploadBaz720p}">Upload Baz</a>
                 <a type="button" target="_blank" class="btn btn-info" href="${data.myBox720p}">My Box</a>
@@ -180,8 +180,8 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-              </button>
+              <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" target="" href="https://mufflercypress.com/fdzuhtzyy?key=f407dd62489e1deb652071b098d43622" data-bs-toggle="dropdown" aria-expanded="false">1080p
+              </a>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-danger" href="${data.uploadBaz1080p}">Upload Baz</a>
                 <a type="button" target="_blank" class="btn btn-info" href="${data.myBox1080p}">My Box</a>
