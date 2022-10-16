@@ -281,11 +281,11 @@ allMovies();
 
 // Function to Show Screen Shots
 function showScreenShots(screenShots) {
-  document.getElementById('showEnglishTrailerDisplay').style.display = "none";
-  document.getElementById('showHindiTrailerDisplay').style.display = "none";
   Array.from(document.getElementsByClassName(screenShots)).forEach(data => {
-    if (data.style.display == "none") {
+    if (data.style.display != "flex") {
       data.style.display = "flex";
+      document.getElementById('showEnglishTrailerDisplay').style.display = "none";
+  document.getElementById('showHindiTrailerDisplay').style.display = "none";
     } else {
       data.style.display = "none";
     }
