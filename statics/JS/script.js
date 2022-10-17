@@ -111,12 +111,12 @@ function show(data, index) {
                 <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
                 </button>
                 <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
-                  <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.englishTrailer} Trailer</button></a>
-                  <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.hindiTrailer} Trailer</button></a>
+                  <a id="${data.screenShot1}" href="https://mufflercypress.com/i5vamc9w?key=d2fb7c5a16df1db7d604ab04e20a4787" target="_blank" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.englishTrailer} Trailer</button></a>
+                  <a id="${data.screenShot2}" target="_blank" href="https://mufflercypress.com/fdzuhtzyy?key=f407dd62489e1deb652071b098d43622" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.hindiTrailer} Trailer</button></a>
                 </div>
               </div>
               <div class="mx-2">
-                <a id="${data.screenShot3}" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning btnSize">Screen Shots</button></a>
+                <a id="${data.screenShot3}" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning btnSize">Screen Shots</button></a>
               </div>
             </div>
             <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
@@ -158,8 +158,8 @@ function show(data, index) {
           </div>
           <div id="download-link">
             <div>
-              <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" data-bs-toggle="dropdown" aria-expanded="false">480p
-              </a>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+              </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-danger" href="${data.uploadBaz480p}">Upload Baz</a>
                 <a type="button" target="_blank" class="btn btn-info" href="${data.myBox480p}">My Box</a>
@@ -169,8 +169,8 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" href="https://mufflercypress.com/i5vamc9w?key=d2fb7c5a16df1db7d604ab04e20a4787" target="_blank" data-bs-toggle="dropdown" aria-expanded="false">720p
-              </a>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+              </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-danger" href="${data.uploadBaz720p}">Upload Baz</a>
                 <a type="button" target="_blank" class="btn btn-info" href="${data.myBox720p}">My Box</a>
@@ -180,8 +180,8 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <a id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" target="" href="https://mufflercypress.com/fdzuhtzyy?key=f407dd62489e1deb652071b098d43622" data-bs-toggle="dropdown" aria-expanded="false">1080p
-              </a>
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+              </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-danger" href="${data.uploadBaz1080p}">Upload Baz</a>
                 <a type="button" target="_blank" class="btn btn-info" href="${data.myBox1080p}">My Box</a>
@@ -241,7 +241,7 @@ function paginationBtn(pages, showContent) {
   if (movieUrl.currentPage != pages) {
     paginationSection.innerHTML += ` <a id="${pages}" href="#logo" onclick="paginationButton(this.id, ${showContent})" class="mx-1 my-2 btn btn-outline-light paginationSize">&#187; Last </a> `;
   }
-}
+};
 
 // Function to show pagination Button
 function paginationButton(index, showNow) {
@@ -250,32 +250,32 @@ function paginationButton(index, showNow) {
   showNow();
 }
 
-// Function to show all movies 
+// Function to show all movies
 function allMovies() {
   wait();
-  setTimeout(()=>{
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
+  setTimeout(()=> {
+    fetch(movieUrl.url).then(response => response.json()).then(data => {
 
-    // Movies load in variables
-    let myData = data.items;
-    let movieData = "allMovies";
-    let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
-    let movies = arrays.url;
+      // Movies load in variables
+      let myData = data.items;
+      let movieData = "allMovies";
+      let arrays = pagination(myData, movieUrl.currentPage, movieUrl.pageSize);
+      let movies = arrays.url;
 
-    // Function to show Data
-    async function showData() {
-      await movies.forEach((data)=> {
-        show(data);
-      });
-    }
-    showData();
+      // Function to show Data
+      async function showData() {
+        await movies.forEach((data)=> {
+          show(data);
+        });
+      }
+      showData();
 
-    // Show pagination Button
-    paginationBtn(arrays.currentPage, movieData);
-  });
+      // Show pagination Button
+      paginationBtn(arrays.currentPage, movieData);
+    });
     wait();
-  },1500);
-  
+  }, 1500);
+
 }
 allMovies();
 
@@ -285,7 +285,7 @@ function showScreenShots(screenShots) {
     if (data.style.display != "flex") {
       data.style.display = "flex";
       document.getElementById('showEnglishTrailerDisplay').style.display = "none";
-  document.getElementById('showHindiTrailerDisplay').style.display = "none";
+      document.getElementById('showHindiTrailerDisplay').style.display = "none";
     } else {
       data.style.display = "none";
     }
@@ -294,10 +294,10 @@ function showScreenShots(screenShots) {
 
 // Function to Show English Trailer
 function showEnglishTrailer(englishTrailer) {
-  document.getElementById('showHindiTrailerDisplay').style.display = "none";
-  document.getElementById('showScreenShotDisplay').style.display = "none";
   Array.from(document.getElementsByClassName(englishTrailer)).forEach(data => {
     if (data.style.display != "flex") {
+      document.getElementById('showHindiTrailerDisplay').style.display = "none";
+      document.getElementById('showScreenShotDisplay').style.display = "none";
       data.style.display = "flex";
     } else {
       data.style.display = "none";
@@ -307,10 +307,10 @@ function showEnglishTrailer(englishTrailer) {
 
 // Function to Show Hindi Trailer
 function showHindiTrailer(hindiTrailer) {
-  document.getElementById('showEnglishTrailerDisplay').style.display = "none";
-  document.getElementById('showScreenShotDisplay').style.display = "none";
   Array.from(document.getElementsByClassName(hindiTrailer)).forEach(data => {
     if (data.style.display != "flex") {
+      document.getElementById('showEnglishTrailerDisplay').style.display = "none";
+      document.getElementById('showScreenShotDisplay').style.display = "none";
       data.style.display = "flex";
     } else {
       data.style.display = "none";
@@ -1009,34 +1009,34 @@ function biography() {
 
 // Function to search movie
 let searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", (event) =>{
- event.preventDefault();
+searchBtn.addEventListener("click", (event) => {
+  event.preventDefault();
 });
 
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
-     wait();
+  wait();
   setTimeout(() => {
-  if(e.key === "Enter"){
-  let inputVal = searchMovies.value.toLowerCase();
-  fetch(movieUrl.url).then(response => response.json()).then(data => {
-    let myData = data.items;
-    myData.sort(byDate);
-    let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
+    if (e.key === "Enter") {
+      let inputVal = searchMovies.value.toLowerCase();
+      fetch(movieUrl.url).then(response => response.json()).then(data => {
+        let myData = data.items;
+        myData.sort(byDate);
+        let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
 
-    // function to showData
-    function showData() {
-      addFilter.forEach((data)=> {
-        show(data); paginationSection.innerHTML = "";
+        // function to showData
+        function showData() {
+          addFilter.forEach((data)=> {
+            show(data); paginationSection.innerHTML = "";
+          });
+        }
+        if (inputVal == "") {
+          showData();
+        }
+        showData();
       });
     }
-    if (inputVal == "") {
-      showData();
-    }
-    showData();
-  });
-}
     wait();
   }, 1500);
 });
