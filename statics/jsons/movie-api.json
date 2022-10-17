@@ -1,6 +1,44 @@
 {
   "items":
  [ {
+      "id": "220",
+      "imdbPage": "https://m.imdb.com/title/tt7466810/?ref_=nv_sr_srsg_0",
+      "movieTitle": "777 Charlie",
+      "categories": "india",
+      "serchMovieTitle": "777 charlie",
+      "duration": "164 min",
+      "genres": "Adventure , Comdey ,Drama",
+      "releaseDate": "10 June 2022",
+      "shortByDate": "2022-06-10",
+      "movieQuality": "Web-DL",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqd6aUwRM27VxrZACOj9mf2sH5kJ9JFkxziQ&usqp=CAU",
+      "storyLineShort": "Dharma is stuck in a rut with his negative and lonely lifestyle and spends each day in the comfort of his loneliness. A pup named Charlie enters his life and gives him a new perspective towa...",
+      "hindiTrailer": "Hindi",
+      "englishTrailer": "Not Available",
+      "watchHindiTrailer": "Z3r7f9zw-mo",
+      "watchEnglishTrailer": "",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfFWulVnXrliWS05qVOoTQ0dcp1Ti3NzJsyA&usqp=CAU"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd47MApEMYvQQNhc9FntCxRepqId5ELuxD3w&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRW1VpetPEFepJEMDwRTpl0G90yXDMjOyp1Q&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0xDR5ScbbJ7AtZGYnHYevk0zkDNzX3IgieQ&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1oLQpDoZgQSB_exdPlF_g2J4a2SVKmW8oXA&usqp=CAU"
+      ,
+      "myBox480p": "https://mdisk.me/convertor/12x5/zuCNbZ",
+      "uploadBaz480p": "https://uploadbaz.me/6rktdf3dd83l",
+      "myBox720p": "https://mdisk.me/convertor/12x5/HIkypw",
+      "uploadBaz720p": "https://uploadbaz.me/e1tlljzyb1j2",
+      "myBox1080p": "https://mdisk.me/convertor/12x5/YKmXHM",
+      "uploadBaz1080p": "https://uploadbaz.me/sngogr5vfbpi",
+      "lan480p": "Hindi",
+      "lan720p": "Hindi",
+      "lan1080p": "Hindi",
+      "lastUpdate": "Last updated 17, october 2022"
+    },
+    {
       "id": "219",
       "imdbPage": "https://m.imdb.com/title/tt10665342/?ref_=fn_al_tt_0",
       "movieTitle": "Halloween Ends",
@@ -343,7 +381,7 @@
   },
   {
     "id": "215",
-    "imdbPage": "https://m.imdb.com/title/tt2457138/?ref_=nv_sr_srsg_0",
+    "imdbPage": "https://m.imdb.com/title/tt15289240/?ref_=nv_sr_srsg_0",
     "movieTitle": "The Curse of Bridge Hollow",
     "categories": "united states",
     "serchMovieTitle": "the curse of bridge hollow 2022 curse bridge ",
