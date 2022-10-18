@@ -1,13 +1,51 @@
 {
   "items":
  [ {
+      "id": "222",
+      "imdbPage": "https://m.imdb.com/title/tt10366460/?ref_=nv_sr_srsg_0",
+      "movieTitle": "CODA",
+      "categories": "United States,canada,france",
+      "serchMovieTitle": "coda 2021",
+      "duration": "111 min",
+      "genres": "Drama , Comedy , Music",
+      "releaseDate": "30 September 2021",
+      "shortByDate": "2021-09-30",
+      "movieQuality": "Web-DL",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVStvW7SCHZh2ro5imHWf_7XvV-W_LFXVOQ&usqp=CAU",
+      "storyLineShort": "As a CODA (Child of Deaf Adults) Ruby is the only hearing person in her deaf family. When the family's fishing business is threatened, Ruby finds herself torn between pursuing her passion at",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "0pmfrE1YL4I",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnZykeO5bjAuGLUhXNBN-yiZCiT5CdbZVow&usqp=CAU"
+      , 
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5KnSQdTgp84M57Wo5sDiOEFdiQfiQhgtkbg&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4iIvx7-Ed75Kde7F7OpFwC6oOJSxel7C2A&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0c.gstatic.com/images?q=tbn:ANd9GcQzPmYHrpGFaeAZCl4zw9m13Xag1EIwTb2qxQ&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4f6Q71YDhVGTVMGWBskEonsObMZ-JfES3g&usqp=CAU"
+      ,
+      "myBox480p": "https://mdisk.me/convertor/37x20/xqporO",
+      "uploadBaz480p": "https://uploadbaz.me/rsdr83hd4k6l",
+      "myBox720p": "https://mdisk.me/convertor/37x20/LOrqmI",     
+      "uploadBaz720p": "https://uploadbaz.me/6lbryu1dvozm",
+      "myBox1080p": "https://mdisk.me/convertor/320x173/4YMTGg",
+      "uploadBaz1080p": "https://uploadbaz.me/xwlmzxjh6n3y",
+      "lan480p": "English",
+      "lan720p": "English",
+      "lan1080p": "English",
+      "lastUpdate": "Last updated 18, october 2022"
+    },
+    {
       "id": "221",
       "imdbPage": "https://m.imdb.com/title/tt10701074/?ref_=nv_sr_srsg_0",
       "movieTitle": "Ponniyin Selvan: Part I",
       "categories": "india",
-      "serchMovieTitle": "ponniyin selvan part 1 ponniyin 1 part 1 selvan 1 part 1",
+      "serchMovieTitle": "ponniyin selvan part 1 ponniyin 1 part 1 selvan 1 part 1 ",
       "duration": "167 min",
-      "genres": "Action, Comdey ,Family",
+      "genres": "Action , Comdey ,Family",
       "releaseDate": "30 September 2022",
       "shortByDate": "2022-09-30",
       "movieQuality": "CamRip",
@@ -29,7 +67,7 @@
       ,
       "myBox480p": "https://mdisk.me/convertor/419x180/R2utnT",
       "uploadBaz480p": "https://uploadbaz.me/c0o3rz72fqpy",
-      "myBox720p": "https://mdisk.me/convertor/559x240/NxIi0g",
+      "myBox720p": "https://mdisk.me/convertor/559x240/NxIi0g"     
       "uploadBaz720p": "https://uploadbaz.me/dgdpufgxs5zj",
       "myBox1080p": "https://mdisk.me/convertor/240x103/zspPYF",
       "uploadBaz1080p": "https://uploadbaz.me/sdqk7pb6kszc",
@@ -45,7 +83,7 @@
       "categories": "india",
       "serchMovieTitle": "777 charlie",
       "duration": "164 min",
-      "genres": "Adventure, Comdey ,Drama",
+      "genres": "Adventure , Comdey ,Drama",
       "releaseDate": "10 June 2022",
       "shortByDate": "2022-06-10",
       "movieQuality": "Web-DL",
