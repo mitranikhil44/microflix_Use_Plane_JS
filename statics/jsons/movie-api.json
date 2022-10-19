@@ -7143,7 +7143,7 @@
       "id": "23",
       "imdbPage": "https://www.imdb.com/title/tt7529298/?ref_=nv_sr_srsg_7",
       "movieTitle": "Attack",
-      "categories": "",
+      "categories": "india,boliywood",
       "serchMovieTitle": "attack 2022",
       "duration": "130 min",
       "genres": "Action, Sci-Fi, Thriller",
@@ -7153,24 +7153,29 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2QahGKyeSJp9t6_If81rwibfaCzqBKstNdA&usqp=CAU",
       "storyLineShort": "Witness the rise of an army soldier as he realizes his destiny and comes to terms to becoming India's first super soldier created to combat terrorists as he fights his inner demons and outer enemies.With lots of Action",
       "hindiTrailer": "Hindi",
-      "englishTrailer": "English",
-      "watchHindiTrailer": "",
+      "englishTrailer": "Not Available",
+      "watchHindiTrailer": "KnC-XvFGflM",
       "watchEnglishTrailer": "",
-      "screenShot1": "",
-      "screenShot2": "",
-      "screenShot3": "",
-      "screenShot4": "",
-      "screenShot5": "",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh_LRuWhtUe14bCQEhZhgCrfKG-o9RhbQJBA&usqp=CAU"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-rfyvITFVlPKbILbrcCV5hAsW3unTHNqWLg&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM77dnRJBfLub5SvK79pcW6x0dAQ40q7z1ug&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOM18WBicquwVFwn2eliocT7J8ehX4B6EPJA&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpI6Mq7JNNqVeYhv6nAVpKep7q56Gwkbm-CA&usqp=CAU"
+      ,
       "myBox480p": "",
-      "uploadBaz480p": "https://send.cm/d/9pbW",
+      "uploadBaz480p": "",
       "myBox720p": "",
-      "uploadBaz720p": "https://send.cm/d/9pcO",
+      "uploadBaz720p": "",
       "myBox1080p": "",
-      "uploadBaz1080p": "https://send.cm/d/9pcP",
+      "uploadBaz1080p": "",
       "lan480p": "Hindi",
       "lan720p": "Hindi",
       "lan1080p": "Hindi",
-      "lastUpdate": "Last updated 06, Jun 202202, Apr 2022"
+      "lastUpdate": "Last updated 19, october 2022"
     },
     {
       "id": "22",
@@ -7237,7 +7242,6 @@
       "lan720p": "Hindi-English",
       "lan1080p": "Hindi-English",
       "lastUpdate": "Last updated 06, Jun 202215, Apr 2022"
-    },
-   
+    }
     ]
 }
