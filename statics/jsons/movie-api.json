@@ -1,6 +1,44 @@
 {
   "items":
- [  {
+ [ {
+      "id": "7",
+      "imdbPage": "https://www.imdb.com/title/tt6856242/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Bombshell",
+      "categories": "United states ,canada, hollywood",
+      "serchMovieTitle": "bombshell 2019",
+      "duration": "109 min",
+      "genres": "Biography, Drama",
+      "releaseDate": "20 Dec 2019",
+      "shortByDate": "2019-12-20",
+      "movieQuality": "Blu-Ray",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqDvHvadvZU5TYSkT2q2JTemeoILMtsl7HGg&usqp=CAU",
+      "storyLineShort": "A group of women take on Fox News head Roger Ailes and the toxic atmosphere he presided over at the network.",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "0rBnkBIhoFE",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREjFDK0RsWo2B37eugYO4a9EzWltBJ7eIocw&usqp=CAU"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6NksxYdKaOH7yNPKaFuiBVXA1GQzjuTPew&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7_ULkHTapwryGMyr5gKJHnETMzFsH2YuFw&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZp59zOhCMtYegzcH4xLJPhMJhjE9UQ1_ITA&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxGZzD2Qf2PVy-rszFqm5ZfLGJV0Sd1G8Ag&usqp=CAU"
+      ,
+      "myBox480p": "",
+      "uploadBaz480p": "https://uploadbaz.me/dzyosjhv0gkm",
+      "myBox720p": "",
+      "uploadBaz720p": "https://uploadbaz.me/07e0pgxnl1it",
+      "myBox1080p": "https://mdisk.me/convertor/160x67/vPaB2i",
+      "uploadBaz1080p": "https://uploadbaz.me/39w3jcg0qh1n",
+      "lan480p": "English",
+      "lan720p": "English",
+      "lan1080p": "English",
+      "lastUpdate": "Last updated 06, Jun 202201, Apr 2022"
+    },
+    {
       "id": "18",
       "imdbPage": "https://www.imdb.com/title/tt7336572/?ref_=nv_sr_srsg_10",
       "movieTitle": "Big Brother",
@@ -7220,43 +7258,6 @@
       "lan1080p": "English",
       "lastUpdate": "Last updated 06, Jun 202201, Apr 2022"
     },
-    {
-      "id": "7",
-      "imdbPage": "https://www.imdb.com/title/tt6856242/?ref_=nv_sr_srsg_0",
-      "movieTitle": "Bombshell",
-      "categories": "United states ,canada",
-      "serchMovieTitle": "bombshell 2019",
-      "duration": "109 min",
-      "genres": "Biography, Drama",
-      "releaseDate": "20 Dec 2019",
-      "shortByDate": "2019-12-20",
-      "movieQuality": "Blu-Ray",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqDvHvadvZU5TYSkT2q2JTemeoILMtsl7HGg&usqp=CAU",
-      "storyLineShort": "A group of women take on Fox News head Roger Ailes and the toxic atmosphere he presided over at the network.",
-      "hindiTrailer": "Not Available",
-      "englishTrailer": "English",
-      "watchHindiTrailer": "",
-      "watchEnglishTrailer": "0rBnkBIhoFE",
-      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREjFDK0RsWo2B37eugYO4a9EzWltBJ7eIocw&usqp=CAU"
-      ,
-      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6NksxYdKaOH7yNPKaFuiBVXA1GQzjuTPew&usqp=CAU"
-      ,
-      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7_ULkHTapwryGMyr5gKJHnETMzFsH2YuFw&usqp=CAU"
-      ,
-      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZp59zOhCMtYegzcH4xLJPhMJhjE9UQ1_ITA&usqp=CAU"
-      ,
-      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxGZzD2Qf2PVy-rszFqm5ZfLGJV0Sd1G8Ag&usqp=CAU"
-      ,
-      "myBox480p": "",
-      "uploadBaz480p": "https://uploadbaz.me/dzyosjhv0gkm",
-      "myBox720p": "",
-      "uploadBaz720p": "https://uploadbaz.me/07e0pgxnl1it",
-      "myBox1080p": "https://mdisk.me/convertor/160x67/vPaB2i",
-      "uploadBaz1080p": "https://uploadbaz.me/39w3jcg0qh1n",
-      "lan480p": "English",
-      "lan720p": "English",
-      "lan1080p": "English",
-      "lastUpdate": "Last updated 06, Jun 202201, Apr 2022"
-    }
+    
     ]
 }
