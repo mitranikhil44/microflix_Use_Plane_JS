@@ -328,7 +328,7 @@ function showHindiMovies() {
       // Movies load in variables
       let myData = data.items;
       let movieData = "showHindiMovies";
-      let addFilter = myData.filter(x => x.lan720p.includes("Hindi"));
+      let addFilter = myData.filter(x => x.categories.includes("bollywood"));
       let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
       let movies = arrays.url;
 
@@ -386,7 +386,7 @@ function showEnglishMovies() {
       // Movies load in variables
       let myData = data.items;
       let movieData = "showEnglishMovies";
-      let addFilter = myData.filter(x => x.lan720p.includes("English"));
+      let addFilter = myData.filter(x => x.categories.includes("hollywood"));
       let arrays = pagination(addFilter, movieUrl.currentPage, movieUrl.pageSize);
       let movies = arrays.url;
 
