@@ -1,6 +1,44 @@
 {
   "items":
  [ {
+      "id": "241",
+      "imdbPage": "https://m.imdb.com/title/tt6443346/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Black Adam",
+      "categories": "United States, canad, hollywood",
+      "serchMovieTitle": "black adam black",
+      "duration": "124 min",
+      "genres": "Action , Fantasy ,Sci-Fi",
+      "releaseDate": "20 October 2022",
+      "shortByDate": "2022-10-20",
+      "movieQuality": "HDCamRip",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUgw20FY_9YyREjL8qIbAsaRVKnaLWyZWYRQ&usqp=CAU",
+      "storyLineShort": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods-and imprisoned just as quickly-Black Adam is freed from his earthly tomb, ready to unleash his unique f..",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "obYuPJH2oTE",
+      "screenShot1": "https://i.ytimg.com/vi/X0tOpBuYasI/maxresdefault.jpg"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpIZqqHh3tGscW_U1gId5twUwHyQ-l7Ha7JQ&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl45Q0VEqLjLI6ESzUfdgLqD2k8nXOfoTPRw&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5wM4zzHF3wG-vsuYSl-qe6XyICtAtuu2y-Q&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTnk9S5ZXbtxQ8gKUbrT0z6FRJJZg9k4Kzjg&usqp=CAU"
+      ,
+      "myBox480p": "https://mdisk.me/convertor/281x120/gI3Pwf",
+      "uploadBaz480p": "https://uploadbaz.me/me5m93rabqgc",
+      "myBox720p": "https://mdisk.me/convertor/281x120/voQwPg",
+      "uploadBaz720p": "https://uploadbaz.me/us9983ufhax8",
+      "myBox1080p": "https://mdisk.me/convertor/96x41/HZcUTC",
+      "uploadBaz1080p": "https://uploadbaz.me/l9kfw7k0cywf ",
+      "lan480p": "Hindi-English",
+      "lan720p": "Hindi-English",
+      "lan1080p": "Hindi-English",
+      "lastUpdate": "Last updated 22, october 2022"
+    },
+    {
       "id": "240",
       "imdbPage": "https://m.imdb.com/title/tt0433035/?ref_=nv_sr_srsg_0",
       "movieTitle": "Real Steel",
@@ -9,7 +47,7 @@
       "duration": "127 min",
       "genres": "Action , Drama ,Sci-Fi",
       "releaseDate": "07 October 2011",
-      "shortByDate": "2011-10-07",
+      "shortByDate": "2011-10-07",<<
       "movieQuality": "Blu-Ray",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXX3ip2zIATkfTx8DgY4WYaAppZlbnOYLNaw&usqp=CAU",
       "storyLineShort": "In the near future, robot boxing is a top sport. A struggling ex-boxer feels he's found a champion in a discarded robot.",
