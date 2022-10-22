@@ -274,7 +274,7 @@ function allMovies() {
       paginationBtn(arrays.currentPage, movieData);
     });
     wait();
-  }, 1500);
+  }, 1000);
 
 }
 allMovies();
@@ -345,7 +345,7 @@ function showHindiMovies() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function adultMovies() {
@@ -374,7 +374,7 @@ function adultMovies() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function showEnglishMovies() {
@@ -403,7 +403,7 @@ function showEnglishMovies() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 // Function to filter data by genres of collection
@@ -434,7 +434,7 @@ function action() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function animation() {
@@ -464,7 +464,7 @@ function animation() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function adventure() {
@@ -494,7 +494,7 @@ function adventure() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function comedy() {
@@ -524,7 +524,7 @@ function comedy() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function crime() {
@@ -554,7 +554,7 @@ function crime() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function documentary() {
@@ -584,7 +584,7 @@ function documentary() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function drama() {
@@ -614,7 +614,7 @@ function drama() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function fantastic() {
@@ -644,7 +644,7 @@ function fantastic() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function fantasy() {
@@ -674,7 +674,7 @@ function fantasy() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function family() {
@@ -704,7 +704,7 @@ function family() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function history() {
@@ -734,7 +734,7 @@ function history() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function horror() {
@@ -764,7 +764,7 @@ function horror() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function music() {
@@ -794,7 +794,7 @@ function music() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function musical() {
@@ -824,7 +824,7 @@ function musical() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function mystery() {
@@ -854,7 +854,7 @@ function mystery() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function romance() {
@@ -884,7 +884,7 @@ function romance() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function thriller() {
@@ -914,7 +914,7 @@ function thriller() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function sciFi() {
@@ -944,7 +944,7 @@ function sciFi() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function sports() {
@@ -974,7 +974,7 @@ function sports() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 function biography() {
@@ -1004,7 +1004,7 @@ function biography() {
     });
     wait();
   },
-    1500);
+    1000);
 };
 
 // Function to search movie
@@ -1038,7 +1038,7 @@ searchMovies.addEventListener("keypress", (e)=> {
       });
     }
     wait();
-  }, 1500);
+  }, 1000);
 });
 
 // const loading = document.querySelector(".loading");
