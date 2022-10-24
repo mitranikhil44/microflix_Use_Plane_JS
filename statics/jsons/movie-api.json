@@ -1,6 +1,39 @@
 {
   "items":
  [ {
+      "id": "22",
+      "imdbPage": "https://www.imdb.com/title/tt14002046/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Bheeshma Parvam",
+      "categories": "india , bollywood",
+      "serchMovieTitle": "bheeshma parvam 2022",
+      "duration": "144 min",
+      "genres": "Drama, Thriller",
+      "releaseDate": "03 Mar 2022",
+      "shortByDate": "2022-03-03",
+      "movieQuality": "Web-DL",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJgdBG_wHsrQ45l2fcgMI1e8X_Uyei66dlg&usqp=CAU",
+      "storyLineShort": "Michael helms his ancestral family in Kochi, inspiring fear and respect through his past. When a few younger members in the household feel his power over their lives are too aggravating, they join hands with foes to clamp down on him.",
+      "hindiTrailer": "Hindi",
+      "englishTrailer": "Tamil",
+      "watchHindiTrailer": "x_POXzfzTHM",
+      "watchEnglishTrailer": "41GswFhjRWk",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS9Msq75TNGPDzs1NT-JCv_0gpMa4Og4IsUg&usqp=CAU",
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjVcKq_q0XdtN5y3hXdtu88hG5kZkv1NKJA&usqp=CAU",
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIbNrqtWEHR99J9vCFMlan76xZoazs9pvDlw&usqp=CAU",
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdC6hJlfaws2V7qw0WotLv9n8ld4dyDzjCLw&usqp=CAU",
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsA03uhfEzripB_mBHC1fvwZRsjSRutElI1Q&usqp=CAU",
+      "myBox480p": "https://mdisk.me/convertor/19x8/Z1LLrQ",
+      "uploadBaz480p": "",
+      "myBox720p": "https://mdisk.me/convertor/240x101/VkXBgl",
+      "uploadBaz720p": "",
+      "myBox1080p": "",
+      "uploadBaz1080p": "",
+      "lan480p": "Hindi",
+      "lan720p": "Hindi",
+      "lan1080p": "Hindi",
+      "lastUpdate": "Last updated 24, october 2022"
+    },
+    {
       "id": "244",
       "imdbPage": "https://m.imdb.com/title/tt21442932/?ref_=nv_sr_srsg_0",
       "movieTitle": "Bula",
@@ -36,7 +69,7 @@
       "lan480p": "Korean",
       "lan720p": "Korean",
       "lan1080p": "Korean",
-      "lastUpdate": "Last updated 23, october 2022"
+      "lastUpdate": "Last updated 24, october 2022"
     },
     {
       "id": "243",
@@ -7941,39 +7974,6 @@
       "lan720p": "Hindi",
       "lan1080p": "Hindi",
       "lastUpdate": "Last updated 06, Jun 202209, Apr 2022"
-    },
-    {
-      "id": "22",
-      "imdbPage": "https://www.imdb.com/title/tt14002046/?ref_=nv_sr_srsg_0",
-      "movieTitle": "Bheeshma Parvam",
-      "categories": "",
-      "serchMovieTitle": "bheeshma parvam 2022",
-      "duration": "144 min",
-      "genres": "Drama, Thriller",
-      "releaseDate": "03 Mar 2022",
-      "shortByDate": "2022-03-03",
-      "movieQuality": "Web-DL",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJgdBG_wHsrQ45l2fcgMI1e8X_Uyei66dlg&usqp=CAU",
-      "storyLineShort": "Michael helms his ancestral family in Kochi, inspiring fear and respect through his past. When a few younger members in the household feel his power over their lives are too aggravating, they join hands with foes to clamp down on him.",
-      "hindiTrailer": "Hindi",
-      "englishTrailer": "English",
-      "watchHindiTrailer": "",
-      "watchEnglishTrailer": "",
-      "screenShot1": "",
-      "screenShot2": "",
-      "screenShot3": "",
-      "screenShot4": "",
-      "screenShot5": "",
-      "myBox480p": "",
-      "uploadBaz480p": "https://send.cm/d/9pfR",
-      "myBox720p": "",
-      "uploadBaz720p": "https://send.cm/d/9pfU",
-      "myBox1080p": "",
-      "uploadBaz1080p": "https://send.cm/d/9pkl",
-      "lan480p": "Hindi",
-      "lan720p": "Hindi",
-      "lan1080p": "Hindi",
-      "lastUpdate": "Last updated 06, Jun 202226, Apr 2022"
     }
     ]
 }
