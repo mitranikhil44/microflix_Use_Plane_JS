@@ -1,6 +1,44 @@
 {
   "items":
  [ {
+      "id": "244",
+      "imdbPage": "https://m.imdb.com/title/tt21442932/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Bula",
+      "categories": "philppines , 18+ ,hollywood",
+      "serchMovieTitle": "bula bul",
+      "duration": "104 min",
+      "genres": "Thriller",
+      "releaseDate": "02 September 2022",
+      "shortByDate": "2022-09-02",
+      "movieQuality": "Blu-Ray",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXQvLxgrOdI5devJ-rNI9kpLRLuKsdsBnjIQ&usqp=CAU",
+      "storyLineShort": "A woman, who owns a laundry shop, uses her clients' clothes to satisfy her sexual fantasies. When she meets a hot police officer, she wants to have him no matter what it takes.",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "Korean",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "aqAuH-Myke8",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI9mvg3yt5R-4oyzoPecOmtbupMW-jxK2Sig&usqp=CAU"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpGote5ofwhnWVAZwKS0iyjGrGjThqnN76og&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQSMJTSfzS1t70EAHRCio0vRMnAdSn_X0Rng&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVZd1Ep7y1F1PNURxUs4d6tUVgB9kr73Ea_g&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTea7O9Z7oU-Fzwzie5LDf0bE6L8uCtHu3kg&usqp=CAU"
+      ,
+      "myBox480p": "https://mdisk.me/convertor/427x240/T5qMFI",
+      "uploadBaz480p": "",
+      "myBox720p": "https://mdisk.me/convertor/16x9/zs863Q",
+      "uploadBaz720p": "",
+      "myBox1080p": "https://mdisk.me/convertor/16x9/mf4NOO",
+      "uploadBaz1080p": "",
+      "lan480p": "Korean",
+      "lan720p": "Korean",
+      "lan1080p": "Korean",
+      "lastUpdate": "Last updated 23, october 2022"
+    },
+    {
       "id": "243",
       "imdbPage": "https://m.imdb.com/title/tt17660740/?ref_=nv_sr_srsg_0",
       "movieTitle": "The Pez Outlaw",
