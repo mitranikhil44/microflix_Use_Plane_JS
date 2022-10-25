@@ -1,6 +1,44 @@
 {
   "items":
  [ {
+      "id": "245",
+      "imdbPage": "https://m.imdb.com/title/tt11827628/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Memory",
+      "categories": "united states ,hollywood",
+      "serchMovieTitle": "memory me mory",
+      "duration": "114 min",
+      "genres": " Action , Crime ,Thriller",
+      "releaseDate": "29 Appli 2022",
+      "shortByDate": "2022-04-29",
+      "movieQuality": "Web-DL",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi8HSoiSB5vOREA4tyCylN8In2nd4BKCMvPg&usqp=CAU",
+      "storyLineShort": "An assassin-for-hire finds that he's become a target after he refuses to complete a job for a dangerous criminal organization",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "ye63hQLDj4k",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFYzihxRpMoDLMy0oFKHjUZ9Kw2HNuSMCCvw&usqp=CAU"
+      ,
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfB9UE9IJX7fXSNq0ZEcLrxaIx6i8SOd9tDQ&usqp=CAU"
+      ,
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR28JM2819d2kb8C2Ewbbh07kAqlGYkyzqamg&usqp=CAU"
+      ,
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmsb8DF24EVI1mH4tkgV8HdUt1FyNeN2fi1A&usqp=CAU"
+      ,
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqPudXcob1tmF34Xj8JvEmPBPDybeNSG1aQ&usqp=CAU"
+      ,
+      "myBox480p": "https://mdisk.me/convertor/191x80/e4PUyA",
+      "uploadBaz480p": "",
+      "myBox720p": "https://mdisk.me/convertor/160x67/yB98PB",
+      "uploadBaz720p": "https://uploadbaz.me/dxlnwt2hm3b5",
+      "myBox1080p": "https://mdisk.me/convertor/160x67/kIXiAh",
+      "uploadBaz1080p": "",
+      "lan480p": "Hindi-English",
+      "lan720p": "Hindi-English",
+      "lan1080p": "Hindi-English",
+      "lastUpdate": "Last updated 25, october 2022"
+    },
+    {
       "id": "22",
       "imdbPage": "https://www.imdb.com/title/tt14002046/?ref_=nv_sr_srsg_0",
       "movieTitle": "Bheeshma Parvam",
@@ -27,7 +65,7 @@
       "myBox720p": "https://mdisk.me/convertor/240x101/VkXBgl",
       "uploadBaz720p": "",
       "myBox1080p": "",
-      "uploadBaz1080p": "",
+      "uploadBaz1080p": "https://uploadbaz.me/sqkmyii4ddbd",
       "lan480p": "Hindi",
       "lan720p": "Hindi",
       "lan1080p": "Hindi",
