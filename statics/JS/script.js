@@ -162,7 +162,7 @@ function show(data, index) {
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-success" href="${data.uploadBaz480p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-success" href="${data.myBox480p}">Server 2</a>
+                <a type="button" target="_blank" class="btn btn-info" href="${data.myBox480p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan480p}
                 </div>
@@ -173,7 +173,7 @@ function show(data, index) {
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-success" href="${data.uploadBaz720p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-success" href="${data.myBox720p}">Server 2</a>
+                <a type="button" target="_blank" class="btn btn-info" href="${data.myBox720p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan720p}
                 </div>
@@ -184,7 +184,7 @@ function show(data, index) {
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                  <a type="button" target="_blank" class="btn btn-success" href="${data.uploadBaz1080p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-success" href="${data.myBox1080p}">Server 2</a>
+                <a type="button" target="_blank" class="btn btn-info" href="${data.myBox1080p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan1080p}
                 </div>
