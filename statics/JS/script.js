@@ -161,9 +161,8 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-success" href="${data.server1_480p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_480p}">Server 2</a>
-                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_480p}">Server 3</a>
+                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_480p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_480p}">Server 1</a>
                 <div class="my-2">
                   ${data.lan480p}
                 </div>
@@ -173,9 +172,8 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-success" href="${data.server1_720p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_720p}">Server 2</a>
-                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_720p}">Server 3</a>
+                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_720p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_720p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan720p}
                 </div>
@@ -185,9 +183,8 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                 <a type="button" target="_blank" class="btn btn-success" href="${data.server1_1080p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_1080p}">Server 2</a>
-                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_1080p}">Server 3</a>
+                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_1080p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_1080p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan1080p}
                 </div>
