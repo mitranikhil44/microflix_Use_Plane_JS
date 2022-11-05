@@ -37,7 +37,7 @@ let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
           _0x1f5f8c[_0x25a0('0xe')](_0x25a0('0x6'), 'color: white; cursor: pointer; font-size: 50px; font-weight: bold; position: absolute; right: 30px; top: 20px;'),
           _0x5a9ba0[_0x25a0('0xe')](_0x25a0('0x6'), _0x25a0('0x11')),
           _0x5a9ba0[_0x25a0('0x3')] = _0x25a0('0x12'),
-          _0x1f5f8c[_0x25a0('0x3')] = '&#10006;',
+          _0x1f5f8c[_0x25a0('0x3')] = '&#1006;',
           _0x3c0b3b['appendChild'](_0x5a9ba0),
           _0x3c0b3b[_0x25a0('0xa')](_0x1f5f8c),
           _0x1f5f8c[_0x25a0('0x13')](_0x25a0('0x14'), function _0x3c0b3b() {
@@ -161,8 +161,8 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_480p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_480p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-info server2_480p" href="${data.server2_480p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-primary server3_480p" id="server3_480p" href="${data.server3_480p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan480p}
                 </div>
@@ -172,8 +172,8 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_720p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_720p}">Server 2</a>
+                <a type="button" target="_blank" class="btn btn-info server2_720p" href="${data.server2_720p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-primary server3_720p" href="${data.server3_720p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan720p}
                 </div>
@@ -183,8 +183,8 @@ function show(data, index) {
               <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-info" href="${data.server2_1080p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-primary" href="${data.server3_1080p}">Server 2</a>
+                <a type="button" target="_blank" class="btn btn-info server2_1080p" href="${data.server2_1080p}">Server 1</a>
+                <a type="button" target="_blank" class="btn btn-primary server3_1080p" href="${data.server3_1080p}">Server 2</a>
                 <div class="my-2">
                   ${data.lan1080p}
                 </div>
@@ -201,6 +201,34 @@ function show(data, index) {
     `);
   // loading.classList.remove("show")
 }
+
+// Function to show SERVERS
+function servers (){
+let server2_480p = document.getElementsByClassName("server2_480p");
+let server3_480p = document.getElementsByClassName("server3_480p");
+let server2_720p = document.getElementsByClassName("server2_720p");
+let server3_720p = document.getElementsByClassName("server3_720p");
+let server2_1080p = document.getElementsByClassName("server2_1080p");
+let server3_1080p = document.getElementsByClassName("server3_1080p");
+
+// Function to show Links
+function showLinks(href){
+  let hrefData = href.getAttribute("href");
+  if(hrefData != ""){
+  }else{
+    href.style.display = "none";
+  }
+}
+
+// SHOW OR NOT LINKS
+Array.from(server2_720p).map(href => {
+  showLinks(href);
+});
+Array.from(server3_720p).map(href => {
+  showLinks(href);
+});
+  
+};
 
 // Function to pagination data
 function pagination(url, currentPage, pageSize) {
@@ -248,6 +276,9 @@ function paginationButton(index, showNow) {
   content.innerHTML = "";
   movieUrl.currentPage = parseInt(index);
   showNow();
+  setTimeout(()=>{
+    servers();
+  }, 500)
 }
 
 // Function to show all movies
@@ -269,12 +300,14 @@ function allMovies() {
         });
       }
       showData();
-
+      setTimeout(()=>{
+        servers();
+      }, 500)
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
     });
     wait();
-  }, 1000);
+  }, 500);
 
 }
 allMovies();
@@ -342,10 +375,13 @@ function showHindiMovies() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function adultMovies() {
@@ -371,10 +407,13 @@ function adultMovies() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function showEnglishMovies() {
@@ -400,10 +439,13 @@ function showEnglishMovies() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 // Function to filter data by genres of collection
@@ -431,10 +473,13 @@ function action() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function animation() {
@@ -461,10 +506,13 @@ function animation() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function adventure() {
@@ -491,10 +539,13 @@ function adventure() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function comedy() {
@@ -521,10 +572,13 @@ function comedy() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function crime() {
@@ -551,10 +605,13 @@ function crime() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function documentary() {
@@ -581,10 +638,13 @@ function documentary() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function drama() {
@@ -611,10 +671,13 @@ function drama() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function fantastic() {
@@ -641,10 +704,13 @@ function fantastic() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function fantasy() {
@@ -671,10 +737,13 @@ function fantasy() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function family() {
@@ -701,10 +770,13 @@ function family() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function history() {
@@ -731,10 +803,13 @@ function history() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function horror() {
@@ -761,10 +836,13 @@ function horror() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function music() {
@@ -791,10 +869,13 @@ function music() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function musical() {
@@ -821,10 +902,13 @@ function musical() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function mystery() {
@@ -851,10 +935,13 @@ function mystery() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function romance() {
@@ -881,10 +968,13 @@ function romance() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function thriller() {
@@ -911,10 +1001,13 @@ function thriller() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function sciFi() {
@@ -941,10 +1034,13 @@ function sciFi() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function sports() {
@@ -971,10 +1067,13 @@ function sports() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 function biography() {
@@ -1001,10 +1100,13 @@ function biography() {
       // Show pagination Button
       paginationBtn(arrays.currentPage, movieData);
       showData();
+      setTimeout(()=>{
+        servers();
+      }, 500)
     });
     wait();
   },
-    1000);
+    500);
 };
 
 // Function to search movie
@@ -1033,12 +1135,18 @@ searchMovies.addEventListener("keypress", (e)=> {
         }
         if (inputVal == "") {
           showData();
+          setTimeout(()=>{
+            servers();
+        }, 500)
         }
         showData();
+        setTimeout(()=>{
+          servers();
+        }, 500)
       });
     }
     wait();
-  }, 1000);
+  }, 500);
 });
 
 // const loading = document.querySelector(".loading");
@@ -1057,5 +1165,5 @@ searchMovies.addEventListener("keypress", (e)=> {
 //   setTimeout(()=> {
 
 //   },
-//     1000);
+//     500);
 // }
