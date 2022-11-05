@@ -221,10 +221,22 @@ function showLinks(href){
 }
 
 // SHOW OR NOT LINKS
+Array.from(server2_480p).map(href => {
+  showLinks(href);
+});
+Array.from(server3_480p).map(href => {
+  showLinks(href);
+});
 Array.from(server2_720p).map(href => {
   showLinks(href);
 });
 Array.from(server3_720p).map(href => {
+  showLinks(href);
+});
+Array.from(server2_1080p).map(href => {
+  showLinks(href);
+});
+Array.from(server3_1080p).map(href => {
   showLinks(href);
 });
   
