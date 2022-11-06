@@ -1156,7 +1156,6 @@ searchMovies.addEventListener("keypress", (e)=> {
     wait();
   }, 500);
 });
-
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
 //   const {
