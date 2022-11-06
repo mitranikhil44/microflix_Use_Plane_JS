@@ -1131,7 +1131,8 @@ searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-    if (e.key === "Enter") {
+    if (e.key == "Enter") {
+      paginationSection.innerHTML = ""
       let inputVal = searchMovies.value.toLowerCase();
       fetch(movieUrl.url).then(response => response.json()).then(data => {
         let myData = data.items;
@@ -1141,7 +1142,7 @@ searchMovies.addEventListener("keypress", (e)=> {
         // function to showData
         function showData() {
           addFilter.forEach((data)=> {
-            show(data); paginationSection.innerHTML = "";
+            show(data); 
           });
         }
         if (inputVal == "") {
