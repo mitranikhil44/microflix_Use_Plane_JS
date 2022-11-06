@@ -1147,9 +1147,6 @@ searchMovies.addEventListener("keypress", (e)=> {
         }
         if (inputVal == "") {
           showData();
-          setTimeout(()=>{
-            servers();
-        }, 500)
         }
         showData();
         setTimeout(()=>{
