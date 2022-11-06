@@ -239,7 +239,6 @@ Array.from(server2_1080p).map(href => {
 Array.from(server3_1080p).map(href => {
   showLinks(href);
 });
-  
 };
 
 // Function to pagination data
@@ -1132,7 +1131,7 @@ searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
   wait();
   setTimeout(() => {
-    if (e.key === "enter") {
+    if (e.key === "Enter") {
       let inputVal = searchMovies.value.toLowerCase();
       fetch(movieUrl.url).then(response => response.json()).then(data => {
         let myData = data.items;
@@ -1147,13 +1146,16 @@ searchMovies.addEventListener("keypress", (e)=> {
         }
         if (inputVal == "") {
           showData();
+          servers();
         }
         showData();
+        servers();
       });
     }
     wait();
   }, 500);
 });
+
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
 //   const {
