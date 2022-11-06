@@ -1151,7 +1151,7 @@ searchMovies.addEventListener("keypress", (e)=> {
         showData();
         setTimeout(()=>{
           servers();
-        }, 500)
+        }, 500);
       });
     }
     wait();
