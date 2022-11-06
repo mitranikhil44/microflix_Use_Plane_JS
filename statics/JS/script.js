@@ -1143,8 +1143,8 @@ searchMovies.addEventListener("keypress", (e)=> {
         }
 
         // function to showData
-        function showData() {
-          addFilter.forEach((data)=> {
+        async function showData() {
+          await addFilter.forEach((data)=> {
             show(data); 
           });
         }
