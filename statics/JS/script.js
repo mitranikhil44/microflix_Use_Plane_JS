@@ -362,48 +362,6 @@ function showHindiTrailer(hindiTrailer) {
   });
 }
 
-// Function to search movie
-let searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-});
-
-let searchMovies = document.getElementById("search-movies");
-searchMovies.addEventListener("keypress", (e)=> {
-  content.innerHTML = "";
-  paginationSection.innerHTML = ""
-  wait();
-  setTimeout(() => {
-    if (e.key == "Enter") {
-      let inputVal = searchMovies.value.toLowerCase();
-      fetch(movieUrl.url).then(response => response.json()).then(data => {
-        let myData = data.items;
-        console.log(myData);
-        console.log(inputVal);
-        let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
-        console.log(addFilter`);
-        
-        // function to showData
-        async function showData() {
-          await addFilter.forEach((data)=> {
-            show(data); 
-          });
-        }
-        
-        if (inputVal != "") {
-        }else{
-          showData();
-          servers();
-        }
-
-        showData();
-        servers();
-      });
-    }
-    wait();
-  }, 500);
-});
-
 // Function to show cateogries
 function showHindiMovies() {
   content.innerHTML = "";
@@ -1162,6 +1120,47 @@ function biography() {
     500);
 };
 
+// Function to search movie
+let searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+});
+
+let searchMovies = document.getElementById("search-movies");
+searchMovies.addEventListener("keypress", (e)=> {
+  content.innerHTML = "";
+  paginationSection.innerHTML = ""
+  wait();
+  setTimeout(() => {
+    if (e.key == "Enter") {
+      let inputVal = searchMovies.value.toLowerCase();
+      fetch(movieUrl.url).then(response => response.json()).then(data => {
+        let myData = data.items;
+        console.log(myData);
+        console.log(inputVal);
+        let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
+        console.log(addFilter`);
+        
+        // function to showData
+        async function showData() {
+          await addFilter.forEach((data)=> {
+            show(data); 
+          });
+        }
+        
+        if (inputVal != "") {
+        }else{
+          showData();
+          servers();
+        }
+
+        showData();
+        servers();
+      });
+    }
+    wait();
+  }, 500);
+});
 
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
