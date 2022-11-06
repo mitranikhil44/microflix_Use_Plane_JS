@@ -1129,14 +1129,17 @@ searchBtn.addEventListener("click", (event) => {
 let searchMovies = document.getElementById("search-movies");
 searchMovies.addEventListener("keypress", (e)=> {
   content.innerHTML = "";
+  paginationSection.innerHTML = ""
   wait();
   setTimeout(() => {
     if (e.key == "Enter") {
-      paginationSection.innerHTML = ""
       let inputVal = searchMovies.value.toLowerCase();
       fetch(movieUrl.url).then(response => response.json()).then(data => {
         let myData = data.items;
+        console.log(myData);
+        console.log(inputVal);
         let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
+        console.log(addFilter`);
         
         // function to showData
         async function showData() {
