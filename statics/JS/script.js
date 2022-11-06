@@ -1136,18 +1136,17 @@ searchMovies.addEventListener("keypress", (e)=> {
       let inputVal = searchMovies.value.toLowerCase();
       fetch(movieUrl.url).then(response => response.json()).then(data => {
         let myData = data.items;
-        myData.sort(byDate);
-        let addFilter = myData.filter(x=> x.serchMovieTitle.includes(inputVal));
+        let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
+        if (inputVal == "") {
+          showData();
+          servers();
+        }
 
         // function to showData
         function showData() {
           addFilter.forEach((data)=> {
             show(data); 
           });
-        }
-        if (inputVal == "") {
-          showData();
-          servers();
         }
         showData();
         servers();
