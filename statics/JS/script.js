@@ -1139,7 +1139,7 @@ searchMovies.addEventListener("keypress", (e)=> {
         console.log(myData);
         console.log(inputVal);
         let addFilter = myData.filter(x => x.serchMovieTitle.includes(inputVal));
-        console.log(addFilter`);
+        console.log(addFilter);
         
         // function to showData
         async function showData() {
