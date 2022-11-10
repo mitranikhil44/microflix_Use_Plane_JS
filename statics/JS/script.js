@@ -199,6 +199,20 @@ function show(data, index) {
       </p>
     </div>
     `);
+    
+  // Check Trailer is available or not
+  let srnShot1 = document.getElementById(data.screenShot2);
+  let srnShot2 = document.getElementById(data.screenShot1);
+  
+  if(data.watchHindiTrailer != ""){
+  }else{
+    srnShot1.style.display = "none";
+  }
+  
+  if(data.watchEnglishTrailer != ""){
+  }else{
+    srnShot2.style.display = "none";
+  }
   // loading.classList.remove("show")
 }
 
