@@ -48,6 +48,9 @@ body {
 #info-movie {
   font-size: 120%;
 }
+#toDownloadMovies{
+  display: none;
+}
 
 /* Content Stuff */
 #wait{
