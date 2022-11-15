@@ -57,6 +57,16 @@ function byDate(a, b) {
   return new Date(b.shortByDate).valueOf() - new Date(a.shortByDate).valueOf();
 }
 
+// Function to show to download movies
+function showToDownloadMovies(){
+  let howToDownload = document.getElementById("howToDownload");
+   if (howToDownload.style.display != "flex") {
+      howToDownload.style.display = "flex";
+    } else {
+      howToDownload.style.display = "none";
+    } 
+}
+
 // Function  to load contents
 let movieUrl = {
   "url": `../statics/jsons/movie-api.json`,
