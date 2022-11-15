@@ -59,7 +59,7 @@ function byDate(a, b) {
 
 // Function to show to download movies
 function showToDownloadMovies(){
-  let howToDownload = document.getElementById("howToDownload");
+  let howToDownload = document.getElementById("toDownloadMovies");
    if (howToDownload.style.display != "flex") {
       howToDownload.style.display = "flex";
     } else {
