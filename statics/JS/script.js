@@ -97,7 +97,7 @@ function show(data, index) {
           <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
           </a>
         </div>
-        <div class="col-md-8" id="card-content">
+        <div class="col-md-8 text-light" id="card-content">
           <div class="card-body" id="movie-info">
             <h1 class="card-title">${data.movieTitle}</h1>
             <p>
@@ -114,7 +114,7 @@ function show(data, index) {
             </p>
             <hr />
             <p>
-              ${data.storyLineShort} <a target="_blank" href="${data.imdbPage}"> Read More... </a>
+              ${data.storyLineShort} <a target="_blank" class="text-warning" href="${data.imdbPage}"> Click Here To Read More Info... </a>
             </p>
             <div class="d-flex align-items-center">
               <div>
@@ -168,7 +168,7 @@ function show(data, index) {
           </div>
           <div id="download-link">
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-info server2_480p" href="${data.server2_480p}">Server 1</a>
@@ -179,7 +179,7 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-info server2_720p" href="${data.server2_720p}">Server 1</a>
@@ -190,7 +190,7 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-info server2_1080p" href="${data.server2_1080p}">Server 1</a>

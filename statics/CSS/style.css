@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lora&family=Noto+Serif&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap");
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Large Desktop Size Css */
 body {
-  background-color: #212233;
+  font-family: "Share Tech", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  text-shadow: 8px 8px 10px #0000008c;
+  background-color: #343a40;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
 }
 #logo img {
   width: 15%;
@@ -48,17 +55,23 @@ body {
 #info-movie {
   font-size: 120%;
 }
-#toDownloadMovies{
+#toDownloadMovies {
   display: none;
 }
 
 /* Content Stuff */
-#wait{
+#wait {
   display: none;
 }
 
 #movie-items {
-  background-color: blue;
+  background: rgb(39, 188, 209);
+  background: linear-gradient(
+    118deg,
+    rgba(39, 188, 209, 0.9783263647255778) 0%,
+    rgba(6, 14, 101, 1) 100%
+  );
+  opacity: 0.9;
 }
 #movie-image {
   width: 100%;
@@ -101,12 +114,14 @@ body {
   border-radius: 8px;
 }
 .screenShots img:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 .btnSize {
   font-size: 100%;
 }
-#showScreenShotDisplay, #showEnglishTrailerDisplay, #showHindiTrailerDisplay {
+#showScreenShotDisplay,
+#showEnglishTrailerDisplay,
+#showHindiTrailerDisplay {
   margin: 2% 0;
   display: none;
 }
@@ -155,11 +170,8 @@ body {
   color: #d0c7c7;
 }
 
-
-
 /* Desktop Size Css */
 @media only screen and (max-width: 1199.98px) {
-
   /* Navbar Stuff */
   #navbar {
     border-radius: 0px 0px 5px 5px;
@@ -200,13 +212,8 @@ body {
   }
 }
 
-
-
-
-
 /* Tablet Size Css */
 @media only screen and (max-width: 991.98px) {
-
   /* Navbar Stuff */
   #navbar {
     border-radius: 0px 0px 4px 4px;
@@ -247,11 +254,8 @@ body {
   }
 }
 
-
-
 /* Land Scape Mobile Size Css */
 @media only screen and (max-width: 770px) {
-
   /* Navbar Stuff */
   #navbar {
     border-radius: 0px 0px 3px 3px;
@@ -286,12 +290,8 @@ body {
   }
 }
 
-
-
-
 /* Desktop Size Css */
 @media only screen and (max-width: 575.98px) {
-
   #logo {
     width: 40%;
     margin: auto;
@@ -311,7 +311,6 @@ body {
   #navbar a {
     font-size: 70%;
   }
-
 
   /* Content Stuff */
   #movie-image {
@@ -335,8 +334,6 @@ body {
     height: 13rem;
   }
 }
-
-
 
 /* Dont't read it */
 /* .loading {
