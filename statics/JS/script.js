@@ -90,7 +90,7 @@ function wait() {
 // Function to show Data
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
-   <div class="mb-3 rounded-1 text-dark bg-light" id="movie-items">
+   <div class="mb-3 rounded-1 text-dark content-scale" id="movie-items">
       <div class="row g-0">
         <div class="col-md-4 px-2 py-2">
           <a target="_blank" href="${data.imdbPage}">
@@ -118,7 +118,7 @@ function show(data, index) {
             </p>
             <div class="d-flex align-items-center">
               <div>
-                <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+                <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
                 </button>
                 <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
                   <a id="${data.screenShot1}" href="https://mufflercypress.com/i5vamc9w?key=d2fb7c5a16df1db7d604ab04e20a4787" target="_blank" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize">${data.englishTrailer} Trailer</button></a>
@@ -126,7 +126,7 @@ function show(data, index) {
                 </div>
               </div>
               <div class="mx-2">
-                <a id="${data.screenShot3}" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" onclick="showScreenShots(this.id)"><button class="btn btn-outline-warning btnSize">Screen Shots</button></a>
+                <a id="${data.screenShot3}" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" onclick="showScreenShots(this.id)"><button class="btn-scale btn btn-outline-warning btnSize">Screen Shots</button></a>
               </div>
             </div>
             <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
@@ -168,7 +168,7 @@ function show(data, index) {
           </div>
           <div id="download-link">
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+              <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-info server2_480p" href="${data.server2_480p}">Server 1</a>
@@ -179,7 +179,7 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+              <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-info server2_720p" href="${data.server2_720p}">Server 1</a>
@@ -190,7 +190,7 @@ function show(data, index) {
               </div>
             </div>
             <div>
-              <button id="btnGroupDrop1" type="button" class="mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+              <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
               </button>
               <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
                 <a type="button" target="_blank" class="btn btn-info server2_1080p" href="${data.server2_1080p}">Server 1</a>
@@ -1144,20 +1144,9 @@ function biography() {
     500);
 };
 
-// Function to search movie
-let searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-});
-
-let searchMovies = document.getElementById("search-movies");
-searchMovies.addEventListener("keypress", (e)=> {
-  content.innerHTML = "";
-  paginationSection.innerHTML = ""
-  wait();
-  setTimeout(() => {
-    if (e.key == "Enter") {
-      let inputVal = searchMovies.value.toLowerCase();
+// Function to search data
+function searchData(){
+  let inputVal = searchMovies.value.toLowerCase();
       fetch(movieUrl.url).then(response => response.json()).then(data => {
         let myData = data.items;
         
@@ -1179,9 +1168,30 @@ searchMovies.addEventListener("keypress", (e)=> {
         showData();
         servers();
       });
+}
+
+// Function to search movie
+let searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+});
+
+let searchMovies = document.getElementById("search-movies");
+searchMovies.addEventListener("keypress", (e)=> {
+  content.innerHTML = "";
+  paginationSection.innerHTML = ""
+  wait();
+  setTimeout(() => {
+    if (e.key == "Enter") {
+      searchData();
     }
     wait();
   }, 500);
+});
+document.getElementById("svg_search_icon").addEventListener("click", () => {
+  content.innerHTML = "";
+  paginationSection.innerHTML = ""
+  searchData();
 });
 
 // const loading = document.querySelector(".loading");

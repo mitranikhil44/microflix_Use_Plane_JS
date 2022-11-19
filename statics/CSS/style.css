@@ -14,7 +14,6 @@ html {
 /* Large Desktop Size Css */
 body {
   font-family: "Share Tech", sans-serif;
-  width: 100vw;
   height: scroll;
   text-shadow: 8px 8px 10px #0000008c;
   background-color: #343a40;
@@ -60,6 +59,10 @@ body {
 }
 
 /* Content Stuff */
+#mainElement{
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+}
 #wait {
   display: none;
 }
@@ -145,6 +148,14 @@ body {
   align-items: center;
   margin: 0% 2%;
 }
+.btn-scale:hover{
+  z-index: 1;
+  transform: scale(1.2);
+}
+.content-scale:hover{
+  z-index: 1;
+  transform: scale(1.03);
+}
 .paginationSize {
   font-size: 100%;
 }
@@ -154,11 +165,11 @@ body {
   color: white;
 }
 #foot a {
-  margin: 2% 3%;
+  margin: 2% 0%;
   text-decoration: none;
 }
 #foot svg {
-  width: 5%;
+  width: 30%;
 }
 #foot svg:hover {
   transform: scale(1.3);
