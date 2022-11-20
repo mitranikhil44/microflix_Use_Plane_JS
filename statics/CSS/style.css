@@ -24,13 +24,22 @@ body {
   width: 15%;
   margin: 2%;
 }
+.ads_css{
+  color: white;
+}
+.ads_baner_css{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Navbar Stuff */
 #navbar {
   position: sticky;
   top: 0px;
-  width: 98%;
-  z-index: 1;
+  width: 99%;
+  z-index: 5;
   margin: auto;
   border-radius: 0px 0px 6px 6px;
 }
@@ -66,18 +75,23 @@ body {
 #wait {
   display: none;
 }
-
+.content-scale:hover{
+  z-index: 1;
+  transform: scale(1.03);
+}
 #movie-items {
   background: rgb(39, 188, 209);
   background: linear-gradient(
     118deg,
     rgba(39, 188, 209, 0.9783263647255778) 0%,
     rgba(6, 14, 101, 1) 100%
-  );
-  opacity: 0.9;
+    );
+    opacity: 0.9;
+    border-radius: 8px;
 }
 #movie-image {
-  width: 100%;
+  border-top-left-radius: 3px;
+  border-end-start-radius: 3px;
   height: 40rem;
 }
 #content {
@@ -146,15 +160,13 @@ body {
 #download-link {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0% 2%;
 }
 .btn-scale:hover{
   z-index: 1;
   transform: scale(1.2);
-}
-.content-scale:hover{
-  z-index: 1;
-  transform: scale(1.03);
 }
 .paginationSize {
   font-size: 100%;
@@ -202,7 +214,7 @@ body {
     height: 36rem;
   }
   #content {
-    font-size: 180%;
+    font-size: 130%;
   }
   #movie-info {
     font-size: 65%;
@@ -226,6 +238,9 @@ body {
 /* Tablet Size Css */
 @media only screen and (max-width: 991.98px) {
   /* Navbar Stuff */
+  #logo img {
+    width: 20%;
+  }
   #navbar {
     border-radius: 0px 0px 4px 4px;
   }
@@ -244,7 +259,7 @@ body {
     height: 33rem;
   }
   #content {
-    font-size: 170%;
+    font-size: 140%;
   }
   #movie-info {
     font-size: 60%;
@@ -268,6 +283,9 @@ body {
 /* Land Scape Mobile Size Css */
 @media only screen and (max-width: 770px) {
   /* Navbar Stuff */
+  #logo img {
+    width: 25%;
+  }
   #navbar {
     border-radius: 0px 0px 3px 3px;
   }
@@ -280,17 +298,17 @@ body {
 
   /* Content Stuff */
   #movie-image {
-    height: 35rem;
+    height: 51rem;
   }
   #content {
-    font-size: 165%;
+    font-size: 150%;
   }
   .screenShots {
     border-radius: 3px;
     height: 26rem;
   }
   .screenShots .card-body {
-    margin-right: -4%;
+    margin-right: -6%;
   }
   .screenShots img {
     height: 22rem;
@@ -301,10 +319,10 @@ body {
   }
 }
 
-/* Desktop Size Css */
+/* portrait Mobile Size Css */
 @media only screen and (max-width: 575.98px) {
   #logo {
-    width: 40%;
+    width: 35%;
     margin: auto;
   }
   #logo img {
@@ -325,10 +343,10 @@ body {
 
   /* Content Stuff */
   #movie-image {
-    height: 35rem;
+    height: 34rem;
   }
   #content {
-    font-size: 160%;
+    font-size: 120%;
   }
   .screenShots {
     border-radius: 2px;
@@ -338,14 +356,99 @@ body {
     margin-right: -9%;
   }
   .screenShots img {
-    height: 13rem;
+    height: 10rem;
     border-radius: 2px;
   }
   #showTrailer {
-    height: 13rem;
+    height: 10rem;
   }
 }
 
+@media only screen and (max-width: 500.98px) {
+  #logo {
+    width: 35%;
+  }
+  #logo img {
+    margin: 3% 0%;
+  }
+
+  /* Navbar Stuff */
+  #navbar {
+    border-radius: 0px 0px 1px 1px;
+  }
+  #genresContent {
+    height: 16rem;
+  }
+  #navbar a {
+    font-size: 60%;
+  }
+
+  /* Content Stuff */
+  #movie-image {
+    height: 26rem;
+  }
+  #content {
+    font-size: 110%;
+  }
+  .screenShots {
+    border-radius: 1px;
+    height: 23rem;
+  }
+  .screenShots .card-body {
+    margin-right: -13%;
+  }
+  .screenShots img {
+    height: 8rem;
+    border-radius: 1px;
+  }
+  #showTrailer {
+    height: 8rem;
+  }
+}
+
+@media only screen and (max-width: 450.98px) {
+  /* Content Stuff */
+  #movie-image {
+    height: 22rem;
+  }
+  #content {
+    font-size: 90%;
+  }
+  .screenShots {
+    height: 21rem;
+  }
+  .screenShots .card-body {
+    margin-right: -17%;
+  }
+  .screenShots img {
+    height: 6rem;
+  }
+  #showTrailer {
+    height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 385.98px) {
+  /* Content Stuff */
+  #movie-image {
+    height: 17rem;
+  }
+  #content {
+    font-size: 80%;
+  }
+  .screenShots {
+    height: 19rem;
+  }
+  .screenShots .card-body {
+    margin-right: -19%;
+  }
+  .screenShots img {
+    height: 4rem;
+  }
+  #showTrailer {
+    height: 4rem;
+  }
+}
 /* Dont't read it */
 /* .loading {
   opacity: 0;
