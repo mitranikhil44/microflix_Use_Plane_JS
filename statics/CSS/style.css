@@ -27,6 +27,15 @@ body {
 .ads_css{
   color: white;
 }
+#desktopSize{
+  display: block;
+}
+#tabSize{
+  display: none;
+}
+#mobileSize{
+  display: none;
+}
 .ads_baner_css{
   display: flex;
   flex-direction: column;
@@ -123,6 +132,7 @@ body {
   width: 100%;
 }
 .screenShots .card-body {
+  padding: 2%;
   margin-right: -3%;
 }
 .screenShots img {
@@ -151,7 +161,7 @@ body {
 }
 #showTrailer {
   width: 100%;
-  height: 25rem;
+  height: 37rem;
 }
 .card-text {
   margin-right: 2%;
@@ -231,7 +241,7 @@ body {
     border-radius: 6px;
   }
   #showTrailer {
-    height: 23rem;
+    height: 22rem;
   }
 }
 
@@ -252,6 +262,15 @@ body {
   }
   #search-movies {
     padding-left: 14%;
+  }
+  #desktopSize{
+    display: none;
+  }
+  #tabSize{
+    display: block;
+  }
+  #mobileSize{
+    display: none;
   }
 
   /* Content Stuff */
@@ -329,6 +348,18 @@ body {
     width: 100%;
     margin: 5% 0%;
   }
+  #desktopSize{
+    display: none;
+  }
+  #tabSize{
+    display: none;
+  }
+  #mobileSize{
+    display: block;
+  }
+  .ads_baner_css{
+    display: none;
+  }
 
   /* Navbar Stuff */
   #navbar {
@@ -401,9 +432,6 @@ body {
     height: 8rem;
     border-radius: 1px;
   }
-  #showTrailer {
-    height: 8rem;
-  }
 }
 
 @media only screen and (max-width: 450.98px) {
@@ -423,9 +451,6 @@ body {
   .screenShots img {
     height: 6rem;
   }
-  #showTrailer {
-    height: 6rem;
-  }
 }
 
 @media only screen and (max-width: 385.98px) {
@@ -443,9 +468,6 @@ body {
     margin-right: -19%;
   }
   .screenShots img {
-    height: 4rem;
-  }
-  #showTrailer {
     height: 4rem;
   }
 }
