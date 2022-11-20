@@ -1,0 +1,48 @@
+/* Navbar Stuff */
+#navbar {
+  border-radius: 0px 0px 5px 5px;
+}
+#genresContent {
+  height: 33rem;
+}
+#navbar a {
+  font-size: 100%;
+}
+#search-movies {
+  padding-left: 18%;
+}
+#ads_desktopSize{
+  display: none;
+}
+
+/* Content Stuff */
+#movie_details_content {
+  height: 29rem;
+}
+#movie-items {
+  width: 24%;
+  height: 28em;
+}
+#movie-image {
+  height: 21rem;
+}
+#content {
+  font-size: 130%;
+}
+#movie-info {
+  font-size: 65%;
+}
+.screenShots {
+  border-radius: 6px;
+  height: 30rem;
+}
+.screenShots .card-body {
+  padding: 1%;
+}
+.screenShots img {
+  height: 8rem;
+  border-radius: 6px;
+}
+#showTrailer {
+  height: 10rem;
+}

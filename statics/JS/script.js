@@ -71,7 +71,7 @@ function showToDownloadMovies(){
 let movieUrl = {
   "url": `../statics/jsons/movie-api.json`,
   "currentPage": 1,
-  "pageSize": 10,
+  "pageSize": 12,
   "window": 5,
 };
 let content = document.getElementById("content");
@@ -90,123 +90,130 @@ function wait() {
 // Function to show Data
 function show(data, index) {
   content.insertAdjacentHTML("beforeend", `
-   <div class="mb-3 rounded-1 text-dark content-scale" id="movie-items">
-      <div class="row g-0">
-        <div class="col-md-4 px-2 py-2">
-          <a target="_blank" href="${data.imdbPage}">
+   <div class="mb-3 position-relative" id="movie-items">
+      <div>
+        <div class="px-2 py-2">
+          <a id="${data.id}" onclick="show_movie_details_content(this.id)">
           <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
           </a>
-        </div>
-        <div class="col-md-8 text-light" id="card-content">
-          <div class="card-body" id="movie-info">
-            <h1 class="card-title">${data.movieTitle}</h1>
-            <p>
-              <b>Duration:</b> ${data.duration}
-            </p>
-            <p>
-              <b>Genres:</b> ${data.genres}
-            </p>
-            <p>
-              <b>Release Date:</b> ${data.releaseDate}
-            </p>
-            <p>
-              <b>Movie Quality:</b> ${data.movieQuality}
-            </p>
-            <hr />
-            <p>
-              ${data.storyLineShort} <a target="_blank" class="text-warning" href="${data.imdbPage}"> Click Here To Read More Info... </a>
-            </p>
-            <div class="d-flex align-items-center flex-wrap">
-              <div>
-                <button id="btnGroupDrop1" type="button" class="btn-scale mx-2 my-1 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
-                </button>
-                <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
-                  <a id="${data.screenShot1}" href="https://mufflercypress.com/i5vamc9w?key=d2fb7c5a16df1db7d604ab04e20a4787" target="_blank" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize my-1">${data.englishTrailer} Trailer</button></a>
-                  <a id="${data.screenShot2}" target="_blank" href="https://mufflercypress.com/fdzuhtzyy?key=f407dd62489e1deb652071b098d43622" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize my-1">${data.hindiTrailer} Trailer</button></a>
+          <h4 class="text-center my-2 text-light" id="${data.id}" onclick="show_movie_details_content(this.id)">${data.movieTitle}</h4>
+          <div class="border-dark my-2 px-1 ${data.id}" id="movie_details_content" aria-labelledby="btnGroupDrop1">
+          <div class="text-light" id="card-content">
+            <div id="movie-info">
+              <h1 class="card-title text-left">Details:</h1>
+                <p>
+                  <b>Duration:</b> ${data.duration}
+                </p>
+                <p>
+                  <b>Genres:</b> ${data.genres}
+                </p>
+                <p>
+                  <b>Release Date:</b> ${data.releaseDate}
+                </p>
+                <p>
+                  <b>Movie Quality:</b> ${data.movieQuality}
+                </p>
+                <hr />
+                <p>
+                  ${data.storyLineShort} <a target="_blank" class="text-warning" href="${data.imdbPage}"> Click Here To Read More Info... </a>
+                </p>
+                <div class="d-flex align-items-center flex-wrap">
+                  <div>
+                    <button id="btnGroupDrop1" type="button" class="btn-scale mx-2 my-3 btn btn-outline-danger btnSize" data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+                    </button>
+                    <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
+                      <a id="${data.screenShot1}" href="https://mufflercypress.com/i5vamc9w?key=d2fb7c5a16df1db7d604ab04e20a4787" target="_blank" onclick="showEnglishTrailer(this.id)"><button class="btn btn-outline-dark btnSize my-1">${data.englishTrailer} Trailer</button></a>
+                      <a id="${data.screenShot2}" target="_blank" href="https://mufflercypress.com/fdzuhtzyy?key=f407dd62489e1deb652071b098d43622" onclick="showHindiTrailer(this.id)"><button class="btn btn-outline-dark btnSize my-1">${data.hindiTrailer} Trailer</button></a>
+                    </div>
+                  </div>
+                  <div class="mx-2">
+                    <a id="${data.screenShot3}" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" onclick="showScreenShots(this.id)"><button class="btn-scale btn btn-outline-warning my-3 btnSize">Screen Shots</button></a>
+                  </div>
                 </div>
-              </div>
-              <div class="mx-2">
-                <a id="${data.screenShot3}" target="_blank" href="https://mufflercypress.com/zk7pv12v?key=6e8531857042640d53227722fbcb1c09" onclick="showScreenShots(this.id)"><button class="btn-scale btn btn-outline-warning my-1 btnSize">Screen Shots</button></a>
-              </div>
-            </div>
-            <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
-              <div class="card-body rounded alert-dismissible">
-                <h5 class="card-title text-dark">Screen Shots</h5>
-                <hr class="bg-dark" />
-                <div>
-                  <img src="${data.screenShot1}" alt="${data.movieTitle}">
-                  <hr class="bg-dark" />
-                  <img src="${data.screenShot2}" alt="${data.movieTitle}">
-                  <hr class="bg-dark" />
-                  <img src="${data.screenShot3}" alt="${data.movieTitle}">
-                  <hr class="bg-dark" />
-                  <img src="${data.screenShot4}" alt="${data.movieTitle}">
-                  <hr class="bg-dark" />
-                  <img src="${data.screenShot5}" alt="${data.movieTitle}">
-                  <hr class="bg-dark" />
+                <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
+                  <div class="card-body rounded alert-dismissible">
+                    <h5 class="card-title text-dark">Screen Shots</h5>
+                    <hr class="bg-dark" />
+                    <div>
+                      <img src="${data.screenShot1}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
+                      <img src="${data.screenShot2}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
+                      <img src="${data.screenShot3}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
+                      <img src="${data.screenShot4}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
+                      <img src="${data.screenShot5}" alt="${data.movieTitle}">
+                      <hr class="bg-dark" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="${data.screenShot1} bg-light" id="showEnglishTrailerDisplay">
-              <div class="card-body bg-light rounded">
-                <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
-                <hr / class="bg-dark">
-                <div>
-                  <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="${data.screenShot1} bg-light" id="showEnglishTrailerDisplay">
+                  <div class="card-body bg-light rounded">
+                    <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
+                    <hr / class="bg-dark">
+                    <div>
+                      <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="${data.screenShot2} bg-light" id="showHindiTrailerDisplay">
-              <div class="card-body bg-light rounded">
-                <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
-                <hr / class="bg-dark">
-                <div>
-                  <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="${data.screenShot2} bg-light" id="showHindiTrailerDisplay">
+                  <div class="card-body bg-light rounded">
+                    <h5 class="card-title text-dark">${data.hindiTrailer} Trailer</h5>
+                    <hr / class="bg-dark">
+                    <div>
+                      <iframe src="https://www.youtube.com/embed/${data.watchHindiTrailer}" id="showTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div id="download-link">
-            <div>
-              <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 my-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
-              </button>
-              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-info btn-scale server2_480p" href="${data.server2_480p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-primary btn-scale server3_480p" id="server3_480p" href="${data.server3_480p}">Server 2</a>
-                <div class="my-2">
-                  ${data.lan480p}
-                </div>
-              </div>
-            </div>
-            <div>
-              <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 my-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
-              </button>
-              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-info btn-scale server2_720p" href="${data.server2_720p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-primary btn-scale server3_720p" href="${data.server3_720p}">Server 2</a>
-                <div class="my-2">
-                  ${data.lan720p}
-                </div>
-              </div>
-            </div>
-            <div>
-              <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 my-1 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
-              </button>
-              <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
-                <a type="button" target="_blank" class="btn btn-info btn-scale server2_1080p" href="${data.server2_1080p}">Server 1</a>
-                <a type="button" target="_blank" class="btn btn-primary btn-scale server3_1080p" href="${data.server3_1080p}">Server 2</a>
-                <div class="my-2">
-                  ${data.lan1080p}
+                <div id="download-link">
+                  <div>
+                    <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 my-3 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">480p
+                    </button>
+                    <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
+                      <a type="button" target="_blank" class="btn btn-info btn-scale server2_480p" href="${data.server2_480p}">Server 1</a>
+                      <a type="button" target="_blank" class="btn btn-primary btn-scale server3_480p" id="server3_480p" href="${data.server3_480p}">Server 2</a>
+                      <div class="my-2">
+                        ${data.lan480p}
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 my-3 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">720p
+                    </button>
+                    <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
+                      <a type="button" target="_blank" class="btn btn-info btn-scale server2_720p" href="${data.server2_720p}">Server 1</a>
+                      <a type="button" target="_blank" class="btn btn-primary btn-scale server3_720p" href="${data.server3_720p}">Server 2</a>
+                      <div class="my-2">
+                        ${data.lan720p}
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <button id="btnGroupDrop1" type="button" class="btn-scale mx-1 my-3 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">1080p
+                    </button>
+                    <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1" aria-labelledby="btnGroupDrop1">
+                      <a type="button" target="_blank" class="btn btn-info btn-scale server2_1080p" href="${data.server2_1080p}">Server 1</a>
+                      <a type="button" target="_blank" class="btn btn-primary btn-scale server3_1080p" href="${data.server3_1080p}">Server 2</a>
+                      <div class="my-2">
+                        ${data.lan1080p}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <hr />
-      <p class="card-text figure-caption text-end">
-        <small class="text-muted">${data.lastUpdate}</small>
-      </p>
+      <div class="position-absolute bottom-0 end-0 mb-2" id="${data.id}" onclick="show_movie_details_content(this.id)">
+        <div>
+          <hr />
+          <p class="card-text text-center">
+            <small class="text-dark fs-5">${data.lastUpdate}</small>
+          </p>
+        </div>
+      </div>
     </div>
     `);
     
@@ -314,6 +321,17 @@ function paginationButton(index, showNow) {
   setTimeout(()=>{
     servers();
   }, 500)
+}
+
+// Function to Show Screen Shots
+function show_movie_details_content(id) {
+  Array.from(document.getElementsByClassName(id)).forEach(data => {
+    if (data.style.display != "block") {
+      data.style.display = "block";
+    } else {
+      data.style.display = "none";
+    }
+  });
 }
 
 // Function to show all movies

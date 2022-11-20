@@ -1,0 +1,38 @@
+ /* Navbar Stuff */
+ #logo img {
+    width: 25%;
+  }
+  #navbar {
+    border-radius: 0px 0px 3px 3px;
+  }
+  #genresContent {
+    height: 18rem;
+  }
+  #navbar a {
+    font-size: 80%;
+  }
+
+  /* Content Stuff */
+  #movie_details_content {
+    height: 24rem;
+  }
+  #movie-items {
+    height: 23em;
+  }
+  #movie-image {
+    height: 16rem;
+  }
+  #content {
+    font-size: 150%;
+  }
+  .screenShots {
+    border-radius: 3px;
+    height: 26rem;
+  }
+  .screenShots img {
+    height: 7rem;
+    border-radius: 3px;
+  }
+  #showTrailer {
+    height: 9rem;
+  }

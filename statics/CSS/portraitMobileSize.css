@@ -1,0 +1,156 @@
+#logo {
+    width: 35%;
+    margin: auto;
+  }
+  #logo img {
+    width: 100%;
+    margin: 5% 0%;
+  }
+  #desktopSize{
+    display: none;
+  }
+  #tabSize{
+    display: none;
+  }
+  #mobileSize{
+    display: block;
+  }
+  .ads_baner_css{
+    display: none;
+  }
+
+  /* Navbar Stuff */
+  #navbar {
+    border-radius: 0px 0px 2px 2px;
+  }
+  #genresContent {
+    height: 20rem;
+  }
+  #navbar a {
+    font-size: 70%;
+  }
+
+  /* Content Stuff */
+  
+  #movie_details_content {
+    height: 27rem;
+  }
+  #movie-items {
+    width: 48%;
+    height: 28em;
+  }
+  #movie-image {
+    height: 21rem;
+  }
+  #content {
+    font-size: 120%;
+  }
+  .screenShots {
+    border-radius: 2px;
+    height: 25rem;
+  }
+  .screenShots img {
+    height: 8rem;
+    border-radius: 2px;
+  }
+  #showTrailer {
+    height: 10rem;
+  }
+
+  @media only screen and (max-width: 500.98px) {
+    #logo {
+      width: 35%;
+    }
+    #logo img {
+      margin: 3% 0%;
+    }
+  
+    /* Navbar Stuff */
+    #navbar {
+      border-radius: 0px 0px 1px 1px;
+    }
+    #genresContent {
+      height: 16rem;
+    }
+    #navbar a {
+      font-size: 60%;
+    }
+  
+    /* Content Stuff */
+    #movie_details_content {
+      height: 23rem;
+    }
+    #movie-items {
+      height: 27em;
+    }
+    #movie-image {
+      height: 17rem;
+    }
+    #content {
+      font-size: 110%;
+    }
+    .screenShots {
+      border-radius: 1px;
+      height: 23rem;
+    }
+    .screenShots img {
+      border-radius: 1px;
+    }
+  }
+  
+  @media only screen and (max-width: 450.98px) {
+    #front_scean{
+      border-radius: 0% 0% 60px 60px;
+      }
+    /* Content Stuff */
+    #movie-items {
+      height: 33em;
+    }
+    #movie-image {
+      height: 16rem;
+    }
+    #content {
+      font-size: 90%;
+    }
+    .screenShots {
+      height: 21rem;
+    }
+    .screenShots img {
+      height: 6rem;
+    }
+    #showTrailer {
+      height: 8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 395.98px) {
+    #front_scean{
+      border-radius: 0% 0% 38px 38px;
+      }
+    /* Content Stuff */
+    #movie_details_content {
+      height: 35rem;
+    }
+    #movie-items {
+      width: 100%;
+      height: 51em;
+    }
+    #movie-image {
+      height: 30rem;
+    }
+    #movie-info {
+      font-size: 100%;
+    }
+    #content {
+      font-size: 80%;
+    }
+    .screenShots {
+      height: 19rem;
+    }
+    .screenShots img {
+      height: 10rem;
+    }
+    #showTrailer {
+      height: 10rem;
+    }
+  }
