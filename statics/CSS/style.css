@@ -14,12 +14,23 @@ html {
 /* Large Desktop Size Css */
 body {
   font-family: "Share Tech", sans-serif;
-  height: scroll;
   text-shadow: 8px 8px 10px #0000008c;
   background-color: #343a40;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+  background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+  width: 100%;
+  background-size: cover;
+  z-index: -2;
 }
+
+#front_scean{
+  background-image: url("https://images.unsplash.com/photo-1539667547529-84c607280d20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1461&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: .8;
+  border-radius: 0% 0% 88px 88px;
+}
+
 #logo img {
   width: 15%;
   margin: 2%;
@@ -133,11 +144,10 @@ body {
 }
 .screenShots .card-body {
   padding: 2%;
-  margin-right: -3%;
 }
 .screenShots img {
   width: 100%;
-  height: 25rem;
+  height: 37rem;
   border-radius: 8px;
 }
 .screenShots img:hover {
@@ -161,7 +171,7 @@ body {
 }
 #showTrailer {
   width: 100%;
-  height: 37rem;
+  height: 22rem;
 }
 .card-text {
   margin-right: 2%;
@@ -233,9 +243,6 @@ body {
     border-radius: 6px;
     height: 28rem;
   }
-  .screenShots .card-body {
-    margin-right: -5%;
-  }
   .screenShots img {
     height: 23rem;
     border-radius: 6px;
@@ -287,9 +294,6 @@ body {
     border-radius: 4px;
     height: 25rem;
   }
-  .screenShots .card-body {
-    margin-right: -6%;
-  }
   .screenShots img {
     height: 18rem;
     border-radius: 4px;
@@ -325,9 +329,6 @@ body {
   .screenShots {
     border-radius: 3px;
     height: 26rem;
-  }
-  .screenShots .card-body {
-    margin-right: -6%;
   }
   .screenShots img {
     height: 22rem;
@@ -374,7 +375,7 @@ body {
 
   /* Content Stuff */
   #movie-image {
-    height: 34rem;
+    height: 45rem;
   }
   #content {
     font-size: 120%;
@@ -383,15 +384,12 @@ body {
     border-radius: 2px;
     height: 25rem;
   }
-  .screenShots .card-body {
-    margin-right: -9%;
-  }
   .screenShots img {
-    height: 10rem;
+    height: 15rem;
     border-radius: 2px;
   }
   #showTrailer {
-    height: 10rem;
+    height: 15rem;
   }
 }
 
@@ -416,7 +414,7 @@ body {
 
   /* Content Stuff */
   #movie-image {
-    height: 26rem;
+    height: 38rem;
   }
   #content {
     font-size: 110%;
@@ -425,19 +423,22 @@ body {
     border-radius: 1px;
     height: 23rem;
   }
-  .screenShots .card-body {
-    margin-right: -13%;
-  }
   .screenShots img {
-    height: 8rem;
+    height: 14rem;
     border-radius: 1px;
+  }
+  #showTrailer {
+    height: 14rem;
   }
 }
 
 @media only screen and (max-width: 450.98px) {
+  #front_scean{
+    border-radius: 0% 0% 60px 60px;
+    }
   /* Content Stuff */
   #movie-image {
-    height: 22rem;
+    height: 34rem;
   }
   #content {
     font-size: 90%;
@@ -445,18 +446,21 @@ body {
   .screenShots {
     height: 21rem;
   }
-  .screenShots .card-body {
-    margin-right: -17%;
-  }
   .screenShots img {
-    height: 6rem;
+    height: 12rem;
+  }
+  #showTrailer {
+    height: 12rem;
   }
 }
 
-@media only screen and (max-width: 385.98px) {
+@media only screen and (max-width: 395.98px) {
+  #front_scean{
+    border-radius: 0% 0% 38px 38px;
+    }
   /* Content Stuff */
   #movie-image {
-    height: 17rem;
+    height: 30rem;
   }
   #content {
     font-size: 80%;
@@ -464,11 +468,11 @@ body {
   .screenShots {
     height: 19rem;
   }
-  .screenShots .card-body {
-    margin-right: -19%;
-  }
   .screenShots img {
-    height: 4rem;
+    height: 10rem;
+  }
+  #showTrailer {
+    height: 10rem;
   }
 }
 /* Dont't read it */
