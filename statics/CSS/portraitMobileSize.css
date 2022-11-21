@@ -31,16 +31,18 @@
   }
 
   /* Content Stuff */
-  
+  #mainElement{
+    display: block;
+  }
   #movie_details_content {
     height: 27rem;
   }
   #movie-items {
     width: 48%;
-    height: 28em;
+    height: 30em;
   }
   #movie-image {
-    height: 21rem;
+    height: 24rem;
   }
   #content {
     font-size: 120%;
@@ -54,7 +56,7 @@
     border-radius: 2px;
   }
   #showTrailer {
-    height: 10rem;
+    height: 8rem;
   }
 
   @media only screen and (max-width: 500.98px) {
@@ -78,13 +80,10 @@
   
     /* Content Stuff */
     #movie_details_content {
-      height: 23rem;
-    }
-    #movie-items {
-      height: 27em;
+      height: 27rem;
     }
     #movie-image {
-      height: 17rem;
+      height: 20.5rem;
     }
     #content {
       font-size: 110%;
@@ -101,13 +100,16 @@
   @media only screen and (max-width: 450.98px) {
     #front_scean{
       border-radius: 0% 0% 60px 60px;
-      }
+    }
     /* Content Stuff */
+    #movie_details_content {
+      height: 23rem;
+    }
     #movie-items {
       height: 33em;
     }
     #movie-image {
-      height: 16rem;
+      height: 18rem;
     }
     #content {
       font-size: 90%;
@@ -116,7 +118,7 @@
       height: 21rem;
     }
     .screenShots img {
-      height: 6rem;
+      height: 8rem;
     }
     #showTrailer {
       height: 8rem;
@@ -128,29 +130,26 @@
       border-radius: 0% 0% 38px 38px;
       }
     /* Content Stuff */
-    #movie_details_content {
-      height: 35rem;
-    }
     #movie-items {
-      width: 100%;
-      height: 51em;
+      width: 48%;
+      height: 40em;
     }
     #movie-image {
-      height: 30rem;
+      height: 16rem;
     }
     #movie-info {
       font-size: 100%;
     }
     #content {
-      font-size: 80%;
+      font-size: 70%;
     }
     .screenShots {
-      height: 19rem;
+      height: 15rem;
     }
     .screenShots img {
-      height: 10rem;
+      height: 6rem;
     }
     #showTrailer {
-      height: 10rem;
+      height: 6rem;
     }
   }

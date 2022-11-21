@@ -23,9 +23,9 @@ body {
 }
 
 #front_scean{
-  background-image: url("https://images.unsplash.com/photo-1539667547529-84c607280d20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1461&q=80");
+  background-image: url("https://img.freepik.com/free-vector/online-cinema-banner-with-open-clapper-board-film-strip_1419-2242.jpg?w=2000");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   z-index: -1;
   opacity: .8;
   border-radius: 0% 0% 88px 88px;
@@ -237,7 +237,12 @@ body {
 #foot path:hover {
   color: #d0c7c7;
 }
-
+.last_update_date{
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  margin: 0% auto;
+}
 /* Dont't read it */
 /* .loading {
   opacity: 0;
