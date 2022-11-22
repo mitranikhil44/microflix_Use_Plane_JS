@@ -126,7 +126,7 @@ function wait() {
 }
 
 // Function to show Data
-function show(data, index) {
+function show(data) {
   content.insertAdjacentHTML(
     "beforeend",
     `

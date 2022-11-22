@@ -1,4 +1,7 @@
 /* Navbar Stuff */
+#how_to_download_movies{
+  height: 32em;
+}
 #navbar {
   border-radius: 0px 0px 5px 5px;
 }
@@ -21,13 +24,10 @@
 }
 #movie-items {
   width: 24%;
-  height: 28em;
+  height: 35em;
 }
 #movie-image {
-  height: 21rem;
-}
-#content {
-  font-size: 130%;
+  height: 20rem;
 }
 #movie-info {
   font-size: 65%;

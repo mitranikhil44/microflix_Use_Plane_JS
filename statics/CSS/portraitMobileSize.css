@@ -35,7 +35,7 @@
     display: block;
   }
   #movie_details_content {
-    height: 27rem;
+    height: 29.3rem;
   }
   #movie-items {
     width: 48%;
@@ -60,14 +60,16 @@
   }
 
   @media only screen and (max-width: 500.98px) {
+    /* Navbar Stuff */
     #logo {
       width: 35%;
     }
     #logo img {
       margin: 3% 0%;
     }
-  
-    /* Navbar Stuff */
+    #how_to_download_movies{
+      height: 15em;
+    }
     #navbar {
       border-radius: 0px 0px 1px 1px;
     }
@@ -98,12 +100,16 @@
   }
   
   @media only screen and (max-width: 450.98px) {
+    #how_to_download_movies{
+      height: 13em;
+    }
+
+    /* Content Stuff */
     #front_scean{
       border-radius: 0% 0% 60px 60px;
     }
-    /* Content Stuff */
     #movie_details_content {
-      height: 23rem;
+      height: 24.2rem;
     }
     #movie-items {
       height: 33em;
@@ -126,10 +132,17 @@
   }
   
   @media only screen and (max-width: 395.98px) {
+    #how_to_download_movies{
+      height: 12em;
+    }
+
+    /* Content Stuff */
     #front_scean{
       border-radius: 0% 0% 38px 38px;
       }
-    /* Content Stuff */
+    #movie_details_content {
+      height: 23.3rem;
+    }
     #movie-items {
       width: 48%;
       height: 40em;

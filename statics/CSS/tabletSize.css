@@ -2,6 +2,9 @@
 #logo img {
   width: 20%;
 }
+#how_to_download_movies{
+  height: 24em;
+}
 #navbar {
   border-radius: 0px 0px 4px 4px;
 }
@@ -30,13 +33,10 @@
 }
 #movie-items {
   width: 32%;
-  height: 25em;
+  height: 33em;
 }
 #movie-image {
-  height: 23rem;
-}
-#content {
-  font-size: 140%;
+  height: 21rem;
 }
 #movie-info {
   font-size: 60%;
