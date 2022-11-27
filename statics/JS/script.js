@@ -1395,19 +1395,6 @@ document.getElementById("svg_search_icon").addEventListener("click", () => {
   }, 500);
 });
 
-
-// Disable window back button
-function DisableBackBtn(){
-  window.history.forward();
-}
-DisableBackBtn();
-window.onload = DisableBackBtn;
-window.onpageshow = () => {
-  if(evt.persisted)DisableBackBtn()
-}
-window.onunload = () => {void (0)}
-
-
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
 //   const {
