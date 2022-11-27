@@ -40,6 +40,15 @@
   <link rel="stylesheet" media="screen and (max-width: 575.98px)" href="./statics/CSS/portraitMobileSize.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4724045884570258"
     crossorigin="anonymous"></script>
+    <script language='javascript' type='text/javascript'>
+      function DisableBackButton() {
+      window.history.forward()
+      }
+      DisableBackButton();
+      window.onload = DisableBackButton;
+      window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+      window.onunload = function() { void (0) }
+      </script>
 </head>
 
 <body>
@@ -376,8 +385,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <!-- Ads Native Banner Script -->
-  <script async="async" data-cfasync="false"
-    src="//mufflercypress.com/8a8462267705e39989e95218ff6f6dae/invoke.js"></script>
+    <script async="async" data-cfasync="false" src="//mufflercypress.com/8a8462267705e39989e95218ff6f6dae/invoke.js"></script>
 </body>
 
 </html>

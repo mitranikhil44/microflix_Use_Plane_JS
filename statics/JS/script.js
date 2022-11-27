@@ -1342,7 +1342,7 @@ function searchData() {
     .then((response) => response.json())
     .then((data) => {
       let myData = data.items;
-
+      
       let addFilter = myData.filter((x) =>
         x.serchMovieTitle.includes(inputVal)
       );
@@ -1383,6 +1383,8 @@ searchMovies.addEventListener("keypress", (e) => {
     wait();
   }, 500);
 });
+
+// When search icon clicked
 document.getElementById("svg_search_icon").addEventListener("click", () => {
   content.innerHTML = "";
   paginationSection.innerHTML = "";
@@ -1392,6 +1394,19 @@ document.getElementById("svg_search_icon").addEventListener("click", () => {
     wait();
   }, 500);
 });
+
+
+// Disable window back button
+function DisableBackBtn(){
+  window.history.forward();
+}
+DisableBackBtn();
+window.onload = DisableBackBtn;
+window.onpageshow = () => {
+  if(evt.persisted)DisableBackBtn()
+}
+window.onunload = () => {void (0)}
+
 
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
