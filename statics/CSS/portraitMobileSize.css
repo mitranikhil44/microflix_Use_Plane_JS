@@ -34,9 +34,6 @@
   #mainElement{
     display: block;
   }
-  #movie_details_content {
-    height: 29.3rem;
-  }
   #movie-items {
     width: 48%;
     height: 30em;
@@ -52,11 +49,10 @@
     height: 25rem;
   }
   .screenShots img {
-    height: 8rem;
     border-radius: 2px;
   }
   #showTrailer {
-    height: 8rem;
+    height: 15.5rem;
   }
 
   @media only screen and (max-width: 500.98px) {
@@ -81,9 +77,6 @@
     }
   
     /* Content Stuff */
-    #movie_details_content {
-      height: 27rem;
-    }
     #movie-image {
       height: 20.5rem;
     }
@@ -108,9 +101,6 @@
     #front_scean{
       border-radius: 0% 0% 60px 60px;
     }
-    #movie_details_content {
-      height: 24.2rem;
-    }
     #movie-items {
       height: 33em;
     }
@@ -123,11 +113,8 @@
     .screenShots {
       height: 21rem;
     }
-    .screenShots img {
-      height: 8rem;
-    }
     #showTrailer {
-      height: 8rem;
+      height: 12rem;
     }
   }
   
@@ -140,9 +127,6 @@
     #front_scean{
       border-radius: 0% 0% 38px 38px;
       }
-    #movie_details_content {
-      height: 23.3rem;
-    }
     #movie-items {
       width: 48%;
       height: 40em;
@@ -159,10 +143,7 @@
     .screenShots {
       height: 15rem;
     }
-    .screenShots img {
-      height: 6rem;
-    }
     #showTrailer {
-      height: 6rem;
+      height: 10.2rem;
     }
   }

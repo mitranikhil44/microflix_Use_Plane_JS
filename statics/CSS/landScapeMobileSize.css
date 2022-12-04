@@ -16,9 +16,6 @@
   }
 
   /* Content Stuff */
-  #movie_details_content {
-    height: 24.2rem;
-  }
   #movie-items {
     height: 30em;
   }
@@ -30,9 +27,8 @@
     height: 26rem;
   }
   .screenShots img {
-    height: 7rem;
     border-radius: 3px;
   }
   #showTrailer {
-    height: 7rem;
+    height: 21rem;
   }

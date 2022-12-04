@@ -19,9 +19,6 @@
 }
 
 /* Content Stuff */
-#movie_details_content {
-  height: 29rem;
-}
 #movie-items {
   width: 24%;
   height: 35em;
@@ -40,9 +37,8 @@
   padding: 1%;
 }
 .screenShots img {
-  height: 8rem;
   border-radius: 6px;
 }
 #showTrailer {
-  height: 10rem;
+  height: 33.5rem;
 }
