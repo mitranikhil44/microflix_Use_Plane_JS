@@ -65,7 +65,7 @@ async function show(data) {
       </div>
     </div>
 
-    <div class="border-dark my-2 px-1 ${data.id} movie_details_content">  
+    <div class="border-dark my-2 px-1 ${data.id} movie_details_content" onmouseleave={invisibleElement(this)}>  
       <span className="position-relative">
        <button type="button" id="${data.id}" onclick="show_movie_details_content(this.id)" class="btn-scale btn-close btn-close-white crossContentBtn" aria-label="Close"></button>
       </span>
@@ -320,12 +320,22 @@ function paginationButton(index, showNow) {
 // Function to show movie details content
 function show_movie_details_content(id) {
   Array.from(document.getElementsByClassName(id)).forEach((data) => {
-    if (data.style.display != "flex") {
-      data.style.display = "flex";
-    } else {
-      data.style.display = "none";
-    }
-  });
+      if (data.style.visibility != "visible") {
+        visibleElement(data);
+      } else {
+        invisibleElement(data);
+      }
+  })
+};
+
+// Function to enable a element and set display property in flex
+function visibleElement(element) {
+  element.style.visibility = "visible";
+}
+
+// Function to desable a element
+function invisibleElement(element) {
+  element.style.visibility = "hidden";
 }
 
 // Function to show all movies

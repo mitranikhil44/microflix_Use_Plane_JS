@@ -22,6 +22,25 @@ body {
   z-index: -5;
 }
 
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.visible{
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* Front scean stuff */
 #front_scean {
   background-image: url("https://img.freepik.com/free-vector/online-cinema-banner-with-open-clapper-board-film-strip_1419-2242.jpg?w=2000");
   background-repeat: no-repeat;
@@ -108,36 +127,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-.movie_details_content {
-  background: rgb(39, 188, 209);
-  background: linear-gradient(
-    35deg,
-    rgba(39, 188, 209, 0.9783263647255778) 0%,
-    rgba(6, 14, 101, 1) 100%
-  );
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-  overflow: scroll;
-  z-index: 2;
-
-}
-.crossContentBtn{
-  position: absolute;
-  top: 3%;
-  right: 2%;
-}
-.content-scale:hover {
-  z-index: 1;
-  transform: scale(1.03);
-}
-.movie_details_content::-webkit-scrollbar {
-  display: none;
-}
 #movie-items {
   background: rgb(39, 188, 209);
   background: linear-gradient(
@@ -149,6 +138,41 @@ body {
   width: 24%;
   height: 52em;
   z-index: 0;
+  overflow: hidden;
+}
+.movie_details_content {
+  visibility: hidden;
+  display: block;
+  background: rgb(39, 188, 209);
+  background: linear-gradient(
+    35deg,
+    rgba(39, 188, 209, 0.9783263647255778) 0%,
+    rgba(6, 14, 101, 1) 100%
+  );
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  overflow: scroll;
+  z-index: 2;
+}
+
+
+
+.crossContentBtn{
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+.content-scale:hover {
+  z-index: 1;
+  transform: scale(1.03);
+}
+.movie_details_content::-webkit-scrollbar {
+  display: none;
 }
 #movie-image {
   border-top-left-radius: 3px;
@@ -197,11 +221,11 @@ body {
 }
 #showScreenShotDisplay,
 #showEnglishTrailerDisplay,
-#showHindiTrailerDisplay,
-.movie_details_content {
+#showHindiTrailerDisplay {
   padding: 2% 0;
   display: none;
 }
+
 #watchTrailer {
   color: #df4759;
   text-decoration: none;
