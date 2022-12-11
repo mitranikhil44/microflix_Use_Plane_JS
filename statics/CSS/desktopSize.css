@@ -19,7 +19,7 @@
 }
 
 /* Content Stuff */
-#movie-items {
+.movie-items {
   width: 24%;
   height: 35em;
 }

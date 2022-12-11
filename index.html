@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <div id="front_scean">
+  <div id="front_scean" onclick="disableMovieDetailsContent()">
     <div id="logo">
       <a href="/">
         <img class="" src="./statics/images/logo.jpg" alt="logo" />
@@ -198,17 +198,17 @@
       </div>
     </div>
   </div>
-  <hr />
+  <hr/>
   <div id="mainElement">
     <div>
-      <div id="wait" class="align-items-center justify-content-center">
+      <div id="wait" class="align-items-center justify-content-center"  onclick="disableMovieDetailsContent()" >
         <button class="btn btn-light" type="button" disabled>
           <span class="spinner-border spinner-border-sm mx-1" role="status" aria-hidden="true"></span>
           Loading...
         </button>
       </div>
       <section class="my-4 mx-2 overflow-hidden position-relative" id="content"></section>
-      <section class="d-flex align-items-center mx-2 flex-wrap mb-2" id="paginationSection">
+      <section class="d-flex align-items-center mx-2 flex-wrap mb-2"  onclick="disableMovieDetailsContent()" id="paginationSection">
         <!-- <div class="loading">
           <div class="ball"></div>
           <div class="ball"></div>
@@ -216,7 +216,7 @@
         </div> -->
       </section>
     </div>
-    <div class="ads_baner_css mt-3">
+    <div class="ads_baner_css mt-3" onclick="disableMovieDetailsContent()" >
       <div class="my-1 mx-1">
         <script type="text/javascript">
           atOptions = {
@@ -268,7 +268,7 @@
     </div>
   </div>
   <hr class="bg-light" />
-  <div class="d-flex justify-content-center align-items-center flex-column">
+  <div class="d-flex justify-content-center align-items-center flex-column"  onclick="disableMovieDetailsContent()" >
     <div id="desktopSize">
       <script type="text/javascript">
         atOptions = {
@@ -311,7 +311,7 @@
     </div>
   </div>
   <hr class="bg-light" />
-  <footer id="foot">
+  <footer id="foot" onclick="disableMovieDetailsContent()" >
     <div class="text-center">
       <h1 class="mb-5">Follow us</h1>
       <div class="my-2 d-flex justify-content-center align-items-center">

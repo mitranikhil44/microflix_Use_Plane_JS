@@ -34,7 +34,7 @@
   #mainElement{
     display: block;
   }
-  #movie-items {
+  .movie-items {
     width: 48%;
     height: 30em;
   }
@@ -101,7 +101,7 @@
     #front_scean{
       border-radius: 0% 0% 60px 60px;
     }
-    #movie-items {
+    .movie-items {
       height: 33em;
     }
     #movie-image {
@@ -127,7 +127,7 @@
     #front_scean{
       border-radius: 0% 0% 38px 38px;
       }
-    #movie-items {
+    .movie-items {
       width: 48%;
       height: 40em;
     }

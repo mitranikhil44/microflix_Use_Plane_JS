@@ -16,7 +16,7 @@
   }
 
   /* Content Stuff */
-  #movie-items {
+  .movie-items {
     height: 30em;
   }
   #movie-image {

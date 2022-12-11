@@ -23,10 +23,16 @@ body {
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.visible{
+.fadeIn{
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
+}
+
+.fadeOut{
+  visibility: hidden;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s
 }
 
 /* Add animation (fade in the popup) */
@@ -38,6 +44,17 @@ body {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+/* Add animation (fade out the popup) */
+@-webkit-keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity:0 ;}
 }
 
 /* Front scean stuff */
@@ -79,7 +96,7 @@ body {
 
 /* Navbar Stuff */
 #navbar {
-  position: fixed;
+  position: sticky;
   top: 0px;
   width: 99%;
   z-index: 3;
@@ -127,7 +144,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-#movie-items {
+.movie-items {
   background: rgb(39, 188, 209);
   background: linear-gradient(
     35deg,
@@ -159,9 +176,6 @@ body {
   overflow: scroll;
   z-index: 2;
 }
-
-
-
 .crossContentBtn{
   position: absolute;
   top: 3%;

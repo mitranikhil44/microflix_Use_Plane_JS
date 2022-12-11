@@ -45,17 +45,17 @@ async function show(data) {
   await content.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="mb-3 position-relative content-scale" id="movie-items">
+    <div class="mb-3 position-relative content-scale movie-items" id="${data.id}" onclick="show_movie_details_content(this.id)">
       <div>
         <div class="px-2 py-2">
-          <a id="${data.id}" onclick="show_movie_details_content(this.id)">
+          <a>
             <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
           </a>
-          <h4 class="text-center my-2 text-light" id="${data.id}" onclick="show_movie_details_content(this.id)">
+          <h4 class="text-center my-2 text-light">
             ${data.movieTitle}</h4>
         </div>
       </div>
-      <div class="last_update_date" id="${data.id}" onclick="show_movie_details_content(this.id)">
+      <div class="last_update_date">
         <div>
           <hr />
           <p class="card-text text-center" id="info-movie">
@@ -65,9 +65,9 @@ async function show(data) {
       </div>
     </div>
 
-    <div class="border-dark my-2 px-1 ${data.id} movie_details_content" onmouseleave={invisibleElement(this)}>  
+    <div class="border-dark my-2 px-1 ${data.id} movie_details_content" tabindex="-1">  
       <span className="position-relative">
-       <button type="button" id="${data.id}" onclick="show_movie_details_content(this.id)" class="btn-scale btn-close btn-close-white crossContentBtn" aria-label="Close"></button>
+       <button type="button" onclick="disableMovieDetailsContent()" class="btn-scale btn-close btn-close-white crossContentBtn" aria-label="Close"></button>
       </span>
       <div>
         <div class="text-light" id="card-content">
@@ -320,23 +320,42 @@ function paginationButton(index, showNow) {
 // Function to show movie details content
 function show_movie_details_content(id) {
   Array.from(document.getElementsByClassName(id)).forEach((data) => {
-      if (data.style.visibility != "visible") {
-        visibleElement(data);
-      } else {
-        invisibleElement(data);
-      }
-  })
+    if (data.style.visibility != "visible") {
+      visibleElement(data);
+    } else {
+      disableMovieDetailsContent();
+    }
+  });
 };
+
+// Function to disable movie details content
+function disableMovieDetailsContent() {
+  let movie_details_content = document.getElementsByClassName("movie_details_content");
+  Array.from(movie_details_content).forEach(data => {
+  if (data.style.visibility === "visible") {
+    invisibleElement(data);
+  }
+})
+}
 
 // Function to enable a element and set display property in flex
 function visibleElement(element) {
   element.style.visibility = "visible";
+  element.classList.add("fadeIn");
+  setTimeout(() => {
+    element.classList.remove("fadeIn");
+  }, 2000);
 }
 
 // Function to desable a element
 function invisibleElement(element) {
-  element.style.visibility = "hidden";
+  element.classList.add("fadeOut");
+  setTimeout(() => {
+    element.style.visibility = "hidden";
+    element.classList.remove("fadeOut");
+  }, 800);
 }
+
 
 // Function to show all movies
 function allMovies() {
