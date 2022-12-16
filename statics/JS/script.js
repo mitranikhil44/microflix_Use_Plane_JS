@@ -24,7 +24,7 @@ function showToDownloadMovies() {
 let movieUrl = {
   url: `../statics/jsons/movie-api.json`,
   currentPage: 1,
-  pageSize: 12,
+  pageSize: 24,
   window: 5,
 };
 let content = document.getElementById("content");
@@ -46,11 +46,11 @@ async function show(data) {
     "beforeend",
     `
     <div class="mb-3 position-relative content-scale movie-items" id="${data.id}" onclick="show_movie_details_content(this.id)">
-      <div>
+    <div>
         <div class="px-2 py-2">
           <a>
             <img src="${data.image}" class="img-fluid" alt="Movie Image" id="movie-image" />
-          </a>
+            </a>
           <h4 class="text-center my-2 text-light">
             ${data.movieTitle}</h4>
         </div>
@@ -64,14 +64,14 @@ async function show(data) {
         </div>
       </div>
     </div>
-
+    
     <div class="border-dark my-2 px-1 ${data.id} movie_details_content" tabindex="-1">  
       <span className="position-relative">
-       <button type="button" onclick="disableMovieDetailsContent()" class="btn-scale btn-close btn-close-white crossContentBtn" aria-label="Close"></button>
+      <button type="button" onclick="disableMovieDetailsContent()" class="btn-scale btn-close btn-close-white crossContentBtn" aria-label="Close"></button>
       </span>
       <div>
         <div class="text-light" id="card-content">
-          <div id="movie-info">
+        <div id="movie-info">
             <h1 class="card-title text-left">Details:</h1>
             <p>
               <b>Title:</b> ${data.movieTitle}
@@ -86,29 +86,29 @@ async function show(data) {
               <b>Release Date:</b> ${data.releaseDate}
             </p>
             <p>
-              <b>Movie Quality:</b> ${data.movieQuality}
+            <b>Movie Quality:</b> ${data.movieQuality}
             </p>
             <hr />
             <p>
               ${data.storyLineShort} <a target="_blank" class="text-warning" href="${data.imdbPage}"> Click Here
-                To
+              To
                 Read More Info... </a>
             </p>
             <div class="d-flex align-items-center flex-wrap">
               <div>
                 <button id="btnGroupDrop1" type="button" class="btn-scale mx-2 my-3 btn btn-outline-danger btnSize"
-                  data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
+                data-bs-toggle="dropdown" aria-expanded="false">Watch Trailer
                 </button>
                 <div class="text-center dropdown-menu bg-light my-2 px-2 py-2" aria-labelledby="btnGroupDrop1">
                   <a id="${data.screenShot1}" onclick="showEnglishTrailer(this.id)"><button
-                      class="btn btn-outline-dark btnSize my-1">${data.englishTrailer} Trailer</button></a>
+                  class="btn btn-outline-dark btnSize my-1">${data.englishTrailer} Trailer</button></a>
                   <a id="${data.screenShot2}" onclick="showHindiTrailer(this.id)"><button
                       class="btn btn-outline-dark btnSize my-1">${data.hindiTrailer} Trailer</button></a>
                 </div>
               </div>
               <div class="mx-2">
                 <a id="${data.screenShot3}" target="_blank" onclick="showScreenShots(this.id)"><button
-                    class="btn-scale btn btn-outline-warning my-3 btnSize">Screen Shots</button></a>
+                class="btn-scale btn btn-outline-warning my-3 btnSize">Screen Shots</button></a>
               </div>
             </div>
             <div class="${data.screenShot3} screenShots bg-light" id="showScreenShotDisplay">
@@ -130,8 +130,8 @@ async function show(data) {
               </div>
             </div>
             <div class="${data.screenShot1} bg-light" id="showEnglishTrailerDisplay">
-              <div class="card-body bg-light rounded">
-                <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
+            <div class="card-body bg-light rounded">
+            <h5 class="card-title text-dark">${data.englishTrailer} Trailer</h5>
                 <hr / class="bg-dark">
                 <div>
                   <iframe src="https://www.youtube.com/embed/${data.watchEnglishTrailer}" id="showTrailer"
@@ -162,7 +162,7 @@ async function show(data) {
                 <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1"
                   aria-labelledby="btnGroupDrop1">
                   <a type="button" target="_blank" class="btn btn-info btn-scale server2_480p"
-                    href="${data.server2_480p}">Server 1</a>
+                  href="${data.server2_480p}">Server 1</a>
                   <a type="button" target="_blank" class="btn btn-primary btn-scale server3_480p" id="server3_480p"
                     href="${data.server3_480p}">Server 2</a>
                   <div class="my-2">
@@ -171,7 +171,7 @@ async function show(data) {
                 </div>
               </div>
               <div>
-                <button id="btnGroupDrop1" type="button"
+              <button id="btnGroupDrop1" type="button"
                   class="btn-scale mx-1 my-3 btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown"
                   aria-expanded="false">720p
                 </button>
@@ -179,7 +179,7 @@ async function show(data) {
                   aria-labelledby="btnGroupDrop1">
                   <a type="button" target="_blank" class="btn btn-info btn-scale server2_720p"
                     href="${data.server2_720p}">Server 1</a>
-                  <a type="button" target="_blank" class="btn btn-primary btn-scale server3_720p"
+                    <a type="button" target="_blank" class="btn btn-primary btn-scale server3_720p"
                     href="${data.server3_720p}">Server 2</a>
                   <div class="my-2">
                     ${data.lan720p}
@@ -198,7 +198,7 @@ async function show(data) {
                   <a type="button" target="_blank" class="btn btn-primary btn-scale server3_1080p"
                     href="${data.server3_1080p}">Server 2</a>
                   <div class="my-2">
-                    ${data.lan1080p}
+                  ${data.lan1080p}
                   </div>
                 </div>
               </div>
@@ -332,10 +332,10 @@ function show_movie_details_content(id) {
 function disableMovieDetailsContent() {
   let movie_details_content = document.getElementsByClassName("movie_details_content");
   Array.from(movie_details_content).forEach(data => {
-  if (data.style.visibility === "visible") {
-    invisibleElement(data);
-  }
-})
+    if (data.style.visibility === "visible") {
+      invisibleElement(data);
+    }
+  })
 }
 
 // Function to enable a element and set display property in flex
@@ -378,6 +378,7 @@ function allMovies() {
         async function showData() {
           await movies.forEach((data) => {
             show(data);
+            insetAdsInContent();
           });
         }
         showData();
@@ -1349,6 +1350,39 @@ document.getElementById("svg_search_icon").addEventListener("click", () => {
     wait();
   }, 500);
 });
+
+// Function to load add in the middle of movies
+function insetAdsInContent (){
+let moive_items = document.getElementsByClassName("movie-items");
+Array.from(moive_items).forEach((e) => {
+  if (e.length === 12) {
+    e.insertAdjacentHTML(
+      "beforeend",
+      `<div class="d-flex justify-content-evenly align-items-center flex-wrap">
+      <script type="text/javascript">
+      atOptions = {
+        'key' : '869ec6d90a576584510453d0b61510ed',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://mufflercypress.com/869ec6d90a576584510453d0b61510ed/invoke.js"></scr' + 'ipt>');
+    </script> 
+      <script type="text/javascript">
+      atOptions = {
+        'key' : '869ec6d90a576584510453d0b61510ed',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://mufflercypress.com/869ec6d90a576584510453d0b61510ed/invoke.js"></scr' + 'ipt>');
+    </script>
+    </div>`
+    )
+  }
+})}
 
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {

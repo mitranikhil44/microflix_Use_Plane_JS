@@ -13,6 +13,7 @@ html {
 
 /* Large Desktop Size Css */
 body {
+  margin-top: -2%;
   font-family: "Share Tech", sans-serif;
   text-shadow: 8px 8px 10px #0000008c;
   background-color: #343a40;
@@ -62,7 +63,7 @@ body {
   background-image: url("https://img.freepik.com/free-vector/online-cinema-banner-with-open-clapper-board-film-strip_1419-2242.jpg?w=2000");
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -4;
+  z-index: -1;
   opacity: 0.8;
   border-radius: 0% 0% 88px 88px;
 }
@@ -171,8 +172,8 @@ body {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
+  width: 75%;
+  height: 75%;
   overflow: scroll;
   z-index: 2;
 }
