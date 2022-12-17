@@ -378,7 +378,6 @@ function allMovies() {
         async function showData() {
           await movies.forEach((data) => {
             show(data);
-            insetAdsInContent();
           });
         }
         showData();
@@ -1350,39 +1349,6 @@ document.getElementById("svg_search_icon").addEventListener("click", () => {
     wait();
   }, 500);
 });
-
-// Function to load add in the middle of movies
-function insetAdsInContent (){
-let moive_items = document.getElementsByClassName("movie-items");
-Array.from(moive_items).forEach((e) => {
-  if (e.length === 12) {
-    e.insertAdjacentHTML(
-      "beforeend",
-      `<div class="d-flex justify-content-evenly align-items-center flex-wrap">
-      <script type="text/javascript">
-      atOptions = {
-        'key' : '869ec6d90a576584510453d0b61510ed',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://mufflercypress.com/869ec6d90a576584510453d0b61510ed/invoke.js"></scr' + 'ipt>');
-    </script> 
-      <script type="text/javascript">
-      atOptions = {
-        'key' : '869ec6d90a576584510453d0b61510ed',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://mufflercypress.com/869ec6d90a576584510453d0b61510ed/invoke.js"></scr' + 'ipt>');
-    </script>
-    </div>`
-    )
-  }
-})}
 
 // const loading = document.querySelector(".loading");
 // window.addEventListener("scroll", ()=> {
