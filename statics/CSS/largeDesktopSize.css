@@ -80,7 +80,7 @@ body {
   color: white;
 }
 #desktopSize {
-  display: block;
+  display: flex;
 }
 #tabSize {
   display: none;
@@ -89,9 +89,8 @@ body {
   display: none;
 }
 .ads_baner_css {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 

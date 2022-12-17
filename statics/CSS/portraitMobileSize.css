@@ -13,7 +13,7 @@
   display: none;
 }
 #mobileSize{
-  display: block;
+  display: flex;
 }
 .ads_baner_css{
   display: none;

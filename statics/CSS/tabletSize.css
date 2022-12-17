@@ -21,7 +21,7 @@
   display: none;
 }
 #tabSize {
-  display: block;
+  display: flex;
 }
 #mobileSize {
   display: none;

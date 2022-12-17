@@ -17,6 +17,15 @@
 #ads_desktopSize{
   display: none;
 }
+#desktopSize {
+  display: none;
+}
+#tabSize {
+  display: flex;
+}
+#mobileSize {
+  display: none;
+}
 
 /* Content Stuff */
 .movie-items {
