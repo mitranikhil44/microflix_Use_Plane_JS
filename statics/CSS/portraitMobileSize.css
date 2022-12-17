@@ -1,151 +1,149 @@
 #logo {
+  width: 35%;
+  margin: auto;
+}
+#logo img {
+  width: 100%;
+  margin: 5% 0%;
+}
+#desktopSize{
+  display: none;
+}
+#tabSize{
+  display: none;
+}
+#mobileSize{
+  display: block;
+}
+.ads_baner_css{
+  display: none;
+}
+
+/* Navbar Stuff */
+#navbar {
+  border-radius: 0px 0px 2px 2px;
+}
+#genresContent {
+  height: 20rem;
+}
+#navbar a {
+  font-size: 70%;
+}
+
+/* Content Stuff */
+#mainElement{
+  display: block;
+}
+.movie-items {
+  width: 48%;
+  height: 30em;
+}
+#movie-image {
+  height: 24rem;
+}
+#content {
+  font-size: 120%;
+}
+.screenShots {
+  border-radius: 2px;
+  height: 25rem;
+}
+.screenShots img {
+  border-radius: 2px;
+}
+#showTrailer {
+  height: 15.5rem;
+}
+
+@media only screen and (max-width: 500.98px) {
+  /* Navbar Stuff */
+  #logo {
     width: 35%;
-    margin: auto;
   }
   #logo img {
-    width: 100%;
-    margin: 5% 0%;
+    margin: 3% 0%;
   }
-  #desktopSize{
-    display: none;
+  #how_to_download_movies{
+    height: 15em;
   }
-  #tabSize{
-    display: none;
-  }
-  #mobileSize{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .ads_baner_css{
-    display: none;
-  }
-
-  /* Navbar Stuff */
   #navbar {
-    border-radius: 0px 0px 2px 2px;
+    border-radius: 0px 0px 1px 1px;
   }
   #genresContent {
-    height: 20rem;
+    height: 16rem;
   }
   #navbar a {
-    font-size: 70%;
+    font-size: 60%;
   }
 
   /* Content Stuff */
-  #mainElement{
-    display: none;
-  }
-  .movie-items {
-    width: 48%;
-    height: 30em;
-  }
   #movie-image {
-    height: 24rem;
+    height: 20.5rem;
   }
   #content {
-    font-size: 120%;
+    font-size: 110%;
   }
   .screenShots {
-    border-radius: 2px;
-    height: 25rem;
+    border-radius: 1px;
+    height: 23rem;
   }
   .screenShots img {
-    border-radius: 2px;
+    border-radius: 1px;
+  }
+}
+
+@media only screen and (max-width: 450.98px) {
+  #how_to_download_movies{
+    height: 13em;
+  }
+
+  /* Content Stuff */
+  #front_scean{
+    border-radius: 0% 0% 60px 60px;
+  }
+  .movie-items {
+    height: 33em;
+  }
+  #movie-image {
+    height: 18rem;
+  }
+  #content {
+    font-size: 90%;
+  }
+  .screenShots {
+    height: 21rem;
   }
   #showTrailer {
-    height: 15.5rem;
+    height: 12rem;
+  }
+}
+
+@media only screen and (max-width: 395.98px) {
+  #how_to_download_movies{
+    height: 12em;
   }
 
-  @media only screen and (max-width: 500.98px) {
-    /* Navbar Stuff */
-    #logo {
-      width: 35%;
+  /* Content Stuff */
+  #front_scean{
+    border-radius: 0% 0% 38px 38px;
     }
-    #logo img {
-      margin: 3% 0%;
-    }
-    #how_to_download_movies{
-      height: 15em;
-    }
-    #navbar {
-      border-radius: 0px 0px 1px 1px;
-    }
-    #genresContent {
-      height: 16rem;
-    }
-    #navbar a {
-      font-size: 60%;
-    }
-  
-    /* Content Stuff */
-    #movie-image {
-      height: 20.5rem;
-    }around
-    #content {
-      font-size: 110%;
-    }
-    .screenShots {
-      border-radius: 1px;
-      height: 23rem;
-    }
-    .screenShots img {
-      border-radius: 1px;
-    }
+  .movie-items {
+    width: 48%;
+    height: 40em;
   }
-  
-  @media only screen and (max-width: 450.98px) {
-    #how_to_download_movies{
-      height: 13em;
-    }
-
-    /* Content Stuff */
-    #front_scean{
-      border-radius: 0% 0% 60px 60px;
-    }
-    .movie-items {
-      height: 33em;
-    }
-    #movie-image {
-      height: 18rem;
-    }
-    #content {
-      font-size: 90%;
-    }
-    .screenShots {
-      height: 21rem;
-    }
-    #showTrailer {
-      height: 12rem;
-    }
+  #movie-image {
+    height: 16rem;
   }
-  
-  @media only screen and (max-width: 395.98px) {
-    #how_to_download_movies{
-      height: 12em;
-    }
-
-    /* Content Stuff */
-    #front_scean{
-      border-radius: 0% 0% 38px 38px;
-      }
-    .movie-items {
-      width: 48%;
-      height: 40em;
-    }
-    #movie-image {
-      height: 16rem;
-    }
-    #movie-info {
-      font-size: 100%;
-    }
-    #content {
-      font-size: 70%;
-    }
-    .screenShots {
-      height: 15rem;
-    }
-    #showTrailer {
-      height: 10.2rem;
-    }
+  #movie-info {
+    font-size: 100%;
   }
+  #content {
+    font-size: 70%;
+  }
+  .screenShots {
+    height: 15rem;
+  }
+  #showTrailer {
+    height: 10.2rem;
+  }
+}

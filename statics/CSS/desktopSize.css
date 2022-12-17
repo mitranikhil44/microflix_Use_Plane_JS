@@ -1,5 +1,5 @@
 /* Navbar Stuff */
-#how_to_download_movies {
+#how_to_download_movies{
   height: 32em;
 }
 #navbar {
@@ -14,22 +14,11 @@
 #search-movies {
   padding-left: 18%;
 }
-#ads_desktopSize {
+#ads_desktopSize{
   display: none;
 }
 
 /* Content Stuff */
-#desktopSize {
-  display: none;
-}
-#tabSize {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#mobileSize {
-  display: none;
-}
 .movie-items {
   width: 24%;
   height: 35em;

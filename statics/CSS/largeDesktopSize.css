@@ -13,7 +13,7 @@ html {
 
 /* Large Desktop Size Css */
 body {
-  margin-top: -3%;
+  margin-top: -2%;
   font-family: "Share Tech", sans-serif;
   text-shadow: 8px 8px 10px #0000008c;
   background-color: #343a40;
@@ -80,15 +80,19 @@ body {
   color: white;
 }
 #desktopSize {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: block;
 }
 #tabSize {
   display: none;
 }
 #mobileSize {
   display: none;
+}
+.ads_baner_css {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Navbar Stuff */
@@ -156,7 +160,7 @@ body {
 }
 .movie_details_content {
   visibility: hidden;
-  display: flex;
+  display: block;
   background: rgb(39, 188, 209);
   background: linear-gradient(
     35deg,
