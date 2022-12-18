@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": "473",
+      "imdbPage": "https://m.imdb.com/title/tt14176542/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Bardo: False Chronicle of a Handful of Truths",
+      "categories": "mexico ,hollywood",
+      "serchMovieTitle": "bardo false chronicle of a handful of truths bardo hand ful tru ths fal se",
+      "duration": "159 min",
+      "genres": " Comedy , Drama",
+      "releaseDate": "16 December 2022",
+      "shortByDate": "2022-12-16",
+      "movieQuality": "Blu-Ray",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYfWLR1-l0gOn2OgyyxG7wXLz0FUTGrQ9w2w&usqp=CAU",
+      "storyLineShort": "An acclaimed journalist-turned-documentarian goes on an oneiric introspective journey to reconcile with the past, the present and his Mexican identity.",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "lCQimQfDuTs",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMoLdCppLH0BbVrr6wtMpKEfRkvorW_XiPlg&usqp=CAU",
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDcCRFy1oNaP5sMjwF7tpLy01-otQT2j3Rg&usqp=CAU",
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHZDJNXGELt7it1-DjsaMVWtIV9T2olxGgQ&usqp=CAU",
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTObhJR5vM0nMIIuPq1pO6p0NFnIEiIlWfUFA&usqp=CAU",
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3MxCSBPiwMXmjLZsdjkLI5KD3LOeTYZwUYg&usqp=CAU",
+      "server3_480p": "https://fileup.to/5blm/Bardo.False.Chronicle.of.a.Handful.of.Truths.2022.480p.WEBDL.Spanish.ESubs.[MicroFlix].mkv",
+      "server2_480p": "",
+      "server1_480p": "",
+      "server3_720p": "https://fileup.to/5bll/Bardo.False.Chronicle.of.a.Handful.of.Truths.2022.720p.WEBDL.Spanish.ESub[MicroFlix].mkv",
+      "server2_720p": "",
+      "server1_720p": "",
+      "server3_1080p": "",
+      "server2_1080p": "",
+      "server1_1080p": "",
+      "lan480p": "Hindi-English",
+      "lan720p": "Hindi-English",
+      "lan1080p": "Not Available",
+      "lastUpdate": "Last updated 18, December 2022"
+    },
+    {
       "id": "224",
       "imdbPage": "https://m.imdb.com/title/tt2072230/?ref_=nv_sr_srsg_3",
       "movieTitle": "Attack on Titan Part 1",
@@ -106,7 +142,7 @@
       "lan480p": "Hindi-English",
       "lan720p": "Hindi-English",
       "lan1080p": "Fill Not Available",
-      "lastUpdate": "Last updated 19, october 2022"
+      "lastUpdate": "Last updated 18, December 2022"
     },
     {
       "id": "472",
