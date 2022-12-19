@@ -1,4 +1,8 @@
- /* Navbar Stuff */
+body {
+  margin-top: -4%;
+}
+
+/* Navbar Stuff */
  #logo img {
   width: 25%;
 }
@@ -16,8 +20,9 @@
 }
 
 /* Content Stuff */
-#movie-items {
-  height: 30em;
+.movie-items {
+  width: 32%;
+  height: 31em;
 }
 #movie-image {
   height: 15rem;

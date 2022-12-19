@@ -162,9 +162,9 @@ async function show(data) {
                 <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1"
                   aria-labelledby="btnGroupDrop1">
                   <a type="button" target="_blank" class="btn btn-info btn-scale server2_480p"
-                  href="${data.server2_480p}">Server 1</a>
+                  href="${data.server1_480p}">[${data.server1_480p_Size}]</a>
                   <a type="button" target="_blank" class="btn btn-primary btn-scale server3_480p" id="server3_480p"
-                    href="${data.server3_480p}">Server 2</a>
+                    href="${data.server2_480p}">[${data.server2_480p_Size}]</a>
                   <div class="my-2">
                     ${data.lan480p}
                   </div>
@@ -178,9 +178,9 @@ async function show(data) {
                 <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1"
                   aria-labelledby="btnGroupDrop1">
                   <a type="button" target="_blank" class="btn btn-info btn-scale server2_720p"
-                    href="${data.server2_720p}">Server 1</a>
+                    href="${data.server1_720p}">[${data.server1_720p_Size}]</a>
                     <a type="button" target="_blank" class="btn btn-primary btn-scale server3_720p"
-                    href="${data.server3_720p}">Server 2</a>
+                    href="${data.server2_720p}">[${data.server2_720p_Size}]</a>
                   <div class="my-2">
                     ${data.lan720p}
                   </div>
@@ -194,9 +194,9 @@ async function show(data) {
                 <div class="text-center dropdown-menu bg-light border-dark my-2 bgSize px-1"
                   aria-labelledby="btnGroupDrop1">
                   <a type="button" target="_blank" class="btn btn-info btn-scale server2_1080p"
-                    href="${data.server2_1080p}">Server 1</a>
+                    href="${data.server1_1080p}">[${data.server1_1080p_Size}]</a>
                   <a type="button" target="_blank" class="btn btn-primary btn-scale server3_1080p"
-                    href="${data.server3_1080p}">Server 2</a>
+                    href="${data.server2_1080p}">[${data.server2_1080p_Size}]</a>
                   <div class="my-2">
                   ${data.lan1080p}
                   </div>

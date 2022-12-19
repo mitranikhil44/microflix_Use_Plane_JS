@@ -1,3 +1,7 @@
+body {
+  margin-top: -5%;
+}
+
 #logo {
   width: 35%;
   margin: auto;
@@ -56,6 +60,10 @@
 }
 
 @media only screen and (max-width: 500.98px) {
+  body {
+    margin-top: -6%;
+  }
+
   /* Navbar Stuff */
   #logo {
     width: 35%;
@@ -119,6 +127,10 @@
 }
 
 @media only screen and (max-width: 395.98px) {
+  body {
+    margin-top: -7%;
+  }
+
   #how_to_download_movies{
     height: 12em;
   }

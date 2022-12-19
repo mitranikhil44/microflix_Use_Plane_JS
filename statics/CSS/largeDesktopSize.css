@@ -98,9 +98,9 @@ body {
 #navbar {
   position: sticky;
   top: 0px;
-  width: 99%;
+  width: 100%;
   z-index: 3;
-  margin: auto;
+  margin: 2% auto;
   border-radius: 0px 0px 6px 6px;
 }
 #genresContent {
