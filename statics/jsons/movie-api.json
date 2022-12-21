@@ -5375,7 +5375,7 @@
       "lastUpdate": "Last updated 02, December 2022"
     },
     {
-      "id": "147",
+      "id": "146",
       "imdbPage": "https://www.imdb.com/title/tt13391710/?ref_=nv_sr_srsg_0",
       "movieTitle": "Jana Gana Mana",
       "categories": "india,bollywood",
@@ -5699,43 +5699,7 @@
       "lan1080": "Hindi-English",
       "lastUpdate": "Last udated 22, November,2022"
     },
-    {
-      "id": "146",
-      "imdbage": "https://www.imdb.com/title/tt13534808/?ref_=nv_sr_srsg_0",
-      "movieTitle": "Janhit Mein Jaari",
-      "categories": "india,bollywood",
-      "serchMovieTitle": "janhit mein jaari 2022",
-      "duration": "135 min",
-      "genres": "Comedy, Drama, Romance",
-      "releaseDate": "10 Jun 2022",
-      "shortByDate": "2022-06-10",
-      "movieQuality": "HDCam",
-      "image": "https://m.media-amazon.com/images/M/MV5BNjIyMzMzOTQtMWMzNi00MjZiLWFmZDctZDMwMzNkMTllNWMzXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg",
-      "storyLineShort": "The story of a young girl, a crusader who takes u a challenging job selling condoms in a small town in M, India.",
-      "hindiTrailer": "Hindi",
-      "englishTrailer": "Not Available",
-      "watchHindiTrailer": "hg2Y2UUR1g0",
-      "watchEnglishTrailer": "",
-      "screenShot1": "https://c.ndtvimg.com/2022-06/34qqaa5o_nushrat_625x300_10_June_22.jpg",
-      "screenShot2": "https://images.indianexpress.com/2022/05/janhit-mein-jaari-trailer.jpg",
-      "screenShot3": "https://www.peepingmoon.com/assets/ckfinder/core/connector/php/uploads/images/Janhit%20Mein%20Jaari%20(1).jpg",
-      "screenShot4": "https://voices.shortpedia.com/wp-content/uploads/2022/06/Janhit-mein-jaari-movie-7@youtube.jpg",
-      "screenShot5": "https://beyondbolllywoodhome.files.wordpress.com/2022/06/lone-muslim-3.jpg?w=1024",
-      "server3_480p": "",
-      "server2_480p": "https://mdisk.me/convertor/3x2/Y1MXHo",
-      "server1_480p": "https://uloadbaz.me/o857laazastx",
-      "server3_720p": "",
-      "server2_720p": "https://mdisk.me/convertor/16x9/agLJDS",
-      "server1_720p": "https://uloadbaz.me/l0sw15l245",
-      "server3_1080p": "",
-      "server2_1080p": "https://mdisk.me/convertor/16x9/FgllU8",
-      "server1_1080p": "https://uloadbaz.me/efxin8camnb",
-      "lan480": "Hindi",
-      "lan720": "Hindi",
-      "lan1080": "Hindi",
-      "lastUpdate": "Last udated 22, November,2022"
-    },
-    
+   
     {
       "id": "188",
       "imdbage": "https://m.imdb.com/title/tt12004038/?ref_=nv_sr_srsg_0",
@@ -5772,7 +5736,7 @@
       "lan1080": "Hindi-English",
       "lastUpdate": "Last udated 22, November,2022"
     },
-{
+    {
       "id": "401",
       "imdbPage": "https://m.imdb.com/title/tt21933110/?ref_=nv_sr_srsg_0",
       "movieTitle": "Old People",
