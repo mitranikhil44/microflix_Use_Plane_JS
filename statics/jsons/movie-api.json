@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": "485",
+      "imdbPage": "https://m.imdb.com/title/tt12749860/?ref_=nv_sr_srsg_0",
+      "movieTitle": "Blood Bite",
+      "categories": "china ,hollywood",
+      "serchMovieTitle": "horror shark blood bite shark ",
+      "duration": "71 min",
+      "genres": "Horror",
+      "releaseDate": "18 Jul 2020",
+      "shortByDate": "2020-07-18",
+      "movieQuality": "Blu-Ray",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFvrDvepmK83bk6cHwo6onT-x6eKOEbalJHQ&usqp=CAU",
+      "storyLineShort": "After a great white shark, also known as an ogre shark, is injected with a transgenic drug, it becomes a dangerous bloodthirsty mutant that can outsmart even the king of nature. A group of h... ",
+      "hindiTrailer": "Not Available",
+      "englishTrailer": "English",
+      "watchHindiTrailer": "",
+      "watchEnglishTrailer": "jfVj7113d20",
+      "screenShot1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6QwY1lImuk0bu7Xutd5pqw9nn7xbnL2s0nw&usqp=CAU",
+      "screenShot2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsTAPLVwNnqcLitshwJWEf-l2jpKLLSWX_fQ&usqp=CAU",
+      "screenShot3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREA6l_bBU2dbCRPWvuYrH9-8dFTSuPyVZTtg&usqp=CAU",
+      "screenShot4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2TY_ogkWoP1mTgfxw3t_JQagjjxhkpxEChw&usqp=CAU",
+      "screenShot5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1CnuS9t5HcOq7AzvfdkSonrOntbnRKev5CA&usqp=CAU",
+      "server3_480p": "https://fileup.to/lXcW/Horror_Shark_2020_Hindi_ORG_Dual_Audio_480p_BluRay-ESub_-_[MicroFlix].mkv",
+      "server2_480p": "",
+      "server1_480p": "",
+      "server3_720p": "https://fileup.to/lXcV/Horror_Shark_2020_Hindi_ORG_Dual_Audio_720p_BluRay-ESub_-_[MicroFlix].mkv",
+      "server2_720p": "",
+      "server1_720p": "",
+      "server3_1080p": "https://fileup.to/lXcU/Horror_Shark_2020_Hindi_ORG_Dual_Audio_1080p_BluRay-ESub_-_[MicroFlix].mkv",
+      "server2_1080p": "",
+      "server1_1080p": "",
+      "lan480p": "English",
+      "lan720p": "English",
+      "lan1080p": "English",
+      "lastUpdate": "Last updated 21, December 2022"
+    },
+    {
       "id": "484",
       "imdbPage": "https://m.imdb.com/title/tt11525390/?ref_=nv_sr_srsg_0",
       "movieTitle": "Hellblazers",
@@ -5699,7 +5735,6 @@
       "lan1080": "Hindi-English",
       "lastUpdate": "Last udated 22, November,2022"
     },
-   
     {
       "id": "188",
       "imdbage": "https://m.imdb.com/title/tt12004038/?ref_=nv_sr_srsg_0",
