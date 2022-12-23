@@ -344,16 +344,16 @@ function visibleElement(element) {
   element.classList.add("fadeIn");
   setTimeout(() => {
     element.classList.remove("fadeIn");
-  }, 1000);
+  }, 100);
 }
 
 // Function to desable a element
 function invisibleElement(element) {
   element.classList.add("fadeOut");
   setTimeout(() => {
-    element.style.visibility = "hidden";
     element.classList.remove("fadeOut");
-  }, 800);
+    element.style.visibility = "hidden";
+  }, 100);
 }
 
 
