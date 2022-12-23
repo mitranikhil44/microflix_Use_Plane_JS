@@ -27,13 +27,13 @@ body {
 .fadeIn{
   visibility: visible;
   -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+  animation: fadeIn 0.5s
 }
 
 .fadeOut{
   visibility: hidden;
   -webkit-animation: fadeOut 1s;
-  animation: fadeOut 1s
+  animation: fadeOut 0.5s
 }
 
 /* Add animation (fade in the popup) */
@@ -99,7 +99,7 @@ body {
   position: sticky;
   top: 0px;
   width: 100%;
-  z-index: 3;
+  z-index: 1;
   margin: 2% auto;
   border-radius: 0px 0px 6px 6px;
 }
